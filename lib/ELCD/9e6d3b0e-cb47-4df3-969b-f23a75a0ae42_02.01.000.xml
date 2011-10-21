@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet version="1.0" href="../../stylesheets/process2html.xsl" type="text/xsl"?>
+<processDataSet xmlns="http://lca.jrc.it/ILCD/Process" xmlns:common="http://lca.jrc.it/ILCD/Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://lca.jrc.it/ILCD/Process ../../schemas/ILCD_ProcessDataSet.xsd" locations="../ILCDLocations.xml" version="1.1">
+  <processInformation>
+    <dataSetInformation>
+      <common:UUID>9e6d3b0e-cb47-4df3-969b-f23a75a0ae42</common:UUID>
+      <name>
+        <baseName xml:lang="en">Excavator</baseName>
+        <treatmentStandardsRoutes xml:lang="en">technology mix</treatmentStandardsRoutes>
+        <functionalUnitFlowProperties xml:lang="en">100 kW, Construction</functionalUnitFlowProperties>
+      </name>
+      <common:synonyms xml:lang="en">Digger</common:synonyms>
+      <classificationInformation>
+        <common:classification>
+          <common:class level="0">Transport services</common:class>
+          <common:class level="1">Other transport</common:class>
+        </common:classification>
+      </classificationInformation>
+      <common:generalComment xml:lang="en">The data set represents the applied technology with a good overall quality. The inventory is mainly based on literature data and datasheets available from machinery manufacturers.</common:generalComment>
+    </dataSetInformation>
+    <quantitativeReference type="Reference flow(s)">
+      <referenceToReferenceFlow>2</referenceToReferenceFlow>
+    </quantitativeReference>
+    <time>
+      <common:referenceYear>2005</common:referenceYear>
+      <common:dataSetValidUntil>2015</common:dataSetValidUntil>
+      <common:timeRepresentativenessDescription xml:lang="en">Average</common:timeRepresentativenessDescription>
+    </time>
+    <geography>
+      <locationOfOperationSupplyOrProduction location="GLO">
+        <descriptionOfRestrictions xml:lang="en">The data set is representative for the mentioned region.</descriptionOfRestrictions>
+      </locationOfOperationSupplyOrProduction>
+    </geography>
+    <technology>
+      <technologyDescriptionAndIncludedProcesses xml:lang="en">Excavator as used for construction works. Inputs are diesel and excavated material. Outputs are combustion emissions due to engine operation, comprising regulated emissions (NOx, CO, Hydrocarbons and Particles), fuel dependent emissions (CO2, SO2, benzene, toluene and xylene) and others such as CH4 and N2O. Emissions due to machinery production, end of life, as well as fuel supply chain (emissions of exploration, refinery and transport) are excluded.</technologyDescriptionAndIncludedProcesses>
+      <technologicalApplicability xml:lang="en">Excavation of materials.</technologicalApplicability>
+      <referenceToTechnologyFlowDiagrammOrPicture refObjectId="151451e8-4418-11dd-ae16-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/151451e8-4418-11dd-ae16-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE_LBP-GaBi_Transport_System_excluding_fuel_151451e8-4418-11dd-ae16-0800200c9a66.jpg</common:shortDescription>
+      </referenceToTechnologyFlowDiagrammOrPicture>
+    </technology>
+    <mathematicalRelations>
+      <modelDescription xml:lang="en">The emission profile as well as the fuel consumption is calculated according to the settings of the variable parameters as described in the technology description. The calculation formulas of the single variables are given in the section variable / parameter.</modelDescription>
+      <variableParameter name="Benzene_h">
+        <meanValue>0.021</meanValue>
+        <comment xml:lang="en">[13] [g Benzene/h] at full load</comment>
+      </variableParameter>
+      <variableParameter name="Benzene_t">
+        <formula>Benzene_h*load_factor/performance*density</formula>
+        <meanValue>0.000458181818181818</meanValue>
+        <comment xml:lang="en">[24] [g Benzene/t]</comment>
+      </variableParameter>
+      <variableParameter name="bucket_volume">
+        <meanValue>1.1</meanValue>
+        <comment xml:lang="en">[02a] [m3] bucket volume</comment>
+      </variableParameter>
+      <variableParameter name="CH4_h">
+        <meanValue>0.72</meanValue>
+        <comment xml:lang="en">[11] [g CH4/h] at full load</comment>
+      </variableParameter>
+      <variableParameter name="CH4_t">
+        <formula>CH4_h*load_factor/performance*density</formula>
+        <meanValue>0.0157090909090909</meanValue>
+        <comment xml:lang="en">[22] [g CH4/t]</comment>
+      </variableParameter>
+      <variableParameter name="CO_h">
+        <meanValue>150</meanValue>
+        <comment xml:lang="en">[07] [g CO/h] at full load</comment>
+      </variableParameter>
+      <variableParameter name="CO_t">
+        <formula>CO_h*load_factor/performance*density</formula>
+        <meanValue>3.27272727272727</meanValue>
+        <comment xml:lang="en">[18] [g CO/t]</comment>
+      </variableParameter>
+      <variableParameter name="cycles_min">
+        <meanValue>0.75</meanValue>
+        <comment xml:lang="en">[02b] [1/min] number of cycles per minute</comment>
+      </variableParameter>
+      <variableParameter name="density">
+        <meanValue>1.8</meanValue>
+        <comment xml:lang="en">[01] [t/m3] density of excavated material</comment>
+      </variableParameter>
+      <variableParameter name="Dust_h">
+        <meanValue>16</meanValue>
+        <comment xml:lang="en">[09] [g Dust/h] at full load</comment>
+      </variableParameter>
+      <variableParameter name="Dust_t">
+        <formula>Dust_h*load_factor/performance*density</formula>
+        <meanValue>0.349090909090909</meanValue>
+        <comment xml:lang="en">[20] [g Dust/t]</comment>
+      </variableParameter>
+      <variableParameter name="fuel_h">
+        <meanValue>25.5</meanValue>
+        <comment xml:lang="en">[05] [kg fuel/h] at full load</comment>
+      </variableParameter>
+      <variableParameter name="fuel_t">
+        <formula>fuel_h*load_factor/performance*density</formula>
+        <meanValue>0.556363636363636</meanValue>
+        <comment xml:lang="en">[16] [kg fuel/t]</comment>
+      </variableParameter>
+      <variableParameter name="load_factor">
+        <meanValue>0.6</meanValue>
+        <comment xml:lang="en">[04] [-] effective power in relation to maximum power = 0,3..1 (default = 0,6)</comment>
+      </variableParameter>
+      <variableParameter name="N2O_h">
+        <meanValue>3</meanValue>
+        <comment xml:lang="en">[10] [g N2O/h] at full load</comment>
+      </variableParameter>
+      <variableParameter name="N2O_t">
+        <formula>N2O_h*load_factor/performance*density</formula>
+        <meanValue>0.0654545454545454</meanValue>
+        <comment xml:lang="en">[21] [g N2O/t]</comment>
+      </variableParameter>
+      <variableParameter name="NMVOC_h">
+        <meanValue>29</meanValue>
+        <comment xml:lang="en">[12] [g NMVOC/h] at full load</comment>
+      </variableParameter>
+      <variableParameter name="NMVOC_t">
+        <formula>NMVOC_h*load_factor/performance*density</formula>
+        <meanValue>0.632727272727273</meanValue>
+        <comment xml:lang="en">[23] [g NMVOC/t]</comment>
+      </variableParameter>
+      <variableParameter name="NOx_h">
+        <meanValue>520</meanValue>
+        <comment xml:lang="en">[08] [g NOx/h] at full load</comment>
+      </variableParameter>
+      <variableParameter name="NOx_t">
+        <formula>NOx_h*load_factor/performance*density</formula>
+        <meanValue>11.3454545454545</meanValue>
+        <comment xml:lang="en">[19] [g NOx/t]</comment>
+      </variableParameter>
+      <variableParameter name="performance">
+        <formula>bucket_volume*cycles_min*60</formula>
+        <meanValue>49.5</meanValue>
+        <comment xml:lang="en">[02] [m3/h]</comment>
+      </variableParameter>
+      <variableParameter name="SO2_h">
+        <formula>fuel_h*sulphur_ppm/1000000*2</formula>
+        <meanValue>0.0102</meanValue>
+        <comment xml:lang="en">[06] [kg SO2/h] at full load</comment>
+      </variableParameter>
+      <variableParameter name="SO2_t">
+        <formula>SO2_h*load_factor/performance*density</formula>
+        <meanValue>0.000222545454545455</meanValue>
+        <comment xml:lang="en">[17] [kg SO2/t]</comment>
+      </variableParameter>
+      <variableParameter name="sulphur_ppm">
+        <meanValue>200</meanValue>
+        <comment xml:lang="en">[03] [ppm] sulphur content in fuel</comment>
+      </variableParameter>
+      <variableParameter name="Toluene_h">
+        <meanValue>0.003</meanValue>
+        <comment xml:lang="en">[14] [g Toluene/h] at full load</comment>
+      </variableParameter>
+      <variableParameter name="Toluene_t">
+        <formula>Toluene_h*load_factor/performance*density</formula>
+        <meanValue>6.54545454545454E-5</meanValue>
+        <comment xml:lang="en">[25] [g Toluene/t]</comment>
+      </variableParameter>
+      <variableParameter name="Xylene_h">
+        <meanValue>0.264</meanValue>
+        <comment xml:lang="en">[15] [g Xylene/h] at full load</comment>
+      </variableParameter>
+      <variableParameter name="Xylene_t">
+        <formula>Xylene_h*load_factor/performance*density</formula>
+        <meanValue>0.00576</meanValue>
+        <comment xml:lang="en">[26] [g Xylene/t]</comment>
+      </variableParameter>
+    </mathematicalRelations>
+  </processInformation>
+  <modellingAndValidation>
+    <LCIMethodAndAllocation>
+      <typeOfDataSet>Unit process, single operation</typeOfDataSet>
+      <LCIMethodPrinciple>Attributional</LCIMethodPrinciple>
+      <deviationsFromLCIMethodPrinciple xml:lang="en">None</deviationsFromLCIMethodPrinciple>
+      <LCIMethodApproaches>Not applicable</LCIMethodApproaches>
+      <deviationsFromLCIMethodApproaches>None</deviationsFromLCIMethodApproaches>
+      <modellingConstants xml:lang="en">All data used in the calculation of the LCI results refer to net calorific value.</modellingConstants>
+      <deviationsFromModellingConstants xml:lang="en">None</deviationsFromModellingConstants>
+      <referenceToLCAMethodDetails refObjectId="10466572-0cfd-428e-8b10-ae74255e6e83" version="02.01.000" type="source data set" uri="../sources/10466572-0cfd-428e-8b10-ae74255e6e83_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi Modelling Principles</common:shortDescription>
+      </referenceToLCAMethodDetails>
+    </LCIMethodAndAllocation>
+    <dataSourcesTreatmentAndRepresentativeness>
+      <dataCutOffAndCompletenessPrinciples xml:lang="en">Cut-off rules for each unit process: Coverage of at least 95 % of mass and energy of the input and output flows, and 98 % of their environmental relevance (according to expert judgement).</dataCutOffAndCompletenessPrinciples>
+      <deviationsFromCutOffAndCompletenessPrinciples xml:lang="en">Manufacturing and EoL of vehicle is not included.</deviationsFromCutOffAndCompletenessPrinciples>
+      <dataSelectionAndCombinationPrinciples xml:lang="en">Data sources for the transport system are sufficiently consistent, emission factors are based on average European conditions (key emissions are based on measured operating data). LCI modelling is fully consistent.</dataSelectionAndCombinationPrinciples>
+      <deviationsFromSelectionAndCombinationPrinciples xml:lang="en">None</deviationsFromSelectionAndCombinationPrinciples>
+      <dataTreatmentAndExtrapolationsPrinciples xml:lang="en">Several data sources have been averaged. Measured data from representative transport systems have been upscaled.</dataTreatmentAndExtrapolationsPrinciples>
+      <deviationsFromTreatmentAndExtrapolationPrinciples xml:lang="en">None</deviationsFromTreatmentAndExtrapolationPrinciples>
+      <referenceToDataSource refObjectId="7641fae0-1d8e-11dd-bd0b-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/7641fae0-1d8e-11dd-bd0b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Emission Inventory Guidebook: Road Transport, 2006</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="7641fae1-1d8e-11dd-bd0b-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/7641fae1-1d8e-11dd-bd0b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Handbook emission factors for road transport. v 2.1, 2004</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="7641fae2-1d8e-11dd-bd0b-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/7641fae2-1d8e-11dd-bd0b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Luftschadstoffemissionen und Kraftstoffverbrauch von Verbrennungsmotoren (mobil), 2004</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="7641fae5-1d8e-11dd-bd0b-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/7641fae5-1d8e-11dd-bd0b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">JCB Wheeled excavators data sheets, 2007</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="764221f1-1d8e-11dd-bd0b-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/764221f1-1d8e-11dd-bd0b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Hydraulikbagger 320D L Product brochure, 2007</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="6df7ba00-86d1-11db-b606-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/6df7ba00-86d1-11db-b606-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi databases 2006</common:shortDescription>
+      </referenceToDataSource>
+      <percentageSupplyOrProductionCovered>95.0</percentageSupplyOrProductionCovered>
+      <samplingProcedure xml:lang="en">Average</samplingProcedure>
+      <dataCollectionPeriod xml:lang="en">2007</dataCollectionPeriod>
+      <uncertaintyAdjustments xml:lang="en">None</uncertaintyAdjustments>
+      <useAdviceForDataSet xml:lang="en">The data set allows individual settings for selected variable parameters. In principle all emission data is based on so called basic emission factors relating emissions to the rated engine output of the excavator. The load factor of the engine (effective power in relation to max. power) may be altered by the LCA expert based on case specific expert knowledge. The reference unit [kg emission/h] may be of particular interest if construction processes are modelled and specific productivity data [excavated material/h] is available. For cases no specific information on the productivity of the excavation process is readily available, a default figure for the productivity (performance) [m3/h] and density is presented [t/m3]. The productivity data is based on a bucket capacity of 1,1 m3 and a circulating time of operation of 80 s. Another variable parameter is the S-content of the diesel, determining the SO2-emissions. Vehicle production and end-of-life treatment are not included.</useAdviceForDataSet>
+    </dataSourcesTreatmentAndRepresentativeness>
+    <completeness>
+      <completenessProductModel>All relevant flows quantified</completenessProductModel>
+    </completeness>
+    <validation>
+      <review type="Dependent internal review">
+        <common:scope name="Raw data">
+          <common:method name="Cross-check with other source" />
+          <common:method name="Expert judgement" />
+        </common:scope>
+        <common:scope name="Unit process(es), black box">
+          <common:method name="Energy balance" />
+          <common:method name="Cross-check with other source" />
+          <common:method name="Cross-check with other data set" />
+          <common:method name="Expert judgement" />
+          <common:method name="Mass balance" />
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:scope name="Documentation">
+          <common:method name="Expert judgement" />
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:scope name="Life cycle inventory methods">
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:reviewDetails xml:lang="en">Inventory: The internal review was done by several iteration steps concerning raw data validation, raw data documentation, representativity, completeness and consistency of modelling with regard to ISO 14040 and 14044.; Documentation: The review of the documentation was performed by Ecobilan and is in compliance with ISO 14040 and 14044. The data set documentation is correct in view of the appropriateness of the information provided. It includes all relevant information in view of data quality and scope of application of the respective LCI result.</common:reviewDetails>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+          <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+          <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="d571097d-d600-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/d571097d-d600-11da-a94d-0800200c9a66_02.01.000.xml">
+          <common:shortDescription xml:lang="en">Ecobilan</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+      </review>
+    </validation>
+    <complianceDeclarations>
+      <compliance>
+        <common:referenceToComplianceSystem type="source data set" uri="../sources/d92a1a12-2545-49e2-a585-55c259997756_01.01.000.xml" refObjectId="d92a1a12-2545-49e2-a585-55c259997756" version="01.01.000">
+          <common:shortDescription>ILCD Data Network - Entry-level</common:shortDescription>
+        </common:referenceToComplianceSystem>
+        <common:approvalOfOverallCompliance>Not compliant</common:approvalOfOverallCompliance>
+        <common:nomenclatureCompliance>Fully compliant</common:nomenclatureCompliance>
+        <common:methodologicalCompliance>Fully compliant</common:methodologicalCompliance>
+        <common:reviewCompliance>Not compliant</common:reviewCompliance>
+        <common:documentationCompliance>Not compliant</common:documentationCompliance>
+      </compliance>
+    </complianceDeclarations>
+  </modellingAndValidation>
+  <administrativeInformation>
+    <common:commissionerAndGoal>
+      <common:referenceToCommissioner refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToCommissioner>
+      <common:referenceToCommissioner refObjectId="5bb337b0-9a1a-11da-a72b-0800200c9a62" version="02.01.000" type="contact data set" uri="../contacts/5bb337b0-9a1a-11da-a72b-0800200c9a62_02.01.000.xml">
+        <common:shortDescription xml:lang="en">EC, DG ENV</common:shortDescription>
+      </common:referenceToCommissioner>
+      <common:referenceToCommissioner refObjectId="d0d5f8bb-9311-49d1-9e30-2f20a6977f4f" version="01.01.000" type="contact data set" uri="../contacts/d0d5f8bb-9311-49d1-9e30-2f20a6977f4f_01.01.000.xml">
+        <common:shortDescription xml:lang="en">EPLCA project team</common:shortDescription>
+      </common:referenceToCommissioner>
+      <intendedApplications xmlns="http://lca.jrc.it/ILCD/Common" xml:lang="en">This background LCI data set can be used for any types of LCA studies.</intendedApplications>
+    </common:commissionerAndGoal>
+    <dataGenerator>
+      <common:referenceToPersonOrEntityGeneratingTheDataSet refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToPersonOrEntityGeneratingTheDataSet>
+      <common:referenceToPersonOrEntityGeneratingTheDataSet refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+      </common:referenceToPersonOrEntityGeneratingTheDataSet>
+    </dataGenerator>
+    <dataEntryBy>
+      <common:timeStamp>2010-03-12T00:00:00+01:00</common:timeStamp>
+      <common:referenceToDataSetFormat type="source data set" uri="../sources/a97a0155-0234-4b87-b4ce-a45da52f2a40_01.01.000.xml" refObjectId="a97a0155-0234-4b87-b4ce-a45da52f2a40" version="01.01.000">
+        <common:shortDescription>ILCD format</common:shortDescription>
+      </common:referenceToDataSetFormat>
+      <common:referenceToConvertedOriginalDataSetFrom refObjectId="6df7ba00-86d1-11db-b606-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/6df7ba00-86d1-11db-b606-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi databases 2006</common:shortDescription>
+      </common:referenceToConvertedOriginalDataSetFrom>
+      <common:referenceToPersonOrEntityEnteringTheData refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+      </common:referenceToPersonOrEntityEnteringTheData>
+      <common:referenceToDataSetUseApproval refObjectId="be34bbb0-b054-11db-abbd-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/be34bbb0-b054-11db-abbd-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">No official approval by producer or operator</common:shortDescription>
+      </common:referenceToDataSetUseApproval>
+    </dataEntryBy>
+    <publicationAndOwnership>
+      <common:dataSetVersion>02.01.000</common:dataSetVersion>
+      <common:referenceToPrecedingDataSetVersion type="process data set" refObjectId="9e6d3b0e-cb47-4df3-969b-f23a75a0ae42" version="02.00.000" uri="http://lca.jrc.ec.europa.eu/lcainfohub/datasets/elcd/processes/9e6d3b0e-cb47-4df3-969b-f23a75a0ae42_02.00.000.xml">
+        <common:shortDescription xml:lang="en">Excavator; technology mix; 100 kW, Construction</common:shortDescription>
+      </common:referenceToPrecedingDataSetVersion>
+      <common:permanentDataSetURI>http://lca.jrc.ec.europa.eu/lcainfohub/datasets/elcd/processes/9e6d3b0e-cb47-4df3-969b-f23a75a0ae42_02.01.000.xml</common:permanentDataSetURI>
+      <common:workflowAndPublicationStatus>Data set finalised; entirely published</common:workflowAndPublicationStatus>
+      <common:referenceToUnchangedRepublication refObjectId="57bbc510-79c3-11dd-ad8b-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/57bbc510-79c3-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ELCD database 2.0</common:shortDescription>
+      </common:referenceToUnchangedRepublication>
+      <common:referenceToOwnershipOfDataSet refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToOwnershipOfDataSet>
+      <common:copyright>true</common:copyright>
+      <common:accessRestrictions xml:lang="en">The data set can be used free of charge by anybody to perform LCA studies, to distribute it to third parties, to convert it to other formats, to develop own data sets etc. as long as the copyright and license conditions for the ELCD data sets and the ILCD format are met that can be accessed via http://lca.jrc.ec.europa.eu. Please note e.g. that reference must be given to the 'Owner of data set' and to the 'ELCD database' plus version number, when using the data set or parts thereof. Please note also, that any modifications/omissions of the data set results in invalidity of any existing 'Official approval of data set by producer/operator', that the impression must be avoided that this would still be a complete ELCD data set, and that the content of further fields has to be adjusted. For details see the aforementioned copyright and license conditions.</common:accessRestrictions>
+    </publicationAndOwnership>
+  </administrativeInformation>
+  <exchanges>
+    <exchange dataSetInternalID="0">
+      <referenceToFlowDataSet refObjectId="4f197bf1-7b3b-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/4f197bf1-7b3b-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">diesel</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <referenceToVariable>fuel_t</referenceToVariable>
+      <meanAmount>1</meanAmount>
+      <resultingAmount>0.556363636363636</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="1">
+      <referenceToFlowDataSet refObjectId="4f19a2f5-7b3b-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/4f19a2f5-7b3b-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">excavated material</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>1000</meanAmount>
+      <resultingAmount>1000</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="2">
+      <referenceToFlowDataSet refObjectId="4f19a2f5-7b3b-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/4f19a2f5-7b3b-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">excavated material</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1000</meanAmount>
+      <resultingAmount>1000</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="3">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9202-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9202-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">benzene (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Benzene_t</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>4.58181818181818E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="4">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-af54-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-af54-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">carbon dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>fuel_t</referenceToVariable>
+      <meanAmount>3.175</meanAmount>
+      <resultingAmount>1.76645454545454</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="5">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-924e-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-924e-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">carbon monoxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>CO_t</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>0.00327272727272727</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="6">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-960b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-960b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">methane (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>CH4_t</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>1.57090909090909E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="7">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-96e5-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-96e5-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrogen dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>NOx_t</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>0.0113454545454545</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="8">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94c3-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94c3-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrous oxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>N2O_t</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>6.54545454545454E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="9">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-a302-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-a302-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">non-methane volatile organic compounds (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>NMVOC_t</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>0.000632727272727273</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="10">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9293-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9293-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">particles (PM2.5) (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Dust_t</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>0.000349090909090909</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="11">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ac48-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ac48-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">sulfur dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>SO2_t</referenceToVariable>
+      <meanAmount>1</meanAmount>
+      <resultingAmount>0.000222545454545455</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="12">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9bb5-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9bb5-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">toluene (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Toluene_t</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>6.54545454545454E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="13">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ad91-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ad91-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">xylene (all isomers) (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Xylene_t</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>5.76E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+  </exchanges>
+</processDataSet>

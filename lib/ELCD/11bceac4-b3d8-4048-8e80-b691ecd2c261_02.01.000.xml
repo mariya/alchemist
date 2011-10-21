@@ -1,0 +1,2349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet version="1.0" href="../../stylesheets/process2html.xsl" type="text/xsl"?>
+<processDataSet xmlns="http://lca.jrc.it/ILCD/Process" xmlns:common="http://lca.jrc.it/ILCD/Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://lca.jrc.it/ILCD/Process ../../schemas/ILCD_ProcessDataSet.xsd" locations="../ILCDLocations.xml" version="1.1">
+  <processInformation>
+    <dataSetInformation>
+      <common:UUID>11bceac4-b3d8-4048-8e80-b691ecd2c261</common:UUID>
+      <name>
+        <baseName xml:lang="en">Copper wire</baseName>
+        <treatmentStandardsRoutes xml:lang="en">technology mix</treatmentStandardsRoutes>
+        <mixAndLocationTypes xml:lang="en">consumption mix, at plant</mixAndLocationTypes>
+        <functionalUnitFlowProperties xml:lang="en">cross section 1 mmy</functionalUnitFlowProperties>
+      </name>
+      <classificationInformation>
+        <common:classification>
+          <common:class level="0">Materials production</common:class>
+          <common:class level="1">Metals and semimetals</common:class>
+        </common:classification>
+      </classificationInformation>
+      <common:generalComment xml:lang="en">The data set is part of a LCA study on copper products. The study is based on recent industry data supplied by the European copper industry, and thus reflecting the reality in copper semis fabrication. Copper wiring is the standard in residential building wire and its use in transformers and motor driven systems helps to increase energy efficiency. In electrical applications, while the use phase is the most important in the overall Life Cycle Assessment, the economic value of copper scrap, based on its ability to be recycled 100% without any loss in performance, must also be included in comparative assessments. Given the broad range of wire diameters in use in the market, the data provided is for one metre of uninsulated copper wire, with a cross section of one square millimetre. The data values should be adjusted to fit the exact wire size for any given application. For example, a typical residential building wire has a cross section of 2.5 square millimetres.</common:generalComment>
+    </dataSetInformation>
+    <quantitativeReference type="Reference flow(s)">
+      <referenceToReferenceFlow>27</referenceToReferenceFlow>
+    </quantitativeReference>
+    <time>
+      <common:referenceYear>2000</common:referenceYear>
+      <common:dataSetValidUntil>2009</common:dataSetValidUntil>
+      <common:timeRepresentativenessDescription xml:lang="en">Annual average</common:timeRepresentativenessDescription>
+    </time>
+    <geography>
+      <locationOfOperationSupplyOrProduction location="EU-15">
+        <descriptionOfRestrictions xml:lang="en">Copper production from primary and secondary raw materials is analysed and modelled for the European Union. The used electricity grid mixes are country-specific. Upstream data are based either on global averages (e.g. copper mining) or European average information.</descriptionOfRestrictions>
+      </locationOfOperationSupplyOrProduction>
+    </geography>
+    <technology>
+      <technologyDescriptionAndIncludedProcesses xml:lang="en">Copper wire is basically made of copper cathode (virgin copper). It encompasses a few amounts of process internal scrap e.g. turnings, cuttings. The process route for copper cathode can be region specific e.g. Outokumpu process, Mishibishi prcess, El teniente process, etc. The production process in principle is based on similar technology worldwide. The database encompasses for both routes the state of the art as described in the EU document on Best Available Technology of IPPC. The process route encompasses the following steps: mining and processing (concentrate production), hydrometallurgy (leaching, solvent extraction, electro winning) and pyrometallurgy (smelting, converting, fire refining, electrolytic refining). Copper cathodes are produced from both, the hydro- and the pyrometallurgical route. The semi-fabrication process for copper wire includes the process steps melting and alloying, extrusion and drawing. Raw materials for the production are copper ore and scrap (pyrometallurgy), as well as clean scrap (semi-fabrication). The background system is addressed as follows: Electricity, Thermal energy: The electricity (and thermal energy as by-product) used is modelled according to the individual country-specific situation. The country-specific modelling is achieved on multiple levels. Firstly the individual power plants in service are modelled according to the current national grid. This includes net losses and imported electricity. Second, the national emission and efficiency standards of the power plants are modelled. Third, the country-specific fuel supply (share of resources used, by import and / or domestic supply) including the country-specific properties (e.g. element and energy contents) are accounted for. Fourth, the import, transport, mining and exploration processes for the energy carrier supply chain are modelled according to the specific situation of each power-producing country. The different mining and exploration techniques (emissions and efficiencies) in the different exploration countries are accounted for according to current engineering knowledge and information. Steam: The steam supply is modelled according to the individual country-specific situation with regard to the technology efficiencies and energy carriers used. Efficiencies range from 84% to 94% in relation to the representative energy carrier (gas, oil, coal). Coal, crude oil and natural gas used for the generation of steam are modelled according to the specific import situation (see electricity). Transports: All relevant and known transport processes used are included. Overseas transport including rail and truck transport to and from major ports for imported bulk resources are included. Furthermore all relevant and known pipeline and / or tanker transport of gases and oil imports are included. Energy carriers: Coal, crude oil, natural gas and uranium are modelled according to the specific import situation (see electricity). Refinery products: Diesel, gasoline, technical gases, fuel oils, basic oils and residues such as bitumen are modelled via a country-specific, refinery parameterized model. The refinery model represents the current national standard in refinery techniques (e.g. emission level, internal energy consumption,...) as well as the individual country-specific product output spectrum, which can be quite different from country to country. Hence the refinery products used show the individual country-specific use of resources. The supply of crude oil is modelled, again, according to the country-specific crude oil situation with the respective properties of the resources.</technologyDescriptionAndIncludedProcesses>
+      <technologicalApplicability xml:lang="en">Copper wire for usage in electric motors (all kind of electric coils), conductors, inductors as well as for wiring in cars, houses / buildings, ships, aircrafts, etc.</technologicalApplicability>
+      <referenceToTechnologyFlowDiagrammOrPicture refObjectId="4789fc26-4bec-11dc-8314-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/4789fc26-4bec-11dc-8314-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ECI_Flow_chart_Copper_production_4789fc26-4bec-11dc-8314-0800200c9a66.jpg</common:shortDescription>
+      </referenceToTechnologyFlowDiagrammOrPicture>
+    </technology>
+  </processInformation>
+  <modellingAndValidation>
+    <LCIMethodAndAllocation>
+      <typeOfDataSet>LCI result</typeOfDataSet>
+      <LCIMethodPrinciple>Attributional</LCIMethodPrinciple>
+      <deviationsFromLCIMethodPrinciple xml:lang="en">None</deviationsFromLCIMethodPrinciple>
+      <LCIMethodApproaches>Allocation - market value</LCIMethodApproaches>
+      <LCIMethodApproaches>Substitution - average, no correction</LCIMethodApproaches>
+      <deviationsFromLCIMethodApproaches>The mining and production of virgin copper (generally called copper cathode) is inseparably coupled with co- and by-products e.g. gold, silver, nickel, molybdenum, etc. These products could only be considered and assessed by allocation. Valuable metal by-products (Au, Ag, Ni, Mo) are allocated by market value. Steam was not allocated because no sufficient data was available. For the produced sulphuric acid a credit was assigned (Substitution).</deviationsFromLCIMethodApproaches>
+      <modellingConstants xml:lang="en">All data used in the calculation of the LCI results which include burden and credit due to recycling and allocation refer to the net calorific value.</modellingConstants>
+      <deviationsFromModellingConstants xml:lang="en">None</deviationsFromModellingConstants>
+    </LCIMethodAndAllocation>
+    <dataSourcesTreatmentAndRepresentativeness>
+      <dataCutOffAndCompletenessPrinciples xml:lang="en">Cut-off rules for each unit process: Coverage of at least 90 % of mass and energy of the input and output flows, and 90 % of their environmental relevance (according to expert judgement).</dataCutOffAndCompletenessPrinciples>
+      <deviationsFromCutOffAndCompletenessPrinciples xml:lang="en">None</deviationsFromCutOffAndCompletenessPrinciples>
+      <dataSelectionAndCombinationPrinciples xml:lang="en">Time-related coverage: The targeted base year is defined as year 2000. Data delivered from industry covers the base year. Literature data is taken from 1992 to 2001. The data for semi-finished production is from 1997 to 2000 as no major changes have occurred. The length of time where data is collected has been one production year. The global copper imports to Europe. Geographical coverage: Worldwide data were included for the mining and processing unit as well as for the hydrometallurgy process units. For the pyrometallurgy process unit, industry specific data were collected from all major European copper smelters/ refiners. Data for semi-finished production is taken only from representative major European semi-fabricating sites, whereby it is assumed that their production is similar and representative for all European fabricators. Technology coverage: All major technologies, relevant to the European LCI, are included for mining, pyrometallurgy and fabrication. Hydrometallurgy is considered in the worldwide data collection. Further descriptors, which define the nature of the data, such as that collected from specific sites, versus data from published sources, and whether the data was measured, calculated or estimated, are also considered. For the transport of materials and energy carriers average transport processes with specific setting parameters e.g. transport distances and route (ship, pipeline, rail, road) are used.</dataSelectionAndCombinationPrinciples>
+      <deviationsFromSelectionAndCombinationPrinciples xml:lang="en">None</deviationsFromSelectionAndCombinationPrinciples>
+      <dataTreatmentAndExtrapolationsPrinciples xml:lang="en">None</dataTreatmentAndExtrapolationsPrinciples>
+      <deviationsFromTreatmentAndExtrapolationPrinciples xml:lang="en">None</deviationsFromTreatmentAndExtrapolationPrinciples>
+      <referenceToDataSource refObjectId="2eb62afa-4fe3-11dc-8314-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/2eb62afa-4fe3-11dc-8314-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Sachbilanz einer Ökobilanz der Kupfererzeugung und -verarbeitung</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="68b45d3c-4fe1-11dc-8314-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/68b45d3c-4fe1-11dc-8314-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Copper extraction from the 60's into the 21st century</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="3246b0c4-4fe4-11dc-8314-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/3246b0c4-4fe4-11dc-8314-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">World Metal Statistics Yearbook</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="6df7ba00-86d1-11db-b606-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/6df7ba00-86d1-11db-b606-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi databases 2006</common:shortDescription>
+      </referenceToDataSource>
+      <percentageSupplyOrProductionCovered>99.0</percentageSupplyOrProductionCovered>
+      <useAdviceForDataSet xml:lang="en">The data set represent a cradle to gate scenario for the production of wire as used by end consumers including the end of life recycling of the material.The data set includes the burden and credit associated with the recycling of copper scrap during copper production, manufacturing and End-of-Life. For this, the current European average recycling rate is estimated to be 95 %. For specific copper data set requests contact the Deutsches Kupferinstitut, www.kupfer-institut.de.</useAdviceForDataSet>
+    </dataSourcesTreatmentAndRepresentativeness>
+    <completeness>
+      <completenessProductModel>All relevant flows quantified</completenessProductModel>
+    </completeness>
+    <validation>
+      <review type="Dependent internal review">
+        <common:scope name="Raw data">
+          <common:method name="Expert judgement" />
+        </common:scope>
+        <common:scope name="LCI results or Partly terminated system">
+          <common:method name="Cross-check with other source" />
+          <common:method name="Expert judgement" />
+          <common:method name="Mass balance" />
+        </common:scope>
+        <common:scope name="LCIA results">
+          <common:method name="Expert judgement" />
+        </common:scope>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="7432a728-4994-11dc-8314-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/7432a728-4994-11dc-8314-0800200c9a66_02.01.000.xml">
+          <common:shortDescription xml:lang="en">Deutsches Kupferinstitut</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+      </review>
+      <review type="Accredited third party review">
+        <common:scope name="LCI results or Partly terminated system">
+          <common:method name="Expert judgement" />
+        </common:scope>
+        <common:scope name="Documentation">
+          <common:method name="Expert judgement" />
+        </common:scope>
+        <common:scope name="LCIA results calculation">
+          <common:method name="Expert judgement" />
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:reviewDetails xml:lang="en">Inventory: The data used seems to be reasonable, as main foreground data have been collected with the direct help of the relevant industrial sites. ; Documentation: The impact categories chosen are widely used within the scientific community.; LCI Method: The LCI method applied is in compliance with ISO 14040 and ISO 14044 with the exception of the specific issues found in the sampling critical review. The methods used and programmed in the GaBi 4 software are scientifically and technically valid. The data set represents state of the art in view of the reference year and functional unit.</common:reviewDetails>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="5b50279c-499b-11dc-8314-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/5b50279c-499b-11dc-8314-0800200c9a66_02.01.000.xml">
+          <common:shortDescription xml:lang="en">Dr. Pere Fullana-i-Palmer</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+        <common:otherReviewDetails xml:lang="en">The complete review is included in the report "LCA of Copper Products". Review conducted by: Dr. Pere Fullana i Palmer. Please note that the report uses a different methodological approach with regard to recycling flows. In the report the recycling potential model is used. The data in this data set is based on the End of Life approach.</common:otherReviewDetails>
+        <common:referenceToCompleteReviewReport refObjectId="5140044a-4bec-11dc-8314-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/5140044a-4bec-11dc-8314-0800200c9a66_02.01.000.xml">
+          <common:shortDescription xml:lang="en">Report on LCA of Copper Products</common:shortDescription>
+        </common:referenceToCompleteReviewReport>
+      </review>
+    </validation>
+    <complianceDeclarations>
+      <compliance>
+        <common:referenceToComplianceSystem type="source data set" uri="../sources/d92a1a12-2545-49e2-a585-55c259997756_01.01.000.xml" refObjectId="d92a1a12-2545-49e2-a585-55c259997756" version="01.01.000">
+          <common:shortDescription>ILCD Data Network - Entry-level</common:shortDescription>
+        </common:referenceToComplianceSystem>
+        <common:approvalOfOverallCompliance>Not compliant</common:approvalOfOverallCompliance>
+        <common:nomenclatureCompliance>Fully compliant</common:nomenclatureCompliance>
+        <common:methodologicalCompliance>Fully compliant</common:methodologicalCompliance>
+        <common:reviewCompliance>Fully compliant</common:reviewCompliance>
+        <common:documentationCompliance>Not compliant</common:documentationCompliance>
+      </compliance>
+    </complianceDeclarations>
+  </modellingAndValidation>
+  <administrativeInformation>
+    <common:commissionerAndGoal>
+      <common:referenceToCommissioner refObjectId="42a11490-573c-11dd-ae16-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/42a11490-573c-11dd-ae16-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ECI</common:shortDescription>
+      </common:referenceToCommissioner>
+      <common:referenceToCommissioner refObjectId="5bb337b0-9a1a-11da-a72b-0800200c9a62" version="02.01.000" type="contact data set" uri="../contacts/5bb337b0-9a1a-11da-a72b-0800200c9a62_02.01.000.xml">
+        <common:shortDescription xml:lang="en">EC, DG ENV</common:shortDescription>
+      </common:referenceToCommissioner>
+      <common:referenceToCommissioner refObjectId="d0d5f8bb-9311-49d1-9e30-2f20a6977f4f" version="01.01.000" type="contact data set" uri="../contacts/d0d5f8bb-9311-49d1-9e30-2f20a6977f4f_01.01.000.xml">
+        <common:shortDescription xml:lang="en">EPLCA project team</common:shortDescription>
+      </common:referenceToCommissioner>
+      <common:project xml:lang="en">LCA of Copper Products</common:project>
+      <intendedApplications xmlns="http://lca.jrc.it/ILCD/Common" xml:lang="en">The primary goal of the study was to develop a unified and rigorous LCI methodology for copper products. The burdens and credits associated with the recycling of copper scrap are taken into consideration.</intendedApplications>
+    </common:commissionerAndGoal>
+    <dataGenerator>
+      <common:referenceToPersonOrEntityGeneratingTheDataSet refObjectId="7432a728-4994-11dc-8314-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/7432a728-4994-11dc-8314-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Deutsches Kupferinstitut</common:shortDescription>
+      </common:referenceToPersonOrEntityGeneratingTheDataSet>
+    </dataGenerator>
+    <dataEntryBy>
+      <common:timeStamp>2010-03-12T00:00:00+01:00</common:timeStamp>
+      <common:referenceToDataSetFormat type="source data set" uri="../sources/a97a0155-0234-4b87-b4ce-a45da52f2a40_01.01.000.xml" refObjectId="a97a0155-0234-4b87-b4ce-a45da52f2a40" version="01.01.000">
+        <common:shortDescription>ILCD format</common:shortDescription>
+      </common:referenceToDataSetFormat>
+      <common:referenceToPersonOrEntityEnteringTheData refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+      </common:referenceToPersonOrEntityEnteringTheData>
+      <common:referenceToDataSetUseApproval refObjectId="42a11490-573c-11dd-ae16-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/42a11490-573c-11dd-ae16-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ECI</common:shortDescription>
+      </common:referenceToDataSetUseApproval>
+    </dataEntryBy>
+    <publicationAndOwnership>
+      <common:dataSetVersion>02.01.000</common:dataSetVersion>
+      <common:referenceToPrecedingDataSetVersion type="process data set" refObjectId="11bceac4-b3d8-4048-8e80-b691ecd2c261" version="02.00.000" uri="http://lca.jrc.ec.europa.eu/lcainfohub/datasets/elcd/processes/11bceac4-b3d8-4048-8e80-b691ecd2c261_02.00.000.xml">
+        <common:shortDescription xml:lang="en">Copper wire; technology mix; consumption mix, at plant; cross section 1 mmy</common:shortDescription>
+      </common:referenceToPrecedingDataSetVersion>
+      <common:permanentDataSetURI>http://lca.jrc.ec.europa.eu/lcainfohub/datasets/elcd/processes/11bceac4-b3d8-4048-8e80-b691ecd2c261_02.01.000.xml</common:permanentDataSetURI>
+      <common:workflowAndPublicationStatus>Data set finalised; entirely published</common:workflowAndPublicationStatus>
+      <common:referenceToUnchangedRepublication refObjectId="57bbc510-79c3-11dd-ad8b-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/57bbc510-79c3-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ELCD database 2.0</common:shortDescription>
+      </common:referenceToUnchangedRepublication>
+      <common:referenceToOwnershipOfDataSet refObjectId="42a11490-573c-11dd-ae16-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/42a11490-573c-11dd-ae16-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ECI</common:shortDescription>
+      </common:referenceToOwnershipOfDataSet>
+      <common:copyright>true</common:copyright>
+      <common:accessRestrictions xml:lang="en">The data set can be used free of charge by anybody to perform LCA studies, to distribute it to third parties, to convert it to other formats, to develop own data sets etc. as long as the copyright and license conditions for the ELCD data sets and the ILCD format are met that can be accessed via http://lca.jrc.ec.europa.eu. Please note e.g. that reference must be given to the 'Owner of data set' and to the 'ELCD database' plus version number, when using the data set or parts thereof. Please note also, that any modifications/omissions of the data set results in invalidity of any existing 'Official approval of data set by producer/operator', that the impression must be avoided that this would still be a complete ELCD data set, and that the content of further fields has to be adjusted. For details see the aforementioned copyright and license conditions.</common:accessRestrictions>
+    </publicationAndOwnership>
+  </administrativeInformation>
+  <exchanges>
+    <exchange dataSetInternalID="0">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aaa4-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aaa4-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">air (Resources from air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>3072.214633</meanAmount>
+      <resultingAmount>3072.214633</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="1">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-97f9-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-97f9-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">baryte (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>0.351257757</meanAmount>
+      <resultingAmount>0.351257757</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="2">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9634-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9634-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">bentonite (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>0.021164242</meanAmount>
+      <resultingAmount>0.021164242</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="3">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a6f9-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a6f9-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">brown coal (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>1144.02205592928</meanAmount>
+      <resultingAmount>1144.02205592928</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="4">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-923a-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-923a-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">calcium carbonate (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>112.5196111</meanAmount>
+      <resultingAmount>112.5196111</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="5">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9f78-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9f78-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">chromium (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>0.3817074918</meanAmount>
+      <resultingAmount>0.3817074918</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="6">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ae5c-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ae5c-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">copper (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>33.747197098329</meanAmount>
+      <resultingAmount>33.747197098329</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="7">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a6f8-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a6f8-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">crude oil (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>1350.35151175197</meanAmount>
+      <resultingAmount>1350.35151175197</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="8">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a826-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a826-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">dolomite (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>0.000923318</meanAmount>
+      <resultingAmount>0.000923318</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="9">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a6fc-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a6fc-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">hard coal (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>3498.22767302059</meanAmount>
+      <resultingAmount>3498.22767302059</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="10">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a6ff-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a6ff-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">inert rock (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>4211.34698110182</meanAmount>
+      <resultingAmount>4211.34698110182</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="11">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-959a-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-959a-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">iron (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>2.33448624035</meanAmount>
+      <resultingAmount>2.33448624035</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="12">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ae5d-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ae5d-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">lead (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>-2.86469435</meanAmount>
+      <resultingAmount>-2.86469435</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="13">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-9e5c-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-9e5c-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">manganese (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>0.015706146405</meanAmount>
+      <resultingAmount>0.015706146405</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="14">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a6fa-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a6fa-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">natural gas (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>3422.10140749004</meanAmount>
+      <resultingAmount>3422.10140749004</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="15">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-96d1-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-96d1-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nickel (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>-0.033727760608</meanAmount>
+      <resultingAmount>-0.033727760608</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="16">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-96e4-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-96e4-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrogen (Resources from air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>0.000151114</meanAmount>
+      <resultingAmount>0.000151114</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="17">
+      <referenceToFlowDataSet refObjectId="04202047-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/04202047-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">primary energy from hydro power (Resources from water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>694.17787432</meanAmount>
+      <resultingAmount>694.17787432</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="18">
+      <referenceToFlowDataSet refObjectId="0420204a-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/0420204a-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">primary energy from wind power (Resources from air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>10.58748006</meanAmount>
+      <resultingAmount>10.58748006</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="19">
+      <referenceToFlowDataSet refObjectId="0d7a3ad3-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/0d7a3ad3-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">quartz sand (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>37.96893725</meanAmount>
+      <resultingAmount>37.96893725</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="20">
+      <referenceToFlowDataSet refObjectId="172ad9fa-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/172ad9fa-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">sodium chloride (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>44.10464268</meanAmount>
+      <resultingAmount>44.10464268</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="21">
+      <referenceToFlowDataSet refObjectId="172b2805-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/172b2805-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">soil (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>7.210893734</meanAmount>
+      <resultingAmount>7.210893734</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="22">
+      <referenceToFlowDataSet refObjectId="1f30fd77-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/1f30fd77-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">sulfur (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>4.73E-5</meanAmount>
+      <resultingAmount>4.73E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="23">
+      <referenceToFlowDataSet refObjectId="1f31247d-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/1f31247d-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">surface water (Resources from water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>11707.52777</meanAmount>
+      <resultingAmount>11707.52777</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="24">
+      <referenceToFlowDataSet refObjectId="3e4d2966-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/3e4d2966-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">uranium (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>2457.9456045</meanAmount>
+      <resultingAmount>2457.9456045</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="25">
+      <referenceToFlowDataSet refObjectId="3e4d9eab-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/3e4d9eab-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">wood (Resources from biosphere)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>315.976964961</meanAmount>
+      <resultingAmount>315.976964961</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="26">
+      <referenceToFlowDataSet refObjectId="64b1ce4a-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/64b1ce4a-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">zinc (Resources from ground)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>-1.008649440091</meanAmount>
+      <resultingAmount>-1.008649440091</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="27">
+      <referenceToFlowDataSet refObjectId="4f197beb-7b3b-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/4f197beb-7b3b-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">copper wire</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1000</meanAmount>
+      <resultingAmount>1000</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="28">
+      <referenceToFlowDataSet refObjectId="ddfc151d-e0f7-4b1e-9ed3-febab09d0c6e" version="02.01.000" type="flow data set" uri="../flows/ddfc151d-e0f7-4b1e-9ed3-febab09d0c6e_02.01.000.xml">
+        <common:shortDescription xml:lang="en">calcium fluoride</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000438315</meanAmount>
+      <resultingAmount>0.000438315</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="29">
+      <referenceToFlowDataSet refObjectId="26fd4ed1-a97f-4be3-a9ea-ca9273b48101" version="02.01.000" type="flow data set" uri="../flows/26fd4ed1-a97f-4be3-a9ea-ca9273b48101_02.01.000.xml">
+        <common:shortDescription xml:lang="en">highly radioactive waste</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001268892</meanAmount>
+      <resultingAmount>0.001268892</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="30">
+      <referenceToFlowDataSet refObjectId="a60b91d7-798b-4f76-973e-edc4ec8815a6" version="02.01.000" type="flow data set" uri="../flows/a60b91d7-798b-4f76-973e-edc4ec8815a6_02.01.000.xml">
+        <common:shortDescription xml:lang="en">medium and low radioactive wastes</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001509061</meanAmount>
+      <resultingAmount>0.001509061</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="31">
+      <referenceToFlowDataSet refObjectId="e3e55f5f-a49f-4f4c-8493-83a908a63b1f" version="02.01.000" type="flow data set" uri="../flows/e3e55f5f-a49f-4f4c-8493-83a908a63b1f_02.01.000.xml">
+        <common:shortDescription xml:lang="en">mineral treatment residue (unspecified)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8.653072482</meanAmount>
+      <resultingAmount>8.653072482</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="32">
+      <referenceToFlowDataSet refObjectId="62fafd63-a4e4-4ac2-adbb-1f838a2b6399" version="02.01.000" type="flow data set" uri="../flows/62fafd63-a4e4-4ac2-adbb-1f838a2b6399_02.01.000.xml">
+        <common:shortDescription xml:lang="en">overburden (unspecified)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1162.2051457851</meanAmount>
+      <resultingAmount>1162.2051457851</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="33">
+      <referenceToFlowDataSet refObjectId="59df304b-46ad-4915-871d-ef3390e584dc" version="02.01.000" type="flow data set" uri="../flows/59df304b-46ad-4915-871d-ef3390e584dc_02.01.000.xml">
+        <common:shortDescription xml:lang="en">plutonium as residual product</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.6E-6</meanAmount>
+      <resultingAmount>2.6E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="34">
+      <referenceToFlowDataSet refObjectId="8df3d2af-d7ac-4365-9b4a-17e28b9ca482" version="02.01.000" type="flow data set" uri="../flows/8df3d2af-d7ac-4365-9b4a-17e28b9ca482_02.01.000.xml">
+        <common:shortDescription xml:lang="en">radioactive tailings</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.769676524</meanAmount>
+      <resultingAmount>0.769676524</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="35">
+      <referenceToFlowDataSet refObjectId="3c4b0e5d-6500-4ada-9a2c-58e43ac96500" version="02.01.000" type="flow data set" uri="../flows/3c4b0e5d-6500-4ada-9a2c-58e43ac96500_02.01.000.xml">
+        <common:shortDescription xml:lang="en">slag (unspecified)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>237.3676</meanAmount>
+      <resultingAmount>237.3676</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="36">
+      <referenceToFlowDataSet refObjectId="be6e0598-a9e9-4366-b34f-631cbc7b2e70" version="02.01.000" type="flow data set" uri="../flows/be6e0598-a9e9-4366-b34f-631cbc7b2e70_02.01.000.xml">
+        <common:shortDescription xml:lang="en">slag (uranium conversion)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>5.37E-6</meanAmount>
+      <resultingAmount>5.37E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="37">
+      <referenceToFlowDataSet refObjectId="8474163c-05a5-46d5-93aa-cd75e50802a1" version="02.01.000" type="flow data set" uri="../flows/8474163c-05a5-46d5-93aa-cd75e50802a1_02.01.000.xml">
+        <common:shortDescription xml:lang="en">tailings (unspecified)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8958.727894472</meanAmount>
+      <resultingAmount>8958.727894472</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="38">
+      <referenceToFlowDataSet refObjectId="9e86849b-f5fc-431e-a4fe-3c3aefae3269" version="02.01.000" type="flow data set" uri="../flows/9e86849b-f5fc-431e-a4fe-3c3aefae3269_02.01.000.xml">
+        <common:shortDescription xml:lang="en">unspecified radioactive waste</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.002531892</meanAmount>
+      <resultingAmount>0.002531892</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="39">
+      <referenceToFlowDataSet refObjectId="a70cd68f-7cd3-4156-ab1e-a8702ecf28d9" version="02.01.000" type="flow data set" uri="../flows/a70cd68f-7cd3-4156-ab1e-a8702ecf28d9_02.01.000.xml">
+        <common:shortDescription xml:lang="en">uranium depleted</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.003011525</meanAmount>
+      <resultingAmount>0.003011525</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="40">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ab67-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ab67-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">2,3,7,8-tetrachlorodibenzo-p-dioxin (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.27E-9</meanAmount>
+      <resultingAmount>2.27E-9</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="41">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a7a5-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a7a5-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">acetaldehyde (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000161731</meanAmount>
+      <resultingAmount>0.000161731</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="42">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-92c3-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-92c3-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">acetic acid (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000734389</meanAmount>
+      <resultingAmount>0.000734389</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="43">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9520-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9520-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">acetone (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000161132</meanAmount>
+      <resultingAmount>0.000161132</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="44">
+      <referenceToFlowDataSet refObjectId="29066274-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/29066274-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">acid (as H+) (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.05896214332</meanAmount>
+      <resultingAmount>0.05896214332</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="45">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-91a2-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-91a2-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">acid (as H+) (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>4.45E-6</meanAmount>
+      <resultingAmount>4.45E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="46">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aaa0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aaa0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">adsorbable organic halogen compounds (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>6.66E-7</meanAmount>
+      <resultingAmount>6.66E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="47">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a732-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a732-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">aluminium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.016652237</meanAmount>
+      <resultingAmount>0.016652237</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="48">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-acd4-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-acd4-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">americium-241 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.004411372276</meanAmount>
+      <resultingAmount>0.004411372276</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="49">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-a2a9-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-a2a9-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ammonia (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001484441</meanAmount>
+      <resultingAmount>0.001484441</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="50">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-96b0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-96b0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ammonia (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.020549036</meanAmount>
+      <resultingAmount>0.020549036</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="51">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-954d-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-954d-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ammonium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>3.54E-8</meanAmount>
+      <resultingAmount>3.54E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="52">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9689-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9689-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">antimony (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>7.84E-6</meanAmount>
+      <resultingAmount>7.84E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="53">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-977b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-977b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">antimony-124 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-9.76745E-6</meanAmount>
+      <resultingAmount>-9.76745E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="54">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-977f-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-977f-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">antimony-124 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>4.1261048E-5</meanAmount>
+      <resultingAmount>4.1261048E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="55">
+      <referenceToFlowDataSet refObjectId="32cc855e-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/32cc855e-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">antimony-125 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.8419841E-5</meanAmount>
+      <resultingAmount>2.8419841E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="56">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a355-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a355-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">argon-41 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8.437725782</meanAmount>
+      <resultingAmount>8.437725782</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="57">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-91d7-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-91d7-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">arsenic (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>4.6E-5</meanAmount>
+      <resultingAmount>4.6E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="58">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-91df-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-91df-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">arsenic (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.28E-5</meanAmount>
+      <resultingAmount>2.28E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="59">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a800-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a800-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">barium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000353699</meanAmount>
+      <resultingAmount>0.000353699</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="60">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a804-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a804-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">barium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001323695</meanAmount>
+      <resultingAmount>0.001323695</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="61">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9202-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9202-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">benzene (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000588029</meanAmount>
+      <resultingAmount>0.000588029</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="62">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9207-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9207-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">benzene (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000148917</meanAmount>
+      <resultingAmount>0.000148917</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="63">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9221-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9221-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">benzo[a]pyrene (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8.6E-7</meanAmount>
+      <resultingAmount>8.6E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="64">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9d8b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9d8b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">beryllium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8.71E-7</meanAmount>
+      <resultingAmount>8.71E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="65">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a78f-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a78f-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">beryllium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>9.64E-8</meanAmount>
+      <resultingAmount>9.64E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="66">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-97de-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-97de-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">biological oxygen demand (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.005290219</meanAmount>
+      <resultingAmount>0.005290219</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="67">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-a0f7-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-a0f7-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">boron (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001280903</meanAmount>
+      <resultingAmount>0.001280903</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="68">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-a0fb-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-a0fb-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">boron (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>9.14E-5</meanAmount>
+      <resultingAmount>9.14E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="69">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-8de0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-8de0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">bromine (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000328198</meanAmount>
+      <resultingAmount>0.000328198</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="70">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9674-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9674-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cadmium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8.31E-6</meanAmount>
+      <resultingAmount>8.31E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="71">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a290-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a290-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cadmium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-1.34E-6</meanAmount>
+      <resultingAmount>-1.34E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="72">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a296-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a296-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">calcium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>12.02521698</meanAmount>
+      <resultingAmount>12.02521698</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="73">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-af54-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-af54-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">carbon dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>745.024675743235</meanAmount>
+      <resultingAmount>745.024675743235</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="74">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-924e-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-924e-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">carbon monoxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.626307383</meanAmount>
+      <resultingAmount>0.626307383</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="75">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9257-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9257-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">carbon-14 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.901375828</meanAmount>
+      <resultingAmount>2.901375828</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="76">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-925b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-925b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">carbon-14 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.2299421314</meanAmount>
+      <resultingAmount>0.2299421314</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="77">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9dee-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9dee-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">carbonate (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000135253</meanAmount>
+      <resultingAmount>0.000135253</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="78">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9b2c-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9b2c-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cesium-134 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001223284172</meanAmount>
+      <resultingAmount>0.001223284172</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="79">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9b30-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9b30-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cesium-134 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.3117522707</meanAmount>
+      <resultingAmount>0.3117522707</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="80">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9b37-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9b37-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cesium-137 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.00240893321</meanAmount>
+      <resultingAmount>0.00240893321</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="81">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9b3b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9b3b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cesium-137 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.073358235</meanAmount>
+      <resultingAmount>2.073358235</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="82">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-9e51-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-9e51-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">CFC-11 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.74E-5</meanAmount>
+      <resultingAmount>2.74E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="83">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-98b3-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-98b3-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">CFC-114 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.81E-5</meanAmount>
+      <resultingAmount>2.81E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="84">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-9efe-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-9efe-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">CFC-12 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>5.9E-6</meanAmount>
+      <resultingAmount>5.9E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="85">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9612-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9612-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">CFC-13 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>3.7E-6</meanAmount>
+      <resultingAmount>3.7E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="86">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-97ed-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-97ed-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">chemical oxygen demand (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.386912001</meanAmount>
+      <resultingAmount>2.386912001</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="87">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9508-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9508-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">chloride (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>28.1167091514351</meanAmount>
+      <resultingAmount>28.1167091514351</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="88">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9b45-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9b45-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">chlorine (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>4.72E-8</meanAmount>
+      <resultingAmount>4.72E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="89">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9b49-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9b49-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">chlorine (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001246083</meanAmount>
+      <resultingAmount>0.001246083</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="90">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9acc-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9acc-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">chromium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>4.86E-5</meanAmount>
+      <resultingAmount>4.86E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="91">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9f73-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9f73-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">chromium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000155239</meanAmount>
+      <resultingAmount>0.000155239</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="92">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-8fd0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-8fd0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">chromium III (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001365697</meanAmount>
+      <resultingAmount>0.001365697</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="93">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9283-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9283-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cobalt (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1.15E-5</meanAmount>
+      <resultingAmount>1.15E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="94">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a4f7-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a4f7-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cobalt-58 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-2.031059E-5</meanAmount>
+      <resultingAmount>-2.031059E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="95">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-969a-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-969a-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cobalt-58 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001576070601</meanAmount>
+      <resultingAmount>0.001576070601</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="96">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-969e-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-969e-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cobalt-60 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-8.4765041E-5</meanAmount>
+      <resultingAmount>-8.4765041E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="97">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a79a-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a79a-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cobalt-60 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.9610173456</meanAmount>
+      <resultingAmount>0.9610173456</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="98">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a7a0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a7a0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">copper (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-6.81E-6</meanAmount>
+      <resultingAmount>-6.81E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="99">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a7a4-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a7a4-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">copper (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>6.59E-5</meanAmount>
+      <resultingAmount>6.59E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="100">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9890-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9890-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">curium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.005846421118</meanAmount>
+      <resultingAmount>0.005846421118</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="101">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a7d8-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a7d8-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cyanide (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8.13E-7</meanAmount>
+      <resultingAmount>8.13E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="102">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-980b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-980b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">decane (Emissions to soil)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>3.03E-6</meanAmount>
+      <resultingAmount>3.03E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="103">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9808-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9808-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">decane (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.004247637</meanAmount>
+      <resultingAmount>0.004247637</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="104">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9219-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9219-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ethane (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.056954913</meanAmount>
+      <resultingAmount>0.056954913</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="105">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9349-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9349-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ethanol (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000340145</meanAmount>
+      <resultingAmount>0.000340145</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="106">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a2eb-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a2eb-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ethyl benzene (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001062931</meanAmount>
+      <resultingAmount>0.001062931</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="107">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a2ef-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a2ef-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ethyl benzene (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.75E-5</meanAmount>
+      <resultingAmount>2.75E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="108">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-93f7-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-93f7-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">fluoride (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>9.93E-5</meanAmount>
+      <resultingAmount>9.93E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="109">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-93fb-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-93fb-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">fluoride (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.044017651</meanAmount>
+      <resultingAmount>0.044017651</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="110">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9400-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9400-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">fluorine (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-4.12E-5</meanAmount>
+      <resultingAmount>-4.12E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="111">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9404-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9404-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">fluorine (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-0.000269588</meanAmount>
+      <resultingAmount>-0.000269588</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="112">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-941b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-941b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">formaldehyde (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001340515</meanAmount>
+      <resultingAmount>0.001340515</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="113">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a909-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a909-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Halon-1301 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.86E-6</meanAmount>
+      <resultingAmount>2.86E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="114">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a90d-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a90d-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">HCFC-22 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>6.45E-6</meanAmount>
+      <resultingAmount>6.45E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="115">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9465-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9465-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">helium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000885207</meanAmount>
+      <resultingAmount>0.000885207</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="116">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-947d-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-947d-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">hexane (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>7.19E-6</meanAmount>
+      <resultingAmount>7.19E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="117">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aaa6-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aaa6-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">hydrocarbons (unspecified) (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.00046856</meanAmount>
+      <resultingAmount>0.00046856</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="118">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a6ba-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a6ba-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">hydrocyanic acid (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1.43E-5</meanAmount>
+      <resultingAmount>1.43E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="119">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aab0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aab0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">hydrogen chloride (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.039161413</meanAmount>
+      <resultingAmount>0.039161413</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="120">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9804-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9804-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">hydrogen fluoride (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.008133772</meanAmount>
+      <resultingAmount>0.008133772</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="121">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aab3-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aab3-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">hydrogen fluoride (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-3.89E-8</meanAmount>
+      <resultingAmount>-3.89E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="122">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94a9-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94a9-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">hydrogen sulfide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.025988098</meanAmount>
+      <resultingAmount>0.025988098</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="123">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94b2-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94b2-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">hydrogen-3 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>17.38965179</meanAmount>
+      <resultingAmount>17.38965179</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="124">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94b6-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94b6-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">hydrogen-3 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>6517.771086</meanAmount>
+      <resultingAmount>6517.771086</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="125">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a7c3-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a7c3-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">iodine-129 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.009566847317</meanAmount>
+      <resultingAmount>0.009566847317</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="126">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a7e8-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a7e8-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">iodine-129 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.6574440076</meanAmount>
+      <resultingAmount>0.6574440076</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="127">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a7ec-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a7ec-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">iodine-131 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-0.000288934736</meanAmount>
+      <resultingAmount>-0.000288934736</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="128">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a7f0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a7f0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">iodine-131 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>3.0649873E-5</meanAmount>
+      <resultingAmount>3.0649873E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="129">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9591-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9591-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">iron (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000147298</meanAmount>
+      <resultingAmount>0.000147298</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="130">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9595-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9595-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">iron (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.198234112</meanAmount>
+      <resultingAmount>0.198234112</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="131">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-95ca-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-95ca-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">krypton-85 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>169860.13656965</meanAmount>
+      <resultingAmount>169860.13656965</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="132">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-91dc-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-91dc-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">lead (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>5.94E-5</meanAmount>
+      <resultingAmount>5.94E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="133">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-91e0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-91e0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">lead (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>9.8E-5</meanAmount>
+      <resultingAmount>9.8E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="134">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aabf-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aabf-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">magnesium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.00244536863</meanAmount>
+      <resultingAmount>0.00244536863</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="135">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9bc7-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9bc7-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">manganese (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>3.69E-5</meanAmount>
+      <resultingAmount>3.69E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="136">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9bca-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9bca-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">manganese (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000407415</meanAmount>
+      <resultingAmount>0.000407415</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="137">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-9e61-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-9e61-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">manganese-54 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.149020435</meanAmount>
+      <resultingAmount>0.149020435</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="138">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a8c4-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a8c4-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">mercury (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1.51E-5</meanAmount>
+      <resultingAmount>1.51E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="139">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a8c8-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a8c8-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">mercury (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-2.76E-6</meanAmount>
+      <resultingAmount>-2.76E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="140">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-960b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-960b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">methane (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1.55009691</meanAmount>
+      <resultingAmount>1.55009691</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="141">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a935-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a935-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">methanol (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000323747</meanAmount>
+      <resultingAmount>0.000323747</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="142">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a939-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a939-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">methanol (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>5.16E-5</meanAmount>
+      <resultingAmount>5.16E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="143">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a75d-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a75d-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">molybdenum (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>3.3E-7</meanAmount>
+      <resultingAmount>3.3E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="144">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a761-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a761-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">molybdenum (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>7.21E-5</meanAmount>
+      <resultingAmount>7.21E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="145">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-94c2-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-94c2-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">n-butane (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001817457</meanAmount>
+      <resultingAmount>0.001817457</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="146">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-96c8-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-96c8-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nickel (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.00015211</meanAmount>
+      <resultingAmount>0.00015211</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="147">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-96cc-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-96cc-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nickel (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.0001136</meanAmount>
+      <resultingAmount>0.0001136</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="148">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-8d68-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-8d68-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrate (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.002483317</meanAmount>
+      <resultingAmount>0.002483317</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="149">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aad2-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aad2-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrogen (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8.20285618</meanAmount>
+      <resultingAmount>8.20285618</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="150">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aad6-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aad6-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrogen (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8.84E-5</meanAmount>
+      <resultingAmount>8.84E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="151">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-96e5-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-96e5-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrogen dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.28205647</meanAmount>
+      <resultingAmount>2.28205647</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="152">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94c3-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94c3-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrous oxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.015276265</meanAmount>
+      <resultingAmount>0.015276265</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="153">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-a302-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-a302-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">non-methane volatile organic compounds (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.281824262</meanAmount>
+      <resultingAmount>0.281824262</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="154">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a702-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a702-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">particles (&gt; PM10) (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>3.683525198</meanAmount>
+      <resultingAmount>3.683525198</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="155">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-91be-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-91be-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">particles (PM10) (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001484971</meanAmount>
+      <resultingAmount>0.001484971</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="156">
+      <referenceToFlowDataSet refObjectId="d86bc57b-6555-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/d86bc57b-6555-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">particles (PM10) (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.00223734</meanAmount>
+      <resultingAmount>0.00223734</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="157">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9501-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9501-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">particles (PM2.5 - PM10) (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.594718059</meanAmount>
+      <resultingAmount>0.594718059</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="158">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-a02e-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-a02e-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">pentane (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001675483</meanAmount>
+      <resultingAmount>0.001675483</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="159">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-975b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-975b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">phenol (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000206223</meanAmount>
+      <resultingAmount>0.000206223</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="160">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9787-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9787-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">phosphate (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001470962</meanAmount>
+      <resultingAmount>0.001470962</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="161">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aa90-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aa90-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">plutonium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.6185223E-5</meanAmount>
+      <resultingAmount>2.6185223E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="162">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aa94-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aa94-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">plutonium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.01934096691</meanAmount>
+      <resultingAmount>0.01934096691</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="163">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aadf-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aadf-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">polycyclic aromatic hydrocarbons (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>9.04E-6</meanAmount>
+      <resultingAmount>9.04E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="164">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9810-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9810-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">polycyclic aromatic hydrocarbons (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000195203</meanAmount>
+      <resultingAmount>0.000195203</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="165">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-97c3-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-97c3-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">potassium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.00063552</meanAmount>
+      <resultingAmount>0.00063552</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="166">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aae9-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aae9-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">propane (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.029515779</meanAmount>
+      <resultingAmount>0.029515779</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="167">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ab3d-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ab3d-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">propene (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>9.66E-5</meanAmount>
+      <resultingAmount>9.66E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="168">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ab4f-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ab4f-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">propionic acid (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>3.66E-7</meanAmount>
+      <resultingAmount>3.66E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="169">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-967b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-967b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">R-40 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>3.95E-5</meanAmount>
+      <resultingAmount>3.95E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="170">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-98bf-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-98bf-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">radium-226 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>73.82840145</meanAmount>
+      <resultingAmount>73.82840145</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="171">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-abb0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-abb0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">radon-222 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2403.330994</meanAmount>
+      <resultingAmount>2403.330994</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="172">
+      <referenceToFlowDataSet refObjectId="1729ef88-6556-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/1729ef88-6556-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">river water (Resources from water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>18585.310245672</meanAmount>
+      <resultingAmount>18585.310245672</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="173">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-abdb-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-abdb-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ruthenium-106 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.004411372276</meanAmount>
+      <resultingAmount>0.004411372276</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="174">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-98ce-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-98ce-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">scandium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>7.78E-8</meanAmount>
+      <resultingAmount>7.78E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="175">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-abf3-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-abf3-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">selenium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>5.11E-5</meanAmount>
+      <resultingAmount>5.11E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="176">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-98d5-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-98d5-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">selenium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1.23E-5</meanAmount>
+      <resultingAmount>1.23E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="177">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-abfa-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-abfa-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">silver (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>7.58E-7</meanAmount>
+      <resultingAmount>7.58E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="178">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-98de-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-98de-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">silver-110 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>6.028814E-6</meanAmount>
+      <resultingAmount>6.028814E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="179">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9505-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9505-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">sodium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>5.99165239088725</meanAmount>
+      <resultingAmount>5.99165239088725</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="180">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ac0a-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ac0a-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">strontium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>3.04E-6</meanAmount>
+      <resultingAmount>3.04E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="181">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ac0e-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ac0e-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">strontium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001333079</meanAmount>
+      <resultingAmount>0.001333079</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="182">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-926c-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-926c-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">strontium-90 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.2519146257</meanAmount>
+      <resultingAmount>0.2519146257</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="183">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ac59-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ac59-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">sulfate (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>4.01229315868</meanAmount>
+      <resultingAmount>4.01229315868</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="184">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9066-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9066-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">sulfide (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.91E-6</meanAmount>
+      <resultingAmount>2.91E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="185">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-96ed-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-96ed-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">sulfite (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.78E-5</meanAmount>
+      <resultingAmount>2.78E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="186">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ac48-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ac48-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">sulfur dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1.899669074</meanAmount>
+      <resultingAmount>1.899669074</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="187">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9963-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9963-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">thallium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8.63E-8</meanAmount>
+      <resultingAmount>8.63E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="188">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9967-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9967-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">thallium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-9.57E-7</meanAmount>
+      <resultingAmount>-9.57E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="189">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-99bb-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-99bb-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">tin (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000106497</meanAmount>
+      <resultingAmount>0.000106497</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="190">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-998f-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-998f-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">tin (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.61E-9</meanAmount>
+      <resultingAmount>2.61E-9</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="191">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9996-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9996-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">titanium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8.27E-6</meanAmount>
+      <resultingAmount>8.27E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="192">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-999a-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-999a-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">titanium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>8.26E-6</meanAmount>
+      <resultingAmount>8.26E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="193">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9bb5-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9bb5-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">toluene (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000487027</meanAmount>
+      <resultingAmount>0.000487027</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="194">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9988-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9988-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">toluene (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000164669</meanAmount>
+      <resultingAmount>0.000164669</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="195">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-8e7d-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-8e7d-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">total organic carbon (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.026063555</meanAmount>
+      <resultingAmount>0.026063555</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="196">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-8daf-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-8daf-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">uranium-234 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.01046403368</meanAmount>
+      <resultingAmount>0.01046403368</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="197">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9c3c-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9c3c-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">uranium-235 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.041759699147</meanAmount>
+      <resultingAmount>0.041759699147</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="198">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9c44-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9c44-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">uranium-238 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.06554623615</meanAmount>
+      <resultingAmount>0.06554623615</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="199">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-8db4-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-8db4-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">uranium-238 (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1.377932359</meanAmount>
+      <resultingAmount>1.377932359</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="200">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ae96-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ae96-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">used air (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2485.9396876</meanAmount>
+      <resultingAmount>2485.9396876</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="201">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-8dba-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-8dba-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">vanadium (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>7.19E-5</meanAmount>
+      <resultingAmount>7.19E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="202">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-8dbe-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-8dbe-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">vanadium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>2.4E-5</meanAmount>
+      <resultingAmount>2.4E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="203">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9155-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9155-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">volatile organic compound (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.0950746197</meanAmount>
+      <resultingAmount>0.0950746197</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="204">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ae9a-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ae9a-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">volatile organic compound (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>6.86253E-5</meanAmount>
+      <resultingAmount>6.86253E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="205">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9136-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9136-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">waste heat (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>3606.388805</meanAmount>
+      <resultingAmount>3606.388805</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="206">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-913a-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-913a-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">waste heat (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>774.9141103</meanAmount>
+      <resultingAmount>774.9141103</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="207">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ac04-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ac04-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">water vapour (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1302.278812</meanAmount>
+      <resultingAmount>1302.278812</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="208">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94d9-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94d9-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">xenon-131 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.1121384102</meanAmount>
+      <resultingAmount>0.1121384102</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="209">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94dd-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94dd-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">xenon-133 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>18.4108058527</meanAmount>
+      <resultingAmount>18.4108058527</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="210">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94e1-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94e1-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">xenon-135 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>5.0189664781</meanAmount>
+      <resultingAmount>5.0189664781</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="211">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9140-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9140-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">xenon-137 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001645870502</meanAmount>
+      <resultingAmount>0.001645870502</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="212">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9144-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9144-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">xenon-138 (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.1341375794</meanAmount>
+      <resultingAmount>0.1341375794</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="213">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ad91-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ad91-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">xylene (all isomers) (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.004445001</meanAmount>
+      <resultingAmount>0.004445001</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="214">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ad96-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ad96-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">xylene (all isomers) (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.001100896</meanAmount>
+      <resultingAmount>0.001100896</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="215">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94e3-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94e3-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">zinc (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.000184982</meanAmount>
+      <resultingAmount>0.000184982</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="216">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94e7-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94e7-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">zinc (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>-0.00016377</meanAmount>
+      <resultingAmount>-0.00016377</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+  </exchanges>
+</processDataSet>

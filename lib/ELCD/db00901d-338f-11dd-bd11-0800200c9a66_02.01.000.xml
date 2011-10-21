@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet version="1.0" href="../../stylesheets/process2html.xsl" type="text/xsl"?>
+<processDataSet xmlns="http://lca.jrc.it/ILCD/Process" xmlns:common="http://lca.jrc.it/ILCD/Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://lca.jrc.it/ILCD/Process ../../schemas/ILCD_ProcessDataSet.xsd" locations="../ILCDLocations.xml" version="1.1">
+  <processInformation>
+    <dataSetInformation>
+      <common:UUID>db00901d-338f-11dd-bd11-0800200c9a66</common:UUID>
+      <name>
+        <baseName xml:lang="en">Waste water treatment</baseName>
+        <treatmentStandardsRoutes xml:lang="en">chemical reduction/oxidation process, municipal waste water</treatmentStandardsRoutes>
+        <mixAndLocationTypes xml:lang="en">at waste water treatment plant</mixAndLocationTypes>
+      </name>
+      <classificationInformation>
+        <common:classification>
+          <common:class level="0">End-of-life treatment</common:class>
+          <common:class level="1">Waste water treatment</common:class>
+        </common:classification>
+      </classificationInformation>
+      <common:generalComment xml:lang="en">The data set covers all relevant process steps / technologies with a good overall data quality. The inventory is mainly based on industry data and completed, where necessary, by secondary data.</common:generalComment>
+    </dataSetInformation>
+    <quantitativeReference type="Reference flow(s)">
+      <referenceToReferenceFlow>0</referenceToReferenceFlow>
+    </quantitativeReference>
+    <time>
+      <common:referenceYear>2003</common:referenceYear>
+      <common:dataSetValidUntil>2010</common:dataSetValidUntil>
+      <common:timeRepresentativenessDescription xml:lang="en">Data set valid for annually equal discharge. Not appropriate for differences in seasons or seasonal peaks.</common:timeRepresentativenessDescription>
+    </time>
+    <geography>
+      <locationOfOperationSupplyOrProduction location="RER">
+        <descriptionOfRestrictions xml:lang="en">Average based on Central European countries. No distinction between Northern and Southern Europe is done.</descriptionOfRestrictions>
+      </locationOfOperationSupplyOrProduction>
+    </geography>
+    <technology>
+      <technologyDescriptionAndIncludedProcesses xml:lang="en">This data set represents an average waste water treatment plant using the chemical reduction/oxidation process. Inputs to the process are: waste water untreated, iron chloride, hydrated lime (dry slaked), phosphoric acid, power and thermal energy from natural gas. The outputs are treated water and the emissions to fresh water. Emissions are calculated based on the reduction number provided by the user in the variable parameters. Energy supply chain and the production of intermediates used in the process are not included in the data set.</technologyDescriptionAndIncludedProcesses>
+      <technologicalApplicability xml:lang="en">Average treatment for urban (domestic) waste water.</technologicalApplicability>
+      <referenceToTechnologyFlowDiagrammOrPicture refObjectId="38ddad01-4676-11dd-ae16-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/38ddad01-4676-11dd-ae16-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE_LBP-GaBi_Water_Waste Water Treatment_Unit Process_38ddad01-4676-11dd-ae16-0800200c9a66.jpg</common:shortDescription>
+      </referenceToTechnologyFlowDiagrammOrPicture>
+    </technology>
+    <mathematicalRelations>
+      <modelDescription xml:lang="en">Variable parameters (with default setting) are: BOD, COD, cadmium, chromium (III), chromium (VI), copper, mercury, heavy metals (values will be used for arsenic, cobalt, manganese and thallium), nitrogen, ammonia, nickel, nitrate, phosphor, lead, phosphate and zinc entering the treatment plant and the reduction to be achieved. They are all measured in mg/l. For all these parameters, the reduction to be achieved in the process should also be given by the user (default values are provided).
+The emission profile is calculated according to the settings of the variable parameters. The calculation formulas of the single variables are given in the section variable / parameter.</modelDescription>
+      <variableParameter name="bod">
+        <formula>bod_in-bod_red*bod_in</formula>
+        <meanValue>16</meanValue>
+        <comment xml:lang="en">[mg/l out] Biochemical oxygen demand (BOD) in the output</comment>
+      </variableParameter>
+      <variableParameter name="bod_in">
+        <meanValue>1000</meanValue>
+        <comment xml:lang="en">[mg/l in] Biochemical oxygen demand (BOD) in the input</comment>
+      </variableParameter>
+      <variableParameter name="bod_red">
+        <meanValue>0.984</meanValue>
+        <comment xml:lang="en">[-] Biochemical oxygen demand (BOD) Reduction (default 98,4% = 0,984)</comment>
+      </variableParameter>
+      <variableParameter name="cd">
+        <formula>cd_in-cd_red*cd_in</formula>
+        <meanValue>13.5</meanValue>
+        <comment xml:lang="en">[mg/l out] Cadmium in the output</comment>
+      </variableParameter>
+      <variableParameter name="cd_in">
+        <meanValue>50</meanValue>
+        <comment xml:lang="en">[mg/l in]  Cadmium in the input</comment>
+      </variableParameter>
+      <variableParameter name="cd_red">
+        <meanValue>0.73</meanValue>
+        <comment xml:lang="en">[-] Cadmium Reduction (default 73% = 0,73)</comment>
+      </variableParameter>
+      <variableParameter name="cod">
+        <formula>cod_in-cod_red*cod_in</formula>
+        <meanValue>59</meanValue>
+        <comment xml:lang="en">[mg/l out] Chemical oxygen deman (COD) in the output</comment>
+      </variableParameter>
+      <variableParameter name="cod_in">
+        <meanValue>1000</meanValue>
+        <comment xml:lang="en">[mg/l in] Chemical oxygen deman (COD) in the input</comment>
+      </variableParameter>
+      <variableParameter name="cod_red">
+        <meanValue>0.941</meanValue>
+        <comment xml:lang="en">[-] Chemical oxygen demand reduction (default 94,1% = 0,941)</comment>
+      </variableParameter>
+      <variableParameter name="cr3">
+        <formula>cr3_in-cr3_red*cr3_in</formula>
+        <meanValue>1.5</meanValue>
+        <comment xml:lang="en">[mg/l out] Chromium (III) in the output</comment>
+      </variableParameter>
+      <variableParameter name="cr3_in">
+        <meanValue>10</meanValue>
+        <comment xml:lang="en">[mg/l in] Chromium (III) in the input</comment>
+      </variableParameter>
+      <variableParameter name="cr3_red">
+        <meanValue>0.85</meanValue>
+        <comment xml:lang="en">[-] Chromium (III) reduction (default 85% = 0,85)</comment>
+      </variableParameter>
+      <variableParameter name="cr6">
+        <formula>cr6_in-cr6_red*cr6_in</formula>
+        <meanValue>1.5</meanValue>
+        <comment xml:lang="en">[mg/l out] Chromium (VI) in the output</comment>
+      </variableParameter>
+      <variableParameter name="cr6_in">
+        <meanValue>10</meanValue>
+        <comment xml:lang="en">[mg/l in] Chromium (VI) in the input</comment>
+      </variableParameter>
+      <variableParameter name="cr6_red">
+        <meanValue>0.85</meanValue>
+        <comment xml:lang="en">[-] Chromium (VI) reduction (default 85% = 0,85)</comment>
+      </variableParameter>
+      <variableParameter name="cu">
+        <formula>cu_in-cu_red*cu_in</formula>
+        <meanValue>1.2</meanValue>
+        <comment xml:lang="en">[mg/l out] Copper in the output</comment>
+      </variableParameter>
+      <variableParameter name="cu_in">
+        <meanValue>10</meanValue>
+        <comment xml:lang="en">[mg/l in] Copper in the input</comment>
+      </variableParameter>
+      <variableParameter name="cu_red">
+        <meanValue>0.88</meanValue>
+        <comment xml:lang="en">[-] Copper Reduction (default 88% = 0,88)</comment>
+      </variableParameter>
+      <variableParameter name="hg">
+        <formula>hg_in-hg_red*hg_in</formula>
+        <meanValue>2.1</meanValue>
+        <comment xml:lang="en">[mg/l out] Mercury in the output</comment>
+      </variableParameter>
+      <variableParameter name="hg_in">
+        <meanValue>10</meanValue>
+        <comment xml:lang="en">[mg/l in] Mercury in the input</comment>
+      </variableParameter>
+      <variableParameter name="hg_red">
+        <meanValue>0.79</meanValue>
+        <comment xml:lang="en">[-] Mercury reduction (default 79% = 0,79)</comment>
+      </variableParameter>
+      <variableParameter name="hm">
+        <formula>hm_in-hm_red*hm_in</formula>
+        <meanValue>3.7</meanValue>
+        <comment xml:lang="en">[mg/l out] Remaining heavy metals in the output</comment>
+      </variableParameter>
+      <variableParameter name="hm_in">
+        <meanValue>10</meanValue>
+        <comment xml:lang="en">[mg/l in] Remaining heavy metals in the input</comment>
+      </variableParameter>
+      <variableParameter name="hm_red">
+        <meanValue>0.63</meanValue>
+        <comment xml:lang="en">[-] Remaining heavy metals reduction [default worst case 63%, Ni = 0,63)</comment>
+      </variableParameter>
+      <variableParameter name="n">
+        <formula>n_in-n_red*n_in</formula>
+        <meanValue>160</meanValue>
+        <comment xml:lang="en">[mg/l out] Nitrogen in the output</comment>
+      </variableParameter>
+      <variableParameter name="n_in">
+        <meanValue>1000</meanValue>
+        <comment xml:lang="en">[mg/l in] Nitrogen in the input</comment>
+      </variableParameter>
+      <variableParameter name="n_red">
+        <meanValue>0.84</meanValue>
+        <comment xml:lang="en">[-] Nitrogen reduction (default 84% = 0,84)</comment>
+      </variableParameter>
+      <variableParameter name="nh3">
+        <formula>nh3_in-nh3_red*nh3_in</formula>
+        <meanValue>4.80000000000001</meanValue>
+        <comment xml:lang="en">[mg/l out] Ammonia in the output</comment>
+      </variableParameter>
+      <variableParameter name="nh3_in">
+        <meanValue>100</meanValue>
+        <comment xml:lang="en">[mg/l in] Ammonia in the input</comment>
+      </variableParameter>
+      <variableParameter name="nh3_red">
+        <meanValue>0.952</meanValue>
+        <comment xml:lang="en">[-] Ammonia reduction (default 95,2% = 0,925)</comment>
+      </variableParameter>
+      <variableParameter name="ni">
+        <formula>ni_in-ni_red*ni_in</formula>
+        <meanValue>3.7</meanValue>
+        <comment xml:lang="en">[mg/l out] Nickel  in the output</comment>
+      </variableParameter>
+      <variableParameter name="ni_in">
+        <meanValue>10</meanValue>
+        <comment xml:lang="en">[mg/l in] Nickel in the input</comment>
+      </variableParameter>
+      <variableParameter name="ni_red">
+        <meanValue>0.63</meanValue>
+        <comment xml:lang="en">[-] Nickel reduction (default 63% = 0,63)</comment>
+      </variableParameter>
+      <variableParameter name="no3">
+        <formula>no3_in-no3_red*no3_in</formula>
+        <meanValue>160</meanValue>
+        <comment xml:lang="en">[mg/l out] Nitrate in the output</comment>
+      </variableParameter>
+      <variableParameter name="no3_in">
+        <meanValue>1000</meanValue>
+        <comment xml:lang="en">[mg/l in] Nitrate in the input</comment>
+      </variableParameter>
+      <variableParameter name="no3_red">
+        <meanValue>0.84</meanValue>
+        <comment xml:lang="en">[-] Nitrate reduction (default 84% = 0,84)</comment>
+      </variableParameter>
+      <variableParameter name="p">
+        <formula>p_in-p_red*p_in</formula>
+        <meanValue>18</meanValue>
+        <comment xml:lang="en">[mg/l out] Phosphor in the output</comment>
+      </variableParameter>
+      <variableParameter name="p_in">
+        <meanValue>500</meanValue>
+        <comment xml:lang="en">[mg/l in] Phosphor in the input</comment>
+      </variableParameter>
+      <variableParameter name="p_red">
+        <meanValue>0.964</meanValue>
+        <comment xml:lang="en">[-] Phosphor reduction (default 96,4% = 0,964)</comment>
+      </variableParameter>
+      <variableParameter name="pb">
+        <formula>pb_in-pb_red*pb_in</formula>
+        <meanValue>1.2</meanValue>
+        <comment xml:lang="en">[mg/l out] Lead in the output</comment>
+      </variableParameter>
+      <variableParameter name="pb_in">
+        <meanValue>10</meanValue>
+        <comment xml:lang="en">[mg/l in] Lead in the input</comment>
+      </variableParameter>
+      <variableParameter name="pb_red">
+        <meanValue>0.88</meanValue>
+        <comment xml:lang="en">[-] Lead reduction (default 88% = 0,88)</comment>
+      </variableParameter>
+      <variableParameter name="po4">
+        <formula>po4_in-po4_red*po4_in</formula>
+        <meanValue>18</meanValue>
+        <comment xml:lang="en">[mg/l out] Phosphate in the output</comment>
+      </variableParameter>
+      <variableParameter name="po4_in">
+        <meanValue>500</meanValue>
+        <comment xml:lang="en">[mg/l in] Phosphate in the input</comment>
+      </variableParameter>
+      <variableParameter name="po4_red">
+        <meanValue>0.964</meanValue>
+        <comment xml:lang="en">[-] Phosphate reduction (default 96,4% = 0,964)</comment>
+      </variableParameter>
+      <variableParameter name="zi">
+        <formula>zi_in-zi_red*zi_in</formula>
+        <meanValue>2.1</meanValue>
+        <comment xml:lang="en">[mg/l out] Zinc in the output</comment>
+      </variableParameter>
+      <variableParameter name="zi_in">
+        <meanValue>10</meanValue>
+        <comment xml:lang="en">[mg/l in] Zinc in the input</comment>
+      </variableParameter>
+      <variableParameter name="zi_red">
+        <meanValue>0.79</meanValue>
+        <comment xml:lang="en">[-] Zinc reduction (default 79% = 0,79)</comment>
+      </variableParameter>
+    </mathematicalRelations>
+  </processInformation>
+  <modellingAndValidation>
+    <LCIMethodAndAllocation>
+      <typeOfDataSet>Unit process, single operation</typeOfDataSet>
+      <LCIMethodPrinciple>Attributional</LCIMethodPrinciple>
+      <deviationsFromLCIMethodPrinciple xml:lang="en">None</deviationsFromLCIMethodPrinciple>
+      <LCIMethodApproaches>Not applicable</LCIMethodApproaches>
+      <deviationsFromLCIMethodApproaches>None</deviationsFromLCIMethodApproaches>
+      <modellingConstants xml:lang="en">None</modellingConstants>
+      <deviationsFromModellingConstants xml:lang="en">None</deviationsFromModellingConstants>
+      <referenceToLCAMethodDetails refObjectId="10466572-0cfd-428e-8b10-ae74255e6e83" version="02.01.000" type="source data set" uri="../sources/10466572-0cfd-428e-8b10-ae74255e6e83_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi Modelling Principles</common:shortDescription>
+      </referenceToLCAMethodDetails>
+    </LCIMethodAndAllocation>
+    <dataSourcesTreatmentAndRepresentativeness>
+      <dataCutOffAndCompletenessPrinciples xml:lang="en">Cut-off rules for each unit process: Coverage of at least 95 % of mass and energy of the input and output flows, and 98 % of their environmental relevance (according to expert judgement).</dataCutOffAndCompletenessPrinciples>
+      <deviationsFromCutOffAndCompletenessPrinciples xml:lang="en">None</deviationsFromCutOffAndCompletenessPrinciples>
+      <dataSelectionAndCombinationPrinciples xml:lang="en">Several data sources have been averaged in order to provide a general waste treatment plant. The inputs to the waste water treatment plant provide average quantities of the reduction/oxidation process. Default values for chemical reduction are also based on average. LCI modelling is fully consistent.</dataSelectionAndCombinationPrinciples>
+      <deviationsFromSelectionAndCombinationPrinciples xml:lang="en">None</deviationsFromSelectionAndCombinationPrinciples>
+      <dataTreatmentAndExtrapolationsPrinciples xml:lang="en">Averaged literature data are used in order to provide a general waste treatment plant.</dataTreatmentAndExtrapolationsPrinciples>
+      <deviationsFromTreatmentAndExtrapolationPrinciples xml:lang="en">None</deviationsFromTreatmentAndExtrapolationPrinciples>
+      <referenceToDataSource refObjectId="d2734938-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d2734938-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Handbuch des U-schutzes und der U-technik, Additiver Umweltschutz: Behandlung von Abwässern, 1996</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d2734939-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d2734939-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Abwassertechnologie (2. Auflage), 1994</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d273493a-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d273493a-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Organisch verschmutze Abwässer sonstiger Industriegruppen, 1986</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d273493b-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d273493b-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Bayer AG: Sustainable development report 2001, 2001</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d273493c-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d273493c-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Umwelt, Sicherheit, Gesundheit 2002 - Daten und Fakten BASF AG Werk Ludwigshafen, 2002</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d273493d-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d273493d-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ATV Handbuch Industrieabwasser Grundlagen, 1999</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d2734946-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d2734946-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">BAT - Common Waste Water and Waste Gas Treatment / Management Systems in the Chemical Sector, 2003</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="38ddad09-4676-11dd-ae16-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/38ddad09-4676-11dd-ae16-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Council Directive 91/271/EEC of 21 May 1991 concerning urban waste-water treatment, 1991</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="6df7ba00-86d1-11db-b606-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/6df7ba00-86d1-11db-b606-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi databases 2006</common:shortDescription>
+      </referenceToDataSource>
+      <percentageSupplyOrProductionCovered>95.0</percentageSupplyOrProductionCovered>
+      <samplingProcedure xml:lang="en">Emission values represent legal site permit data. Only in the case of heavy metal a worst case number for reduction is applied as 63%, based on expert judgement.</samplingProcedure>
+      <dataCollectionPeriod xml:lang="en">2003 for product flows, waste flows and emission data; single site measurements 2002</dataCollectionPeriod>
+      <uncertaintyAdjustments xml:lang="en">None</uncertaintyAdjustments>
+      <useAdviceForDataSet xml:lang="en">The data set covers the end-of-life stage only, in form of a parameterised unit process level. It can be used to characterise the process chain situation of the respective end-of-life treatment in a representative manner within user specific product LCAs.</useAdviceForDataSet>
+    </dataSourcesTreatmentAndRepresentativeness>
+    <completeness>
+      <completenessProductModel>All relevant flows quantified</completenessProductModel>
+    </completeness>
+    <validation>
+      <review type="Dependent internal review">
+        <common:scope name="Raw data">
+          <common:method name="Cross-check with other source" />
+          <common:method name="Expert judgement" />
+        </common:scope>
+        <common:scope name="Unit process(es), black box">
+          <common:method name="Energy balance" />
+          <common:method name="Element balance" />
+          <common:method name="Cross-check with other source" />
+          <common:method name="Cross-check with other data set" />
+          <common:method name="Expert judgement" />
+          <common:method name="Mass balance" />
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:scope name="Documentation">
+          <common:method name="Expert judgement" />
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:scope name="Life cycle inventory methods">
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:reviewDetails xml:lang="en">Inventory: The internal review was done by several iteration steps concerning raw data validation, raw data documentation, representativity, completeness and consistency of modelling with regard to ISO 14040 and 14044.; Documentation: The review of the documentation was performed by Ecobilan and is in compliance with ISO 14040 and 14044. The data set documentation is correct in view of the appropriateness of the information provided. It includes all relevant information in view of data quality and scope of application of the respective LCI result.</common:reviewDetails>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+          <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+          <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="d571097d-d600-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/d571097d-d600-11da-a94d-0800200c9a66_02.01.000.xml">
+          <common:shortDescription xml:lang="en">Ecobilan</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+      </review>
+    </validation>
+    <complianceDeclarations>
+      <compliance>
+        <common:referenceToComplianceSystem type="source data set" uri="../sources/d92a1a12-2545-49e2-a585-55c259997756_01.01.000.xml" refObjectId="d92a1a12-2545-49e2-a585-55c259997756" version="01.01.000">
+          <common:shortDescription>ILCD Data Network - Entry-level</common:shortDescription>
+        </common:referenceToComplianceSystem>
+        <common:approvalOfOverallCompliance>Not compliant</common:approvalOfOverallCompliance>
+        <common:nomenclatureCompliance>Fully compliant</common:nomenclatureCompliance>
+        <common:methodologicalCompliance>Fully compliant</common:methodologicalCompliance>
+        <common:reviewCompliance>Not compliant</common:reviewCompliance>
+        <common:documentationCompliance>Not compliant</common:documentationCompliance>
+      </compliance>
+    </complianceDeclarations>
+  </modellingAndValidation>
+  <administrativeInformation>
+    <common:commissionerAndGoal>
+      <common:referenceToCommissioner refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToCommissioner>
+      <common:referenceToCommissioner refObjectId="5bb337b0-9a1a-11da-a72b-0800200c9a62" version="02.01.000" type="contact data set" uri="../contacts/5bb337b0-9a1a-11da-a72b-0800200c9a62_02.01.000.xml">
+        <common:shortDescription xml:lang="en">EC, DG ENV</common:shortDescription>
+      </common:referenceToCommissioner>
+      <common:referenceToCommissioner refObjectId="d0d5f8bb-9311-49d1-9e30-2f20a6977f4f" version="01.01.000" type="contact data set" uri="../contacts/d0d5f8bb-9311-49d1-9e30-2f20a6977f4f_01.01.000.xml">
+        <common:shortDescription xml:lang="en">EPLCA project team</common:shortDescription>
+      </common:referenceToCommissioner>
+      <intendedApplications xmlns="http://lca.jrc.it/ILCD/Common" xml:lang="en">This background LCI data set can be used for any types of LCA studies.</intendedApplications>
+    </common:commissionerAndGoal>
+    <dataGenerator>
+      <common:referenceToPersonOrEntityGeneratingTheDataSet refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToPersonOrEntityGeneratingTheDataSet>
+      <common:referenceToPersonOrEntityGeneratingTheDataSet refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+      </common:referenceToPersonOrEntityGeneratingTheDataSet>
+    </dataGenerator>
+    <dataEntryBy>
+      <common:timeStamp>2010-03-12T00:00:00+01:00</common:timeStamp>
+      <common:referenceToDataSetFormat type="source data set" uri="../sources/a97a0155-0234-4b87-b4ce-a45da52f2a40_01.01.000.xml" refObjectId="a97a0155-0234-4b87-b4ce-a45da52f2a40" version="01.01.000">
+        <common:shortDescription>ILCD format</common:shortDescription>
+      </common:referenceToDataSetFormat>
+      <common:referenceToConvertedOriginalDataSetFrom refObjectId="6df7ba00-86d1-11db-b606-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/6df7ba00-86d1-11db-b606-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi databases 2006</common:shortDescription>
+      </common:referenceToConvertedOriginalDataSetFrom>
+      <common:referenceToPersonOrEntityEnteringTheData refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+      </common:referenceToPersonOrEntityEnteringTheData>
+      <common:referenceToDataSetUseApproval refObjectId="be34bbb0-b054-11db-abbd-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/be34bbb0-b054-11db-abbd-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">No official approval by producer or operator</common:shortDescription>
+      </common:referenceToDataSetUseApproval>
+    </dataEntryBy>
+    <publicationAndOwnership>
+      <common:dataSetVersion>02.01.000</common:dataSetVersion>
+      <common:referenceToPrecedingDataSetVersion type="process data set" refObjectId="db00901d-338f-11dd-bd11-0800200c9a66" version="02.00.000" uri="http://lca.jrc.ec.europa.eu/lcainfohub/datasets/elcd/processes/db00901d-338f-11dd-bd11-0800200c9a66_02.00.000.xml">
+        <common:shortDescription xml:lang="en">Waste water treatment; chemical reduction/oxidation process, municipal waste water; at waste water treatment plant</common:shortDescription>
+      </common:referenceToPrecedingDataSetVersion>
+      <common:permanentDataSetURI>http://lca.jrc.ec.europa.eu/lcainfohub/datasets/elcd/processes/db00901d-338f-11dd-bd11-0800200c9a66_02.01.000.xml</common:permanentDataSetURI>
+      <common:workflowAndPublicationStatus>Data set finalised; entirely published</common:workflowAndPublicationStatus>
+      <common:referenceToUnchangedRepublication refObjectId="57bbc510-79c3-11dd-ad8b-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/57bbc510-79c3-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ELCD database 2.0</common:shortDescription>
+      </common:referenceToUnchangedRepublication>
+      <common:referenceToOwnershipOfDataSet refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToOwnershipOfDataSet>
+      <common:copyright>true</common:copyright>
+      <common:accessRestrictions xml:lang="en">The data set can be used free of charge by anybody to perform LCA studies, to distribute it to third parties, to convert it to other formats, to develop own data sets etc. as long as the copyright and license conditions for the ELCD data sets and the ILCD format are met that can be accessed via http://lca.jrc.ec.europa.eu. Please note e.g. that reference must be given to the 'Owner of data set' and to the 'ELCD database' plus version number, when using the data set or parts thereof. Please note also, that any modifications/omissions of the data set results in invalidity of any existing 'Official approval of data set by producer/operator', that the impression must be avoided that this would still be a complete ELCD data set, and that the content of further fields has to be adjusted. For details see the aforementioned copyright and license conditions.</common:accessRestrictions>
+    </publicationAndOwnership>
+  </administrativeInformation>
+  <exchanges>
+    <exchange dataSetInternalID="0">
+      <referenceToFlowDataSet refObjectId="4f1a3f44-7b3b-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/4f1a3f44-7b3b-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">waste water - untreated</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>1</meanAmount>
+      <resultingAmount>1</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="1">
+      <referenceToFlowDataSet refObjectId="1ca6b4ff-e518-48f1-8012-82776ef15ef8" version="02.01.000" type="flow data set" uri="../flows/1ca6b4ff-e518-48f1-8012-82776ef15ef8_02.01.000.xml">
+        <common:shortDescription xml:lang="en">electricity</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>0.0028572</meanAmount>
+      <resultingAmount>0.0028572</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="2">
+      <referenceToFlowDataSet refObjectId="88c10493-a480-431e-9ea2-372d3a99318d" version="02.01.000" type="flow data set" uri="../flows/88c10493-a480-431e-9ea2-372d3a99318d_02.01.000.xml">
+        <common:shortDescription xml:lang="en">hydrated lime dry slaked</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>0.0011429</meanAmount>
+      <resultingAmount>0.0011429</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="3">
+      <referenceToFlowDataSet refObjectId="3b66e7a0-3272-48ec-b86e-bdae4ab845d4" version="02.01.000" type="flow data set" uri="../flows/3b66e7a0-3272-48ec-b86e-bdae4ab845d4_02.01.000.xml">
+        <common:shortDescription xml:lang="en">iron chloride</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>0.00057086</meanAmount>
+      <resultingAmount>0.00057086</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="4">
+      <referenceToFlowDataSet refObjectId="49c501ce-9480-4d08-9e7d-c826fd42bf98" version="02.01.000" type="flow data set" uri="../flows/49c501ce-9480-4d08-9e7d-c826fd42bf98_02.01.000.xml">
+        <common:shortDescription xml:lang="en">phosphoric acid</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>6.258E-8</meanAmount>
+      <resultingAmount>6.258E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="5">
+      <referenceToFlowDataSet refObjectId="d71fef59-2e93-450f-b18f-72981f58e312" version="02.01.000" type="flow data set" uri="../flows/d71fef59-2e93-450f-b18f-72981f58e312_02.01.000.xml">
+        <common:shortDescription xml:lang="en">process steam</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>0.10213</meanAmount>
+      <resultingAmount>0.10213</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="6">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-96b0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-96b0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ammonia (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>nh3</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>4.80000000000001E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="7">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-91df-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-91df-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">arsenic (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>hm</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>3.7E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="8">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-97de-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-97de-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">biological oxygen demand (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>bod</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>1.6E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="9">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a290-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a290-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cadmium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>cd</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>1.35E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="10">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-97ed-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-97ed-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">chemical oxygen demand (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>cod</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>5.9E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="11">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-8fd0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-8fd0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">chromium III (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>cr3</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>1.5E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="12">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-8fd7-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-8fd7-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">chromium VI (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>cr6</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>1.5E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="13">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a4ee-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a4ee-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cobalt (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>hm</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>3.7E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="14">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a7a4-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a7a4-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">copper (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>cu</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>1.2E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="15">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-91e0-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-91e0-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">lead (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>pb</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>1.2E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="16">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9bca-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9bca-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">manganese (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>hm</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>3.7E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="17">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-a8c8-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-a8c8-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">mercury (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>hg</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>2.1E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="18">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-96cc-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-96cc-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nickel (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>ni</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>3.7E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="19">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-8d68-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-8d68-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrate (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>no3</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>0.00016</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="20">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-aad6-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-aad6-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrogen (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>n</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>0.00016</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="21">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9787-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9787-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">phosphate (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>0.00011826</meanAmount>
+      <resultingAmount>0.00011826</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="22">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9967-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9967-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">thallium (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>hm</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>3.7E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="23">
+      <referenceToFlowDataSet refObjectId="8215cec6-029b-4297-a8c2-6f893b1f8412" version="02.01.000" type="flow data set" uri="../flows/8215cec6-029b-4297-a8c2-6f893b1f8412_02.01.000.xml">
+        <common:shortDescription xml:lang="en">waste water - treated</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1</meanAmount>
+      <resultingAmount>1</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="24">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94e7-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94e7-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">zinc (Emissions to water)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>zi</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>2.1E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+  </exchanges>
+</processDataSet>

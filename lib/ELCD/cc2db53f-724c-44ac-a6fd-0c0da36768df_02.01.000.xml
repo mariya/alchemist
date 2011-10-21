@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet version="1.0" href="../../stylesheets/process2html.xsl" type="text/xsl"?>
+<processDataSet xmlns="http://lca.jrc.it/ILCD/Process" xmlns:common="http://lca.jrc.it/ILCD/Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://lca.jrc.it/ILCD/Process ../../schemas/ILCD_ProcessDataSet.xsd" locations="../ILCDLocations.xml" version="1.1">
+  <processInformation>
+    <dataSetInformation>
+      <common:UUID>cc2db53f-724c-44ac-a6fd-0c0da36768df</common:UUID>
+      <name>
+        <baseName xml:lang="en">Rail transport</baseName>
+        <treatmentStandardsRoutes xml:lang="en">technology mix, diesel driven, cargo</treatmentStandardsRoutes>
+      </name>
+      <classificationInformation>
+        <common:classification>
+          <common:class level="0">Transport services</common:class>
+          <common:class level="1">Rail</common:class>
+        </common:classification>
+      </classificationInformation>
+      <common:generalComment xml:lang="en">The data set represents the applied technology with a good overall data quality. The inventory is based on industry and literature data.</common:generalComment>
+    </dataSetInformation>
+    <quantitativeReference type="Reference flow(s)">
+      <referenceToReferenceFlow>2</referenceToReferenceFlow>
+    </quantitativeReference>
+    <time>
+      <common:referenceYear>2000</common:referenceYear>
+      <common:dataSetValidUntil>2009</common:dataSetValidUntil>
+      <common:timeRepresentativenessDescription xml:lang="en">Average</common:timeRepresentativenessDescription>
+    </time>
+    <geography>
+      <locationOfOperationSupplyOrProduction location="GLO">
+        <descriptionOfRestrictions xml:lang="en">The data set is representative for the mentioned region.</descriptionOfRestrictions>
+      </locationOfOperationSupplyOrProduction>
+    </geography>
+    <technology>
+      <technologyDescriptionAndIncludedProcesses xml:lang="en">Rail transport via cargo train. Variable parameters are: utilisation ratio and distance.Train production, end-of-life treatment of the train and upstream processes for fuel production (e.g. exploration and production of fuels, refinery, transport, combustion emissions of power plants) are not included in the data set.</technologyDescriptionAndIncludedProcesses>
+      <technologicalApplicability xml:lang="en">Rail transport of bulk or packaged goods.</technologicalApplicability>
+      <referenceToTechnologyFlowDiagrammOrPicture refObjectId="151451e8-4418-11dd-ae16-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/151451e8-4418-11dd-ae16-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE_LBP-GaBi_Transport_System_excluding_fuel_151451e8-4418-11dd-ae16-0800200c9a66.jpg</common:shortDescription>
+      </referenceToTechnologyFlowDiagrammOrPicture>
+    </technology>
+    <mathematicalRelations>
+      <modelDescription xml:lang="en">The emission profile as well as the fuel consumption is calculated according to the settings of the variable parameters as described in the technology description. The calculation formulas of the single variables are given in the section variable / parameter.</modelDescription>
+      <variableParameter name="Auslast">
+        <meanValue>0.6</meanValue>
+        <comment xml:lang="en">[-] average utilisation ratio (60%)</comment>
+      </variableParameter>
+      <variableParameter name="Distanz">
+        <meanValue>100</meanValue>
+        <comment xml:lang="en">[km] distance start - destination</comment>
+      </variableParameter>
+      <variableParameter name="Spez_Verbr">
+        <formula>Verbrauch/(Auslast*766*1000)</formula>
+        <meanValue>0.000696670921241325</meanValue>
+        <comment xml:lang="en">[kg] Diesel per kg cargo</comment>
+      </variableParameter>
+      <variableParameter name="Verbrauch">
+        <formula>(0.0049*Auslast^-0.6889*Distanz*Auslast*766)</formula>
+        <meanValue>320.189955402513</meanValue>
+        <comment xml:lang="en">[kg] Diesel total consumption, payload 766t</comment>
+      </variableParameter>
+    </mathematicalRelations>
+  </processInformation>
+  <modellingAndValidation>
+    <LCIMethodAndAllocation>
+      <typeOfDataSet>Unit process, single operation</typeOfDataSet>
+      <LCIMethodPrinciple>Attributional</LCIMethodPrinciple>
+      <deviationsFromLCIMethodPrinciple xml:lang="en">None</deviationsFromLCIMethodPrinciple>
+      <LCIMethodApproaches>Not applicable</LCIMethodApproaches>
+      <deviationsFromLCIMethodApproaches>None</deviationsFromLCIMethodApproaches>
+      <modellingConstants xml:lang="en">All data used in the calculation of the LCI results refer to net calorific value.</modellingConstants>
+      <deviationsFromModellingConstants xml:lang="en">None</deviationsFromModellingConstants>
+      <referenceToLCAMethodDetails refObjectId="10466572-0cfd-428e-8b10-ae74255e6e83" version="02.01.000" type="source data set" uri="../sources/10466572-0cfd-428e-8b10-ae74255e6e83_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi Modelling Principles</common:shortDescription>
+      </referenceToLCAMethodDetails>
+    </LCIMethodAndAllocation>
+    <dataSourcesTreatmentAndRepresentativeness>
+      <dataCutOffAndCompletenessPrinciples xml:lang="en">Cut-off rules for each unit process: Coverage of at least 95 % of mass and energy of the input and output flows, and 98 % of their environmental relevance (according to expert judgement).</dataCutOffAndCompletenessPrinciples>
+      <deviationsFromCutOffAndCompletenessPrinciples xml:lang="en">Manufacturing and EoL of the vehicle is not included.</deviationsFromCutOffAndCompletenessPrinciples>
+      <dataSelectionAndCombinationPrinciples xml:lang="en">Data sources for the transport system are sufficiently consistent, emission factors as are based on average European conditions (key emissions are based on measured operating data). LCI modelling is fully consistent.</dataSelectionAndCombinationPrinciples>
+      <deviationsFromSelectionAndCombinationPrinciples xml:lang="en">None</deviationsFromSelectionAndCombinationPrinciples>
+      <dataTreatmentAndExtrapolationsPrinciples xml:lang="en">Several datasources have been averaged. Measured data from representative transport systems have been upscaled.</dataTreatmentAndExtrapolationsPrinciples>
+      <deviationsFromTreatmentAndExtrapolationPrinciples xml:lang="en">None</deviationsFromTreatmentAndExtrapolationPrinciples>
+      <referenceToDataSource refObjectId="d273704d-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d273704d-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Spezif. Energieeinsatz im Verkehr, Ermittlung und Vergleich der spezif. Energieverbräuche, 1990</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d273704e-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d273704e-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Verminderung der Luft- und Lärmbelastung im Güterfernverkehr 2010, Forschungsbericht, 10405962, 1994</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="6df7ba00-86d1-11db-b606-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/6df7ba00-86d1-11db-b606-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi databases 2006</common:shortDescription>
+      </referenceToDataSource>
+      <percentageSupplyOrProductionCovered>95.0</percentageSupplyOrProductionCovered>
+      <samplingProcedure xml:lang="en">Average</samplingProcedure>
+      <dataCollectionPeriod xml:lang="en">2000-2005</dataCollectionPeriod>
+      <uncertaintyAdjustments xml:lang="en">None</uncertaintyAdjustments>
+      <useAdviceForDataSet xml:lang="en">The data set should be used for LCI/LCA studies where bulk commodities or packaged goods have to be transported via railway. The data set allows individual settings of the variable parameters. The following parameters are variable: utilisation ratio and distance. Default values of the variable parameters have to be checked and adjusted for individual use. The data set does not include the fuel supply route. Therefore the fuel supply data set has to be linked with this data set. Train production and end-of-life treatment are not part of the data set (negligible from a LCA point of view).</useAdviceForDataSet>
+    </dataSourcesTreatmentAndRepresentativeness>
+    <completeness>
+      <completenessProductModel>All relevant flows quantified</completenessProductModel>
+    </completeness>
+    <validation>
+      <review type="Dependent internal review">
+        <common:scope name="Raw data">
+          <common:method name="Cross-check with other source" />
+          <common:method name="Expert judgement" />
+        </common:scope>
+        <common:scope name="Unit process(es), black box">
+          <common:method name="Energy balance" />
+          <common:method name="Cross-check with other source" />
+          <common:method name="Cross-check with other data set" />
+          <common:method name="Expert judgement" />
+          <common:method name="Mass balance" />
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:scope name="Documentation">
+          <common:method name="Expert judgement" />
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:scope name="Life cycle inventory methods">
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:reviewDetails xml:lang="en">Inventory: The internal review was done by several iteration steps concerning raw data validation, raw data documentation, representativity, completeness and consistency of modelling with regard to ISO 14040 and 14044.; Documentation: The review of the documentation was performed by Ecobilan and is in compliance with ISO 14040 and 14044. The data set documentation is correct in view of the appropriateness of the information provided. It includes all relevant information in view of data quality and scope of application of the respective LCI result.</common:reviewDetails>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+          <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+          <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="d571097d-d600-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/d571097d-d600-11da-a94d-0800200c9a66_02.01.000.xml">
+          <common:shortDescription xml:lang="en">Ecobilan</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+      </review>
+    </validation>
+    <complianceDeclarations>
+      <compliance>
+        <common:referenceToComplianceSystem type="source data set" uri="../sources/d92a1a12-2545-49e2-a585-55c259997756_01.01.000.xml" refObjectId="d92a1a12-2545-49e2-a585-55c259997756" version="01.01.000">
+          <common:shortDescription>ILCD Data Network - Entry-level</common:shortDescription>
+        </common:referenceToComplianceSystem>
+        <common:approvalOfOverallCompliance>Not compliant</common:approvalOfOverallCompliance>
+        <common:nomenclatureCompliance>Fully compliant</common:nomenclatureCompliance>
+        <common:methodologicalCompliance>Fully compliant</common:methodologicalCompliance>
+        <common:reviewCompliance>Not compliant</common:reviewCompliance>
+        <common:documentationCompliance>Not compliant</common:documentationCompliance>
+      </compliance>
+    </complianceDeclarations>
+  </modellingAndValidation>
+  <administrativeInformation>
+    <common:commissionerAndGoal>
+      <common:referenceToCommissioner refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToCommissioner>
+      <common:referenceToCommissioner refObjectId="5bb337b0-9a1a-11da-a72b-0800200c9a62" version="02.01.000" type="contact data set" uri="../contacts/5bb337b0-9a1a-11da-a72b-0800200c9a62_02.01.000.xml">
+        <common:shortDescription xml:lang="en">EC, DG ENV</common:shortDescription>
+      </common:referenceToCommissioner>
+      <common:referenceToCommissioner refObjectId="d0d5f8bb-9311-49d1-9e30-2f20a6977f4f" version="01.01.000" type="contact data set" uri="../contacts/d0d5f8bb-9311-49d1-9e30-2f20a6977f4f_01.01.000.xml">
+        <common:shortDescription xml:lang="en">EPLCA project team</common:shortDescription>
+      </common:referenceToCommissioner>
+      <intendedApplications xmlns="http://lca.jrc.it/ILCD/Common" xml:lang="en">This background LCI data set can be used for any types of LCA studies.</intendedApplications>
+    </common:commissionerAndGoal>
+    <dataGenerator>
+      <common:referenceToPersonOrEntityGeneratingTheDataSet refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToPersonOrEntityGeneratingTheDataSet>
+      <common:referenceToPersonOrEntityGeneratingTheDataSet refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+      </common:referenceToPersonOrEntityGeneratingTheDataSet>
+    </dataGenerator>
+    <dataEntryBy>
+      <common:timeStamp>2010-03-12T00:00:00+01:00</common:timeStamp>
+      <common:referenceToDataSetFormat type="source data set" uri="../sources/a97a0155-0234-4b87-b4ce-a45da52f2a40_01.01.000.xml" refObjectId="a97a0155-0234-4b87-b4ce-a45da52f2a40" version="01.01.000">
+        <common:shortDescription>ILCD format</common:shortDescription>
+      </common:referenceToDataSetFormat>
+      <common:referenceToConvertedOriginalDataSetFrom refObjectId="6df7ba00-86d1-11db-b606-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/6df7ba00-86d1-11db-b606-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi databases 2006</common:shortDescription>
+      </common:referenceToConvertedOriginalDataSetFrom>
+      <common:referenceToPersonOrEntityEnteringTheData refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+      </common:referenceToPersonOrEntityEnteringTheData>
+      <common:referenceToDataSetUseApproval refObjectId="be34bbb0-b054-11db-abbd-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/be34bbb0-b054-11db-abbd-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">No official approval by producer or operator</common:shortDescription>
+      </common:referenceToDataSetUseApproval>
+    </dataEntryBy>
+    <publicationAndOwnership>
+      <common:dataSetVersion>02.01.000</common:dataSetVersion>
+      <common:referenceToPrecedingDataSetVersion type="process data set" refObjectId="cc2db53f-724c-44ac-a6fd-0c0da36768df" version="02.00.000" uri="http://lca.jrc.ec.europa.eu/lcainfohub/datasets/elcd/processes/cc2db53f-724c-44ac-a6fd-0c0da36768df_02.00.000.xml">
+        <common:shortDescription xml:lang="en">Rail transport; technology mix, diesel driven, cargo</common:shortDescription>
+      </common:referenceToPrecedingDataSetVersion>
+      <common:permanentDataSetURI>http://lca.jrc.ec.europa.eu/lcainfohub/datasets/elcd/processes/cc2db53f-724c-44ac-a6fd-0c0da36768df_02.01.000.xml</common:permanentDataSetURI>
+      <common:workflowAndPublicationStatus>Data set finalised; entirely published</common:workflowAndPublicationStatus>
+      <common:referenceToUnchangedRepublication refObjectId="57bbc510-79c3-11dd-ad8b-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/57bbc510-79c3-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ELCD database 2.0</common:shortDescription>
+      </common:referenceToUnchangedRepublication>
+      <common:referenceToOwnershipOfDataSet refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToOwnershipOfDataSet>
+      <common:copyright>true</common:copyright>
+      <common:accessRestrictions xml:lang="en">The data set can be used free of charge by anybody to perform LCA studies, to distribute it to third parties, to convert it to other formats, to develop own data sets etc. as long as the copyright and license conditions for the ELCD data sets and the ILCD format are met that can be accessed via http://lca.jrc.ec.europa.eu. Please note e.g. that reference must be given to the 'Owner of data set' and to the 'ELCD database' plus version number, when using the data set or parts thereof. Please note also, that any modifications/omissions of the data set results in invalidity of any existing 'Official approval of data set by producer/operator', that the impression must be avoided that this would still be a complete ELCD data set, and that the content of further fields has to be adjusted. For details see the aforementioned copyright and license conditions.</common:accessRestrictions>
+    </publicationAndOwnership>
+  </administrativeInformation>
+  <exchanges>
+    <exchange dataSetInternalID="0">
+      <referenceToFlowDataSet refObjectId="e9fd08fb-8067-4d90-91e3-4c92fc1803f7" version="02.01.000" type="flow data set" uri="../flows/e9fd08fb-8067-4d90-91e3-4c92fc1803f7_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cargo</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>1</meanAmount>
+      <resultingAmount>1</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="1">
+      <referenceToFlowDataSet refObjectId="4f197bf1-7b3b-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/4f197bf1-7b3b-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">diesel</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <referenceToVariable>Spez_Verbr</referenceToVariable>
+      <meanAmount>1</meanAmount>
+      <resultingAmount>0.000696670921241325</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="2">
+      <referenceToFlowDataSet refObjectId="e9fd08fb-8067-4d90-91e3-4c92fc1803f7" version="02.01.000" type="flow data set" uri="../flows/e9fd08fb-8067-4d90-91e3-4c92fc1803f7_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cargo</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1</meanAmount>
+      <resultingAmount>1</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="3">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-af54-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-af54-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">carbon dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Verbr</referenceToVariable>
+      <meanAmount>3.17499999999999</meanAmount>
+      <resultingAmount>0.0022119301749412</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="4">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-924e-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-924e-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">carbon monoxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Verbr</referenceToVariable>
+      <meanAmount>0.018</meanAmount>
+      <resultingAmount>1.25400765823439E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="5">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-960b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-960b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">methane (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Verbr</referenceToVariable>
+      <meanAmount>2E-5</meanAmount>
+      <resultingAmount>1.39334184248265E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="6">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-96e5-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-96e5-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrogen dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Verbr</referenceToVariable>
+      <meanAmount>0.0549999999999998</meanAmount>
+      <resultingAmount>3.83169006682727E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="7">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94c3-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94c3-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrous oxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Verbr</referenceToVariable>
+      <meanAmount>0.00124</meanAmount>
+      <resultingAmount>8.63871942339243E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="8">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-a302-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-a302-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">non-methane volatile organic compounds (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Verbr</referenceToVariable>
+      <meanAmount>0.006192</meanAmount>
+      <resultingAmount>4.31378634432629E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="9">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-91be-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-91be-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">particles (PM10) (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Verbr</referenceToVariable>
+      <meanAmount>0.003</meanAmount>
+      <resultingAmount>2.09001276372398E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="10">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ac48-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ac48-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">sulfur dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Verbr</referenceToVariable>
+      <meanAmount>0.003</meanAmount>
+      <resultingAmount>2.09001276372398E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+  </exchanges>
+</processDataSet>

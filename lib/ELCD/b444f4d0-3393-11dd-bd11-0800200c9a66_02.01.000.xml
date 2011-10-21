@@ -1,0 +1,1732 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet version="1.0" href="../../stylesheets/process2html.xsl" type="text/xsl"?>
+<processDataSet xmlns="http://lca.jrc.it/ILCD/Process" xmlns:common="http://lca.jrc.it/ILCD/Common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://lca.jrc.it/ILCD/Process ../../schemas/ILCD_ProcessDataSet.xsd" locations="../ILCDLocations.xml" version="1.1">
+  <processInformation>
+    <dataSetInformation>
+      <common:UUID>b444f4d0-3393-11dd-bd11-0800200c9a66</common:UUID>
+      <name>
+        <baseName xml:lang="en">Articulated lorry transport</baseName>
+        <treatmentStandardsRoutes xml:lang="en">Euro 0, 1, 2, 3, 4 mix</treatmentStandardsRoutes>
+        <functionalUnitFlowProperties xml:lang="en">40 t total weight, 27 t max payload</functionalUnitFlowProperties>
+      </name>
+      <classificationInformation>
+        <common:classification>
+          <common:class level="0">Transport services</common:class>
+          <common:class level="1">Road</common:class>
+        </common:classification>
+      </classificationInformation>
+      <common:generalComment xml:lang="en">The data set represents the applied technology with a good overall data quality. The inventory is based on industry and literature data.</common:generalComment>
+    </dataSetInformation>
+    <quantitativeReference type="Reference flow(s)">
+      <referenceToReferenceFlow>2</referenceToReferenceFlow>
+    </quantitativeReference>
+    <time>
+      <common:referenceYear>2007</common:referenceYear>
+      <common:dataSetValidUntil>2010</common:dataSetValidUntil>
+      <common:timeRepresentativenessDescription xml:lang="en">Annual average</common:timeRepresentativenessDescription>
+    </time>
+    <geography>
+      <locationOfOperationSupplyOrProduction location="RER">
+        <descriptionOfRestrictions xml:lang="en">The data set is representative for the mentioned region.</descriptionOfRestrictions>
+      </locationOfOperationSupplyOrProduction>
+    </geography>
+    <technology>
+      <technologyDescriptionAndIncludedProcesses xml:lang="en">Weighted average of articulated lorries with 40t total weight for emission standards from EURO 0 to EURO 4. Payload of lorry is 27t. The following combustion emissions (measured data) of the lorry are taken into account: ammonia, benzene, carbon dioxide, carbon monoxide, methane, nitrogen oxides, nitrous oxide, NMVOC, particulate PM 2.5, sulfur dioxide, toluene, xylene. NMVOC, toluene and xylene emissions of the vehicle result from imperfect combustion and evaporation losses via diffusion through the tank. Lorry fueled by diesel.</technologyDescriptionAndIncludedProcesses>
+      <technologicalApplicability xml:lang="en">Road transport of bulk commodities or packaged goods with a payload of up to 27 t.</technologicalApplicability>
+      <referenceToTechnologyFlowDiagrammOrPicture refObjectId="151451e8-4418-11dd-ae16-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/151451e8-4418-11dd-ae16-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE_LBP-GaBi_Transport_System_excluding_fuel_151451e8-4418-11dd-ae16-0800200c9a66.jpg</common:shortDescription>
+      </referenceToTechnologyFlowDiagrammOrPicture>
+    </technology>
+    <mathematicalRelations>
+      <modelDescription xml:lang="en">The emission profile as well as the fuel consumption is calculated according to the settings of the variable parameters as described in the technology description. The calculation formulas of the single variables are given in the section variable / parameter.</modelDescription>
+      <variableParameter name="Ant_E_Prüf">
+        <formula>Anteil_E0+Anteil_E1+Anteil_E2+Anteil_E3+Anteil_E4</formula>
+        <meanValue>1</meanValue>
+        <comment xml:lang="en">Result must be 1!</comment>
+      </variableParameter>
+      <variableParameter name="Anteil_AB">
+        <meanValue>0.68</meanValue>
+        <comment xml:lang="en">[04] [-] Percentage on motorway (average speed 82 km/h), Standard = 0,27</comment>
+      </variableParameter>
+      <variableParameter name="Anteil_AO">
+        <meanValue>0.24</meanValue>
+        <comment xml:lang="en">[05] [-] Percentage outside of town (average speed 70 km/h), Standard = 0,43</comment>
+      </variableParameter>
+      <variableParameter name="Anteil_E0">
+        <meanValue>0.074589673</meanValue>
+        <comment xml:lang="en">[08] [-] Percentage EU0 tonkilometers</comment>
+      </variableParameter>
+      <variableParameter name="Anteil_E1">
+        <meanValue>0.062695577</meanValue>
+        <comment xml:lang="en">[09] [-] Percentage EU1 tonkilometers</comment>
+      </variableParameter>
+      <variableParameter name="Anteil_E2">
+        <meanValue>0.175313488</meanValue>
+        <comment xml:lang="en">[10] [-] Percentage EU2 tonkilometers</comment>
+      </variableParameter>
+      <variableParameter name="Anteil_E3">
+        <meanValue>0.3575471</meanValue>
+        <comment xml:lang="en">[11] [-] Percentage EU3 tonkilometers</comment>
+      </variableParameter>
+      <variableParameter name="Anteil_E4">
+        <meanValue>0.329854162</meanValue>
+        <comment xml:lang="en">[12] [-] Percentage EU4 tonkilometers</comment>
+      </variableParameter>
+      <variableParameter name="Anteil_IO">
+        <meanValue>0.08</meanValue>
+        <comment xml:lang="en">[06] [-] Percentage within  town (average speed 27 km/h), Standard = 0,3</comment>
+      </variableParameter>
+      <variableParameter name="Anteil_Prüf">
+        <formula>Anteil_AB+Anteil_AO+Anteil_IO</formula>
+        <meanValue>1</meanValue>
+        <comment xml:lang="en">Result must be 1!</comment>
+      </variableParameter>
+      <variableParameter name="Auslast">
+        <meanValue>0.85</meanValue>
+        <comment xml:lang="en">[02] [-] Load based on mass, Standard = 85 % = 0,85</comment>
+      </variableParameter>
+      <variableParameter name="Distanz">
+        <meanValue>100</meanValue>
+        <comment xml:lang="en">[01] [km] Distance Start - Finish, Standard = 100 km</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Benzol_AB">
+        <formula>(0.008728771+(0.008298797-0.008728771)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.64413642701525E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions motorway; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Benzol_AO">
+        <formula>(0.007600439+(0.007420419-0.007600439)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.24506405228758E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions outside of town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Benzol_ges">
+        <formula>((Anteil_AB*E0Sp_Benzol_AB)+(Anteil_AO*E0Sp_Benzol_AO)+(Anteil_IO*E0Sp_Benzol_IO))*Distanz</formula>
+        <meanValue>4.01435652810458E-5</meanValue>
+        <comment xml:lang="en">[gBenzene/kg] Benzene emissions weighted; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Benzol_IO">
+        <formula>(0.018180089+(0.022358332-0.018180089)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>9.46910481481481E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions within a town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CH4_AB">
+        <formula>(0.012544342+(0.011926415-0.012544342)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>5.23708237472767E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions motorway; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CH4_AO">
+        <formula>(0.010922788+(0.010664076-0.010922788)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>4.66356549019608E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions outside of town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CH4_ges">
+        <formula>((Anteil_AB*E0Sp_CH4_AB)+(Anteil_AO*E0Sp_CH4_AO)+(Anteil_IO*E0Sp_CH4_IO))*Distanz</formula>
+        <meanValue>5.7691354204793E-5</meanValue>
+        <comment xml:lang="en">[gCH4/kg] CH4 Emissions weighted; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CH4_IO">
+        <formula>(0.026127076+(0.032131739-0.026127076)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.36082961002179E-6</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions within a town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CO_AB">
+        <formula>(1.627172947+(1.838482857-1.627172947)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>7.87270749673203E-5</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions motorway; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CO_AO">
+        <formula>(1.58979249+(2.022540808-1.58979249)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>8.52997194030501E-5</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions outside of town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CO_ges">
+        <formula>((Anteil_AB*E0Sp_CO_AB)+(Anteil_AO*E0Sp_CO_AO)+(Anteil_IO*E0Sp_CO_IO))*Distanz</formula>
+        <meanValue>0.00901901500360784</meanValue>
+        <comment xml:lang="en">[gCO/kg] CO Emissions weighted; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CO_IO">
+        <formula>(3.268083811+(4.885313988-3.268083811)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000202297580019608</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions within a town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CO2_AB">
+        <formula>(715.6907349+(1103.905396-715.6907349)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0455631022586057</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions motorway; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CO2_AO">
+        <formula>(684.4699707+(1184.046387-684.4699707)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0483272298281046</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions outside of town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CO2_ges">
+        <formula>((Anteil_AB*E0Sp_CO2_AB)+(Anteil_AO*E0Sp_CO2_AO)+(Anteil_IO*E0Sp_CO2_IO))*Distanz</formula>
+        <meanValue>4.88470400143355</meanValue>
+        <comment xml:lang="en">[gCO2/kg] CO2 Emissions weighted; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_CO2_IO">
+        <formula>(1110.033691+(1918.750122-1110.033691)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.078319941496732</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions within a town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Diesel_AB">
+        <formula>(0.2254144+(0.34768674-0.2254144)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.43505833986928E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg*km)] Diesel consumption; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Diesel_AO">
+        <formula>(0.21558109+(0.37292798-0.21558109)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.52211741394336E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg*km)] Diesel consumption; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Diesel_ges">
+        <formula>((Anteil_AB*E0Sp_Diesel_AB)+(Anteil_AO*E0Sp_Diesel_AO)+(Anteil_IO*E0Sp_Diesel_IO))*Distanz</formula>
+        <meanValue>0.0015384894377342</meanValue>
+        <comment xml:lang="en">[kgDiesel/kg] Diesel consumption; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Diesel_IO">
+        <formula>(0.34961694+(0.60433075-0.34961694)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.46676984095861E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg* km)] Diesel consumption; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_N2O_AB">
+        <formula>9.4/(Tonnage*1000)</formula>
+        <meanValue>0.00040958605664488</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions motorway; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_N2O_AO">
+        <formula>13.6/(Tonnage*1000)</formula>
+        <meanValue>0.000592592592592593</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions outside of town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_N2O_ges">
+        <formula>((Anteil_AB*E0Sp_N2O_AB)+(Anteil_AO*E0Sp_N2O_AO)+(Anteil_IO*E0Sp_N2O_IO))*Distanz</formula>
+        <meanValue>0.0477211328976035</meanValue>
+        <comment xml:lang="en">[mgN2O/kg] N2O Emissions weighted; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_N2O_IO">
+        <formula>16.2/(Tonnage*1000)</formula>
+        <meanValue>0.000705882352941176</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions within a town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_NH3">
+        <formula>5*Distanz/(Tonnage*1000)</formula>
+        <meanValue>0.0217864923747277</meanValue>
+        <comment xml:lang="en">[mgNH3/kg)] NH3 Emissions in any traffic situation; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_NMVOC_AB">
+        <formula>(0.495553806+(0.471143097-0.495553806)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.06886580980392E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_NMVOC_AO">
+        <formula>(0.431495623+(0.421275411-0.431495623)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.84230258300654E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_NMVOC_ges">
+        <formula>((Anteil_AB*E0Sp_NMVOC_AB)+(Anteil_AO*E0Sp_NMVOC_AO)+(Anteil_IO*E0Sp_NMVOC_IO))*Distanz</formula>
+        <meanValue>0.00227904888072331</meanValue>
+        <comment xml:lang="en">[gNMVOC/kg] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_NMVOC_IO">
+        <formula>(1.032128348+(1.26933755-1.032128348)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>5.37584387668845E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_NOx_AB">
+        <formula>(9.15732193+(14.80891418-9.15732193)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000608330080283224</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions motorway; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_NOx_AO">
+        <formula>(9.055377007+(16.29502487-9.055377007)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000662704910263617</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions outside of town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_NOx_ges">
+        <formula>((Anteil_AB*E0Sp_NOx_AB)+(Anteil_AO*E0Sp_NOx_AO)+(Anteil_IO*E0Sp_NOx_IO))*Distanz</formula>
+        <meanValue>0.0654400598403137</meanValue>
+        <comment xml:lang="en">[gNOx/kg] NOx Emissions weighted; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_NOx_IO">
+        <formula>(13.56494427+(25.17553711-13.56494427)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.00102108706684096</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions within a town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Part_AB">
+        <formula>(0.324563295+(0.427357554-0.324563295)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.79493862810457E-5</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions motorway; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Part_AO">
+        <formula>(0.310613751+(0.45265907-0.310613751)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.87953059760349E-5</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions outside of town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Part_ges">
+        <formula>((Anteil_AB*E0Sp_Part_AB)+(Anteil_AO*E0Sp_Part_AO)+(Anteil_IO*E0Sp_Part_IO))*Distanz</formula>
+        <meanValue>0.00197785432283224</meanValue>
+        <comment xml:lang="en">[gParticulate matter/kg] Particulate emissions weighted; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Part_IO">
+        <formula>(0.583988726+(0.93039757-0.583988726)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.8276089037037E-5</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions within a town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_SO2_AB">
+        <formula>(ppm_Schwefel/1000000)*2*E0Sp_Diesel_AB</formula>
+        <meanValue>1.43505833986928E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions motorway / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_SO2_AO">
+        <formula>(ppm_Schwefel/1000000)*2*E0Sp_Diesel_AO</formula>
+        <meanValue>1.52211741394336E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions outside of town / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_SO2_ges">
+        <formula>((Anteil_AB*E0Sp_SO2_AB)+(Anteil_AO*E0Sp_SO2_AO)+(Anteil_IO*E0Sp_SO2_IO))*Distanz</formula>
+        <meanValue>1.5384894377342E-7</meanValue>
+        <comment xml:lang="en">[kgSO2/kg] SO2 Emissions weighted; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_SO2_IO">
+        <formula>(ppm_Schwefel/1000000)*2*E0Sp_Diesel_IO</formula>
+        <meanValue>2.46676984095861E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions within a town / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Toluol_AB">
+        <formula>(0.001672579+(0.001590189-0.001672579)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>6.98277777777778E-8</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions motorway; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Toluol_AO">
+        <formula>(0.001456372+(0.001421877-0.001456372)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>6.21808823529412E-8</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions outside of town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Toluol_ges">
+        <formula>((Anteil_AB*E0Sp_Toluol_AB)+(Anteil_AO*E0Sp_Toluol_AO)+(Anteil_IO*E0Sp_Toluol_IO))*Distanz</formula>
+        <meanValue>7.69218138562092E-6</meanValue>
+        <comment xml:lang="en">[gToluene/kg] Toluene Emissions weighted; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Toluol_IO">
+        <formula>(0.00348361+(0.004284231-0.00348361)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.8144391503268E-7</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions within a town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Xylol_AB">
+        <formula>(0.004181447+(0.003975472-0.004181447)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.74569422657952E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions motorway; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Xylol_AO">
+        <formula>(0.003640929+(0.003554692-0.003640929)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.55452180827887E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions outside of town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Xylol_ges">
+        <formula>((Anteil_AB*E0Sp_Xylol_AB)+(Anteil_AO*E0Sp_Xylol_AO)+(Anteil_IO*E0Sp_Xylol_IO))*Distanz</formula>
+        <meanValue>1.92304518779956E-5</meanValue>
+        <comment xml:lang="en">[gXylene/kg] Xylene Emissions weighted; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E0Sp_Xylol_IO">
+        <formula>(0.008709026+(0.010710579-0.008709026)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>4.53609849673203E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions within a town; Euro 0</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Benzol_AB">
+        <formula>(0.009113311+(0.009664588-0.009113311)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>4.1751182788671E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions motorway; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Benzol_AO">
+        <formula>(0.008164695+(0.009118079-0.008164695)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.91070649237473E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions outside of town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Benzol_ges">
+        <formula>((Anteil_AB*E1Sp_Benzol_AB)+(Anteil_AO*E1Sp_Benzol_AO)+(Anteil_IO*E1Sp_Benzol_IO))*Distanz</formula>
+        <meanValue>4.62743208104575E-5</meanValue>
+        <comment xml:lang="en">[gBenzene/kg] Benzene emissions weighted; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Benzol_IO">
+        <formula>(0.019216917+(0.025288925-0.019216917)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.06222761655773E-6</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions within a town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CH4_AB">
+        <formula>(0.013096974+(0.013889228-0.013096974)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>6.00016989106754E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions motorway; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CH4_AO">
+        <formula>(0.011733693+(0.013103827-0.011733693)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>5.62017729847495E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions outside of town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CH4_ges">
+        <formula>((Anteil_AB*E1Sp_CH4_AB)+(Anteil_AO*E1Sp_CH4_AO)+(Anteil_IO*E1Sp_CH4_IO))*Distanz</formula>
+        <meanValue>6.65020183006536E-5</meanValue>
+        <comment xml:lang="en">[gCH4/kg] CH4 Emissions weighted; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CH4_IO">
+        <formula>(0.027617127+(0.036343366-0.027617127)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.52655469063181E-6</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions within a town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CO_AB">
+        <formula>(1.375679016+(1.638035655-1.375679016)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>6.96593533398693E-5</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions motorway; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CO_AO">
+        <formula>(1.362391472+(1.873942018-1.362391472)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>7.83097793507625E-5</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions outside of town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CO_ges">
+        <formula>((Anteil_AB*E1Sp_CO_AB)+(Anteil_AO*E1Sp_CO_AO)+(Anteil_IO*E1Sp_CO_IO))*Distanz</formula>
+        <meanValue>0.00812919746059259</meanValue>
+        <comment xml:lang="en">[gCO/kg] CO Emissions weighted; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CO_IO">
+        <formula>(2.961803436+(4.583456516-2.961803436)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000189115841132898</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions within a town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CO2_AB">
+        <formula>(629.3200073+(998.0057373-629.3200073)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0410763781176471</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions motorway; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CO2_AO">
+        <formula>(608.0487671+(1082.220337-608.0487671)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0440564096520697</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions outside of town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CO2_ges">
+        <formula>((Anteil_AB*E1Sp_CO2_AB)+(Anteil_AO*E1Sp_CO2_AO)+(Anteil_IO*E1Sp_CO2_IO))*Distanz</formula>
+        <meanValue>4.41974735386144</meanValue>
+        <comment xml:lang="en">[gCO2/kg] CO2 Emissions weighted; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_CO2_IO">
+        <formula>(978.0646973+(1748.449707-978.0646973)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0711499762764706</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions within a town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Diesel_AB">
+        <formula>(0.19821103+(0.31433252-0.19821103)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.29374421132898E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg*km)] Diesel consumption; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Diesel_AO">
+        <formula>(0.19151141+(0.34085678-0.19151141)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.38760337472767E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg*km)] Diesel consumption; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Diesel_ges">
+        <formula>((Anteil_AB*E1Sp_Diesel_AB)+(Anteil_AO*E1Sp_Diesel_AO)+(Anteil_IO*E1Sp_Diesel_IO))*Distanz</formula>
+        <meanValue>0.00139204640148148</meanValue>
+        <comment xml:lang="en">[kgDiesel/kg] Diesel consumption; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Diesel_IO">
+        <formula>(0.30805188+(0.55069281-0.30805188)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.24094409803922E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg* km)] Diesel consumption; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_N2O_AB">
+        <formula>9.4/(Tonnage*1000)</formula>
+        <meanValue>0.00040958605664488</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions motorway; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_N2O_AO">
+        <formula>13.6/(Tonnage*1000)</formula>
+        <meanValue>0.000592592592592593</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions outside of town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_N2O_ges">
+        <formula>((Anteil_AB*E1Sp_N2O_AB)+(Anteil_AO*E1Sp_N2O_AO)+(Anteil_IO*E1Sp_N2O_IO))*Distanz</formula>
+        <meanValue>0.0477211328976035</meanValue>
+        <comment xml:lang="en">[mgN2O/kg] N2O Emissions weighted; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_N2O_IO">
+        <formula>16.2/(Tonnage*1000)</formula>
+        <meanValue>0.000705882352941176</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions within a town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_NH3">
+        <formula>5*Distanz/(Tonnage*1000)</formula>
+        <meanValue>0.0217864923747277</meanValue>
+        <comment xml:lang="en">[mgNH3/kg)] NH3 Emissions in any traffic situation; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_NMVOC_AB">
+        <formula>(0.517385065+(0.548682347-0.517385065)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.37031701394335E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_NMVOC_AO">
+        <formula>(0.463529751+(0.51765575-0.463529751)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.22020414008715E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_NMVOC_ges">
+        <formula>((Anteil_AB*E1Sp_NMVOC_AB)+(Anteil_AO*E1Sp_NMVOC_AO)+(Anteil_IO*E1Sp_NMVOC_IO))*Distanz</formula>
+        <meanValue>0.00262710673366449</meanValue>
+        <comment xml:lang="en">[gNMVOC/kg] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_NMVOC_IO">
+        <formula>(1.090991556+(1.435714404-1.090991556)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>6.03052713202614E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_NOx_AB">
+        <formula>(6.466877937+(10.0750227-6.466877937)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000415416164947712</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions motorway; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_NOx_AO">
+        <formula>(6.411221504+(11.01144791-6.411221504)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.00044973481259695</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions outside of town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_NOx_ges">
+        <formula>((Anteil_AB*E1Sp_NOx_AB)+(Anteil_AO*E1Sp_NOx_AO)+(Anteil_IO*E1Sp_NOx_IO))*Distanz</formula>
+        <meanValue>0.0447433075187364</meanValue>
+        <comment xml:lang="en">[gNOx/kg] NOx Emissions weighted; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_NOx_IO">
+        <formula>(9.616233826+(17.54515076-9.616233826)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000712671599995643</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions within a town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Part_AB">
+        <formula>(0.255221397+(0.341112435-0.255221397)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.43019075947712E-5</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions motorway; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Part_AO">
+        <formula>(0.225679442+(0.354997188-0.225679442)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.46230730326797E-5</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions outside of town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Part_ges">
+        <formula>((Anteil_AB*E1Sp_Part_AB)+(Anteil_AO*E1Sp_Part_AO)+(Anteil_IO*E1Sp_Part_IO))*Distanz</formula>
+        <meanValue>0.00160717273645316</meanValue>
+        <comment xml:lang="en">[gParticulate matter/kg] Particulate emissions weighted; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Part_IO">
+        <formula>(0.531683981+(0.863624692-0.531683981)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.54611584030501E-5</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions within a town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_SO2_AB">
+        <formula>(ppm_Schwefel/1000000)*2*E1Sp_Diesel_AB</formula>
+        <meanValue>1.29374421132898E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions motorway / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_SO2_AO">
+        <formula>(ppm_Schwefel/1000000)*2*E1Sp_Diesel_AO</formula>
+        <meanValue>1.38760337472767E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions outside of town / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_SO2_ges">
+        <formula>((Anteil_AB*E1Sp_SO2_AB)+(Anteil_AO*E1Sp_SO2_AO)+(Anteil_IO*E1Sp_SO2_IO))*Distanz</formula>
+        <meanValue>1.39204640148148E-7</meanValue>
+        <comment xml:lang="en">[kgSO2/kg] SO2 Emissions weighted; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_SO2_IO">
+        <formula>(ppm_Schwefel/1000000)*2*E1Sp_Diesel_IO</formula>
+        <meanValue>2.24094409803922E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions within a town / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Toluol_AB">
+        <formula>(0.001746263+(0.001851897-0.001746263)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>8.00022614379085E-8</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions motorway; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Toluol_AO">
+        <formula>(0.001564492+(0.001747177-0.001564492)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>7.4935697167756E-8</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions outside of town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Toluol_ges">
+        <formula>((Anteil_AB*E1Sp_Toluol_AB)+(Anteil_AO*E1Sp_Toluol_AO)+(Anteil_IO*E1Sp_Toluol_IO))*Distanz</formula>
+        <meanValue>8.8669354422658E-6</meanValue>
+        <comment xml:lang="en">[gToluene/kg] Toluene Emissions weighted; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Toluol_IO">
+        <formula>(0.003682283+(0.004845782-0.003682283)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.03540616557734E-7</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions within a town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Xylol_AB">
+        <formula>(0.004365658+(0.004629743-0.004365658)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.00005675381264E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions motorway; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Xylol_AO">
+        <formula>(0.003911231+(0.004367942-0.003911231)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.87339230936819E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions outside of town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Xylol_ges">
+        <formula>((Anteil_AB*E1Sp_Xylol_AB)+(Anteil_AO*E1Sp_Xylol_AO)+(Anteil_IO*E1Sp_Xylol_IO))*Distanz</formula>
+        <meanValue>2.21673401742919E-5</meanValue>
+        <comment xml:lang="en">[gXylene/kg] Xylene Emissions weighted; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E1Sp_Xylol_IO">
+        <formula>(0.009205709+(0.012114456-0.009205709)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>5.08851588235294E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions within a town; Euro 1</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Benzol_AB">
+        <formula>(0.005252009+(0.005692902-0.005252009)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.45175078431373E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions motorway; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Benzol_AO">
+        <formula>(0.004785067+(0.005594997-0.004785067)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.38497058823529E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions outside of town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Benzol_ges">
+        <formula>((Anteil_AB*E2Sp_Benzol_AB)+(Anteil_AO*E2Sp_Benzol_AO)+(Anteil_IO*E2Sp_Benzol_IO))*Distanz</formula>
+        <meanValue>2.72116721830065E-5</meanValue>
+        <comment xml:lang="en">[gBenzene/kg] Benzene emissions weighted; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Benzol_IO">
+        <formula>(0.010779209+(0.014351238-0.010779209)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>6.01979679738562E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions within a town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CH4_AB">
+        <formula>(0.007547798+(0.008181416-0.007547798)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.52347420479303E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions motorway; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CH4_AO">
+        <formula>(0.006876743+(0.008040715-0.006876743)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.42750291938998E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions outside of town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CH4_ges">
+        <formula>((Anteil_AB*E2Sp_CH4_AB)+(Anteil_AO*E2Sp_CH4_AO)+(Anteil_IO*E2Sp_CH4_IO))*Distanz</formula>
+        <meanValue>3.91065959912854E-5</meanValue>
+        <comment xml:lang="en">[gCH4/kg] CH4 Emissions weighted; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CH4_IO">
+        <formula>(0.015491079+(0.020624535-0.015491079)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>8.65120549019608E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions within a town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CO_AB">
+        <formula>(1.0004493+(1.151823401-1.0004493)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>4.91990102766885E-5</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions motorway; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CO_AO">
+        <formula>(1.133528352+(1.479269862-1.133528352)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>6.21964547058823E-5</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions outside of town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CO_ges">
+        <formula>((Anteil_AB*E2Sp_CO_AB)+(Anteil_AO*E2Sp_CO_AO)+(Anteil_IO*E2Sp_CO_IO))*Distanz</formula>
+        <meanValue>0.00599241664874074</meanValue>
+        <comment xml:lang="en">[gCO/kg] CO Emissions weighted; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CO_IO">
+        <formula>(2.089811325+(3.526530266-2.089811325)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000144271129623094</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions within a town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CO2_AB">
+        <formula>(596.019043+(963.7462158-596.019043)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0395898535895425</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions motorway; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CO2_AO">
+        <formula>(580.3435059+(1057.455444-580.3435059)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0429581112542484</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions outside of town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CO2_ges">
+        <formula>((Anteil_AB*E2Sp_CO2_AB)+(Anteil_AO*E2Sp_CO2_AO)+(Anteil_IO*E2Sp_CO2_IO))*Distanz</formula>
+        <meanValue>4.26248401842266</meanValue>
+        <comment xml:lang="en">[gCO2/kg] CO2 Emissions weighted; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_CO2_IO">
+        <formula>(909.9897461+(1659.818726-909.9897461)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.067422413028976</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions within a town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Diesel_AB">
+        <formula>(0.18772253+(0.30354211-0.18772253)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.24692450108932E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg*km)] Diesel consumption; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Diesel_AO">
+        <formula>(0.18278535+(0.33305682-0.18278535)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.35301132679739E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg*km)] Diesel consumption; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Diesel_ges">
+        <formula>((Anteil_AB*E2Sp_Diesel_AB)+(Anteil_AO*E2Sp_Diesel_AO)+(Anteil_IO*E2Sp_Diesel_IO))*Distanz</formula>
+        <meanValue>0.00134251463686275</meanValue>
+        <comment xml:lang="en">[kgDiesel/kg] Diesel consumption; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Diesel_IO">
+        <formula>(0.28661096+(0.52277759-0.28661096)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.1235407211329E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg* km)] Diesel consumption; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_N2O_AB">
+        <formula>8.8/(Tonnage*1000)</formula>
+        <meanValue>0.000383442265795207</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions motorway; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_N2O_AO">
+        <formula>13.6/(Tonnage*1000)</formula>
+        <meanValue>0.000592592592592593</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions outside of town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_N2O_ges">
+        <formula>((Anteil_AB*E2Sp_N2O_AB)+(Anteil_AO*E2Sp_N2O_AO)+(Anteil_IO*E2Sp_N2O_IO))*Distanz</formula>
+        <meanValue>0.045838779956427</meanValue>
+        <comment xml:lang="en">[mgN2O/kg] N2O Emissions weighted; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_N2O_IO">
+        <formula>15.9/(Tonnage*1000)</formula>
+        <meanValue>0.00069281045751634</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions within a town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_NH3">
+        <formula>5*Distanz/(Tonnage*1000)</formula>
+        <meanValue>0.0217864923747277</meanValue>
+        <comment xml:lang="en">[mgNH3/kg)] NH3 Emissions in any traffic situation; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_NMVOC_AB">
+        <formula>(0.298169459+(0.323200055-0.298169459)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.39191924008715E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_NMVOC_AO">
+        <formula>(0.271659991+(0.317641753-0.271659991)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.35400648671024E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_NMVOC_ges">
+        <formula>((Anteil_AB*E2Sp_NMVOC_AB)+(Anteil_AO*E2Sp_NMVOC_AO)+(Anteil_IO*E2Sp_NMVOC_IO))*Distanz</formula>
+        <meanValue>0.00154487357709804</meanValue>
+        <comment xml:lang="en">[gNMVOC/kg] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_NMVOC_IO">
+        <formula>(0.611962172+(0.814755088-0.611962172)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.41758671285403E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_NOx_AB">
+        <formula>(7.487653255+(10.93857288-7.487653255)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000454071239052288</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions motorway; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_NOx_AO">
+        <formula>(7.466893196+(11.66134071-7.466893196)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000480704731281046</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions outside of town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_NOx_ges">
+        <formula>((Anteil_AB*E2Sp_NOx_AB)+(Anteil_AO*E2Sp_NOx_AO)+(Anteil_IO*E2Sp_NOx_IO))*Distanz</formula>
+        <meanValue>0.0488113490591111</meanValue>
+        <comment xml:lang="en">[gNOx/kg] NOx Emissions weighted; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_NOx_IO">
+        <formula>(11.47814941+(19.5663147-11.47814941)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000799698906601307</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions within a town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Part_AB">
+        <formula>(0.118901379+(0.16115503-0.118901379)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>6.74583801089325E-6</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions motorway; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Part_AO">
+        <formula>(0.121178657+(0.185275152-0.121178657)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>7.65406003267974E-6</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions outside of town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Part_ges">
+        <formula>((Anteil_AB*E2Sp_Part_AB)+(Anteil_AO*E2Sp_Part_AO)+(Anteil_IO*E2Sp_Part_IO))*Distanz</formula>
+        <meanValue>0.000757735436714597</meanValue>
+        <comment xml:lang="en">[gParticulate matter/kg] Particulate emissions weighted; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Part_IO">
+        <formula>(0.19719848+(0.354408681-0.19719848)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.44151263986928E-5</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions within a town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_SO2_AB">
+        <formula>(ppm_Schwefel/1000000)*2*E2Sp_Diesel_AB</formula>
+        <meanValue>1.24692450108932E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions motorway / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_SO2_AO">
+        <formula>(ppm_Schwefel/1000000)*2*E2Sp_Diesel_AO</formula>
+        <meanValue>1.35301132679739E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions outside of town / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_SO2_ges">
+        <formula>((Anteil_AB*E2Sp_SO2_AB)+(Anteil_AO*E2Sp_SO2_AO)+(Anteil_IO*E2Sp_SO2_IO))*Distanz</formula>
+        <meanValue>1.34251463686274E-7</meanValue>
+        <comment xml:lang="en">[kgSO2/kg] SO2 Emissions weighted; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_SO2_IO">
+        <formula>(ppm_Schwefel/1000000)*2*E2Sp_Diesel_IO</formula>
+        <meanValue>2.1235407211329E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions within a town / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Toluol_AB">
+        <formula>(0.001006373+(0.001090856-0.001006373)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>4.69796753812636E-8</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions motorway; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Toluol_AO">
+        <formula>(0.000916899+(0.001072095-0.000916899)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>4.57000261437909E-8</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions outside of town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Toluol_ges">
+        <formula>((Anteil_AB*E2Sp_Toluol_AB)+(Anteil_AO*E2Sp_Toluol_AO)+(Anteil_IO*E2Sp_Toluol_IO))*Distanz</formula>
+        <meanValue>5.21421379520697E-6</meanValue>
+        <comment xml:lang="en">[gToluene/kg] Toluene Emissions weighted; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Toluol_IO">
+        <formula>(0.002065477+(0.002749938-0.002065477)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.15349405228758E-7</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions within a town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Xylol_AB">
+        <formula>(0.002515933+(0.002727139-0.002515933)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.17449154684096E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions motorway; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Xylol_AO">
+        <formula>(0.002292248+(0.002680239-0.002292248)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.14250124183007E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions outside of town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Xylol_ges">
+        <formula>((Anteil_AB*E2Sp_Xylol_AB)+(Anteil_AO*E2Sp_Xylol_AO)+(Anteil_IO*E2Sp_Xylol_IO))*Distanz</formula>
+        <meanValue>1.30355336296296E-5</meanValue>
+        <comment xml:lang="en">[gXylene/kg] Xylene Emissions weighted; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E2Sp_Xylol_IO">
+        <formula>(0.005163693+(0.006874845-0.005163693)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.88373516339869E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions within a town; Euro 2</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Benzol_AB">
+        <formula>(0.005558006+(0.005258731-0.005558006)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.31094651416122E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions motorway; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Benzol_AO">
+        <formula>(0.004798944+(0.004886031-0.004798944)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.12329758169935E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions outside of town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Benzol_ges">
+        <formula>((Anteil_AB*E3Sp_Benzol_AB)+(Anteil_AO*E3Sp_Benzol_AO)+(Anteil_IO*E3Sp_Benzol_IO))*Distanz</formula>
+        <meanValue>2.53365234248366E-5</meanValue>
+        <comment xml:lang="en">[gBenzene/kg] Benzene emissions weighted; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Benzol_IO">
+        <formula>(0.010704031+(0.013386887-0.010704031)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>5.65771616557734E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions within a town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CH4_AB">
+        <formula>(0.007987553+(0.007557458-0.007987553)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.32112080610022E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions motorway; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CH4_AO">
+        <formula>(0.006896685+(0.007021842-0.006896685)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.05144594771242E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions outside of town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CH4_ges">
+        <formula>((Anteil_AB*E3Sp_CH4_AB)+(Anteil_AO*E3Sp_CH4_AO)+(Anteil_IO*E3Sp_CH4_IO))*Distanz</formula>
+        <meanValue>3.64117717385621E-5</meanValue>
+        <comment xml:lang="en">[gCH4/kg] CH4 Emissions weighted; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CH4_IO">
+        <formula>(0.015383039+(0.019238641-0.015383039)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>8.13084997821351E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions within a town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CO_AB">
+        <formula>(1.25731194+(1.392638445-1.25731194)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>5.97969267647059E-5</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions motorway; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CO_AO">
+        <formula>(1.305427074+(1.699917555-1.305427074)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>7.14921125424837E-5</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions outside of town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CO_ges">
+        <formula>((Anteil_AB*E3Sp_CO_AB)+(Anteil_AO*E3Sp_CO_AO)+(Anteil_IO*E3Sp_CO_IO))*Distanz</formula>
+        <meanValue>0.00711406913989542</meanValue>
+        <comment xml:lang="en">[gCO/kg] CO Emissions weighted; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CO_IO">
+        <formula>(2.556429863+(4.044592857-2.556429863)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000166508427359477</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions within a town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CO2_AB">
+        <formula>(626.593689+(992.7439575-626.593689)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0408636783104575</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions motorway; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CO2_AO">
+        <formula>(607.892334+(1079.281006-607.892334)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0439465231023965</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions outside of town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CO2_ges">
+        <formula>((Anteil_AB*E3Sp_CO2_AB)+(Anteil_AO*E3Sp_CO2_AO)+(Anteil_IO*E3Sp_CO2_IO))*Distanz</formula>
+        <meanValue>4.39505388554684</meanValue>
+        <comment xml:lang="en">[gCO2/kg] CO2 Emissions weighted; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_CO2_IO">
+        <formula>(964.913269+(1725.145508-964.913269)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0702009007472767</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions within a town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Diesel_AB">
+        <formula>(0.19735234+(0.31267526-0.19735234)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.28704497603486E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg*km)] Diesel consumption; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Diesel_AO">
+        <formula>(0.19146216+(0.33993103-0.19146216)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.38414248148148E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg*km)] Diesel consumption; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Diesel_ges">
+        <formula>((Anteil_AB*E3Sp_Diesel_AB)+(Anteil_AO*E3Sp_Diesel_AO)+(Anteil_IO*E3Sp_Diesel_IO))*Distanz</formula>
+        <meanValue>0.00138426893734205</meanValue>
+        <comment xml:lang="en">[kgDiesel/kg] Diesel consumption; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Diesel_IO">
+        <formula>(0.3039097+(0.54335291-0.3039097)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.21105197603486E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg* km)] Diesel consumption; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_N2O_AB">
+        <formula>5.9/(Tonnage*1000)</formula>
+        <meanValue>0.000257080610021787</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions motorway; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_N2O_AO">
+        <formula>7.8/(Tonnage*1000)</formula>
+        <meanValue>0.000339869281045752</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions outside of town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_N2O_ges">
+        <formula>((Anteil_AB*E3Sp_N2O_AB)+(Anteil_AO*E3Sp_N2O_AO)+(Anteil_IO*E3Sp_N2O_IO))*Distanz</formula>
+        <meanValue>0.0285664488017429</meanValue>
+        <comment xml:lang="en">[mgN2O/kg] N2O Emissions weighted; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_N2O_IO">
+        <formula>8.4/(Tonnage*1000)</formula>
+        <meanValue>0.000366013071895425</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions within a town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_NH3">
+        <formula>5*Distanz/(Tonnage*1000)</formula>
+        <meanValue>0.0217864923747277</meanValue>
+        <comment xml:lang="en">[mgNH3/kg)] NH3 Emissions in any traffic situation; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_NMVOC_AB">
+        <formula>(0.315541634+(0.298551084-0.315541634)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.31198111764706E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_NMVOC_AO">
+        <formula>(0.272447819+(0.277391995-0.272447819)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.2054482291939E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_NMVOC_ges">
+        <formula>((Anteil_AB*E3Sp_NMVOC_AB)+(Anteil_AO*E3Sp_NMVOC_AO)+(Anteil_IO*E3Sp_NMVOC_IO))*Distanz</formula>
+        <meanValue>0.0014384166972549</meanValue>
+        <comment xml:lang="en">[gNMVOC/kg] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_NMVOC_IO">
+        <formula>(0.60769413+(0.760006482-0.60769413)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.21202452810457E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_NOx_AB">
+        <formula>(5.222245693+(8.007289886-5.222245693)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000330698616864924</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions motorway; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_NOx_AO">
+        <formula>(5.738945961+(9.089015961-5.738945961)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000374139671503268</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions outside of town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_NOx_ges">
+        <formula>((Anteil_AB*E3Sp_NOx_AB)+(Anteil_AO*E3Sp_NOx_AO)+(Anteil_IO*E3Sp_NOx_IO))*Distanz</formula>
+        <meanValue>0.0364393987251503</meanValue>
+        <comment xml:lang="en">[gNOx/kg] NOx Emissions weighted; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_NOx_IO">
+        <formula>(8.795174599+(15.2302351-8.795174599)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000621567582782135</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions within a town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Part_AB">
+        <formula>(0.154254138+(0.160876617-0.154254138)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>6.96659020261438E-6</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions motorway; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Part_AO">
+        <formula>(0.14788948+(0.170460165-0.14788948)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>7.27993735294118E-6</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions outside of town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Part_ges">
+        <formula>((Anteil_AB*E3Sp_Part_AB)+(Anteil_AO*E3Sp_Part_AO)+(Anteil_IO*E3Sp_Part_IO))*Distanz</formula>
+        <meanValue>0.000782418671485839</meanValue>
+        <comment xml:lang="en">[gParticulate matter/kg] Particulate emissions weighted; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Part_IO">
+        <formula>(0.291178823+(0.400771141-0.291178823)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.67465051546841E-5</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions within a town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_SO2_AB">
+        <formula>(ppm_Schwefel/1000000)*2*E3Sp_Diesel_AB</formula>
+        <meanValue>1.28704497603486E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions motorway / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_SO2_AO">
+        <formula>(ppm_Schwefel/1000000)*2*E3Sp_Diesel_AO</formula>
+        <meanValue>1.38414248148148E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions outside of town / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_SO2_ges">
+        <formula>((Anteil_AB*E3Sp_SO2_AB)+(Anteil_AO*E3Sp_SO2_AO)+(Anteil_IO*E3Sp_SO2_IO))*Distanz</formula>
+        <meanValue>1.38426893734205E-7</meanValue>
+        <comment xml:lang="en">[kgSO2/kg] SO2 Emissions weighted; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_SO2_IO">
+        <formula>(ppm_Schwefel/1000000)*2*E3Sp_Diesel_IO</formula>
+        <meanValue>2.21105197603486E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions within a town / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Toluol_AB">
+        <formula>(0.001065007+(0.001007661-0.001065007)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>4.42816078431373E-8</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions motorway; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Toluol_AO">
+        <formula>(0.000919558+(0.000936246-0.000919558)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>4.06859607843137E-8</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions outside of town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Toluol_ges">
+        <formula>((Anteil_AB*E3Sp_Toluol_AB)+(Anteil_AO*E3Sp_Toluol_AO)+(Anteil_IO*E3Sp_Toluol_IO))*Distanz</formula>
+        <meanValue>4.85490302396514E-6</meanValue>
+        <comment xml:lang="en">[gToluene/kg] Toluene Emissions weighted; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Toluol_IO">
+        <formula>(0.002051072+(0.002565152-0.002051072)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.08411328976035E-7</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions within a town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Xylol_AB">
+        <formula>(0.002662518+(0.002519153-0.002662518)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.10704041394336E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions motorway; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Xylol_AO">
+        <formula>(0.002298895+(0.002340614-0.002298895)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.01714864923747E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions outside of town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Xylol_ges">
+        <formula>((Anteil_AB*E3Sp_Xylol_AB)+(Anteil_AO*E3Sp_Xylol_AO)+(Anteil_IO*E3Sp_Xylol_IO))*Distanz</formula>
+        <meanValue>1.21372581525054E-5</meanValue>
+        <comment xml:lang="en">[gXylene/kg] Xylene Emissions weighted; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E3Sp_Xylol_IO">
+        <formula>(0.00512768+(0.00641288-0.00512768)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.71028322440087E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions within a town; Euro 3</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Benzol_AB">
+        <formula>(0.006866262+(0.006846708-0.006866262)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.98459307189542E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions motorway; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Benzol_AO">
+        <formula>(0.005975349+(0.006424624-0.005975349)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.77003605664488E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions outside of town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Benzol_ges">
+        <formula>((Anteil_AB*E4Sp_Benzol_AB)+(Anteil_AO*E4Sp_Benzol_AO)+(Anteil_IO*E4Sp_Benzol_IO))*Distanz</formula>
+        <meanValue>3.22491385620915E-5</meanValue>
+        <comment xml:lang="en">[gBenzene/kg] Benzene emissions weighted; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Benzol_IO">
+        <formula>(0.012266223+(0.015742512-0.012266223)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>6.63227392156863E-7</meanValue>
+        <comment xml:lang="en">[gBenzene/(kg*km)] Benzene emissions within a town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CH4_AB">
+        <formula>(0.009867683+(0.00983958-0.009867683)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>4.28923549019608E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions motorway; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CH4_AO">
+        <formula>(0.008587328+(0.009232994-0.008587328)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.98089067538126E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions outside of town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CH4_ges">
+        <formula>((Anteil_AB*E4Sp_CH4_AB)+(Anteil_AO*E4Sp_CH4_AO)+(Anteil_IO*E4Sp_CH4_IO))*Distanz</formula>
+        <meanValue>4.63460688540305E-5</meanValue>
+        <comment xml:lang="en">[gCH4/kg] CH4 Emissions weighted; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CH4_IO">
+        <formula>(0.017628107+(0.022623971-0.017628107)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>9.53141237472767E-7</meanValue>
+        <comment xml:lang="en">[gCH4/(kg*km)] CH4 Emissions within a town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CO_AB">
+        <formula>(0.906178653+(0.860649645-0.906178653)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.77986490718954E-5</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions motorway; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CO_AO">
+        <formula>(0.971730471+(1.100381255-0.971730471)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>4.71060408453159E-5</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions outside of town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CO_ges">
+        <formula>((Anteil_AB*E4Sp_CO_AB)+(Anteil_AO*E4Sp_CO_AO)+(Anteil_IO*E4Sp_CO_IO))*Distanz</formula>
+        <meanValue>0.00461303144958606</meanValue>
+        <comment xml:lang="en">[gCO/kg] CO Emissions weighted; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CO_IO">
+        <formula>(1.765907645+(2.766971111-1.765907645)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000114022291551198</meanValue>
+        <comment xml:lang="en">[gCO/(kg*km)] CO Emissions within a town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CO2_AB">
+        <formula>(627.8233032+(1006.904602-627.8233032)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.04139618331939</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions motorway; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CO2_AO">
+        <formula>(606.0595093+(1092.139038-606.0595093)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0444107672633987</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions outside of town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CO2_ges">
+        <formula>((Anteil_AB*E4Sp_CO2_AB)+(Anteil_AO*E4Sp_CO2_AO)+(Anteil_IO*E4Sp_CO2_IO))*Distanz</formula>
+        <meanValue>4.43933194799129</meanValue>
+        <comment xml:lang="en">[gCO2/kg] CO2 Emissions weighted; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_CO2_IO">
+        <formula>(943.6578979+(1718.52124-943.6578979)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.0698166334938998</meanValue>
+        <comment xml:lang="en">[gCO2/(kg*km)] CO2 Emissions within a town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Diesel_AB">
+        <formula>(0.19773962+(0.31713531-0.19773962)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.30381680392157E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg*km)] Diesel consumption; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Diesel_AO">
+        <formula>(0.19088489+(0.3439808-0.19088489)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.39876432897603E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg*km)] Diesel consumption; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Diesel_ges">
+        <formula>((Anteil_AB*E4Sp_Diesel_AB)+(Anteil_AO*E4Sp_Diesel_AO)+(Anteil_IO*E4Sp_Diesel_IO))*Distanz</formula>
+        <meanValue>0.00139821479503268</meanValue>
+        <comment xml:lang="en">[kgDiesel/kg] Diesel consumption; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Diesel_IO">
+        <formula>(0.29721509+(0.54126654-0.29721509)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>2.19894911764706E-5</meanValue>
+        <comment xml:lang="en">[kgDiesel/(kg* km)] Diesel consumption; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_N2O_AB">
+        <formula>5.9/(Tonnage*1000)</formula>
+        <meanValue>0.000257080610021787</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions motorway; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_N2O_AO">
+        <formula>7.8/(Tonnage*1000)</formula>
+        <meanValue>0.000339869281045752</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions outside of town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_N2O_ges">
+        <formula>((Anteil_AB*E4Sp_N2O_AB)+(Anteil_AO*E4Sp_N2O_AO)+(Anteil_IO*E4Sp_N2O_IO))*Distanz</formula>
+        <meanValue>0.0285664488017429</meanValue>
+        <comment xml:lang="en">[mgN2O/kg] N2O Emissions weighted; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_N2O_IO">
+        <formula>8.4/(Tonnage*1000)</formula>
+        <meanValue>0.000366013071895425</meanValue>
+        <comment xml:lang="en">[mgN2O/(kg*km)] N2O Emissions within a town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_NH3">
+        <formula>5*Distanz/(Tonnage*1000)</formula>
+        <meanValue>0.0217864923747277</meanValue>
+        <comment xml:lang="en">[mgNH3/kg)] NH3 Emissions in any traffic situation; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_NMVOC_AB">
+        <formula>(0.389814587+(0.388704455-0.389814587)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.69442690544662E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_NMVOC_AO">
+        <formula>(0.339235242+(0.364741724-0.339235242)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.57261765446623E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_NMVOC_ges">
+        <formula>((Anteil_AB*E4Sp_NMVOC_AB)+(Anteil_AO*E4Sp_NMVOC_AO)+(Anteil_IO*E4Sp_NMVOC_IO))*Distanz</formula>
+        <meanValue>0.00183086293847495</meanValue>
+        <comment xml:lang="en">[gNMVOC/kg] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_NMVOC_IO">
+        <formula>(0.696383655+(0.893741136-0.696383655)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.76530507124183E-5</meanValue>
+        <comment xml:lang="en">[gNMVOC/(kg*km)] NMVOC Emissions (Without Xylene, Toluene and Benzene); Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_NOx_AB">
+        <formula>(3.190988541+(4.935979366-3.190988541)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000203670184847495</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions motorway; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_NOx_AO">
+        <formula>(4.190591812+(6.03132534-4.190591812)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.00025077190896732</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions outside of town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_NOx_ges">
+        <formula>((Anteil_AB*E4Sp_NOx_AB)+(Anteil_AO*E4Sp_NOx_AO)+(Anteil_IO*E4Sp_NOx_IO))*Distanz</formula>
+        <meanValue>0.0240628989931416</meanValue>
+        <comment xml:lang="en">[gNOx/kg] NOx Emissions weighted; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_NOx_IO">
+        <formula>(7.732958317+(12.79281235-7.732958317)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>0.000524350076037037</meanValue>
+        <comment xml:lang="en">[gNOx/(kg*km)] NOx Emissions within a town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Part_AB">
+        <formula>(0.02739075+(0.032125678-0.02739075)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.36886443572985E-6</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions motorway; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Part_AO">
+        <formula>(0.035441618+(0.039772589-0.035441618)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.70470341394335E-6</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions outside of town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Part_ges">
+        <formula>((Anteil_AB*E4Sp_Part_AB)+(Anteil_AO*E4Sp_Part_AO)+(Anteil_IO*E4Sp_Part_IO))*Distanz</formula>
+        <meanValue>0.000169413997769063</meanValue>
+        <comment xml:lang="en">[gParticulate matter/kg] Particulate emissions weighted; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Part_IO">
+        <formula>(0.071415022+(0.106934227-0.071415022)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>4.42729177559913E-6</meanValue>
+        <comment xml:lang="en">[gParticulate matter/(kg*km)] Particulate emissions within a town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_SO2_AB">
+        <formula>(ppm_Schwefel/1000000)*2*E4Sp_Diesel_AB</formula>
+        <meanValue>1.30381680392157E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions motorway / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_SO2_AO">
+        <formula>(ppm_Schwefel/1000000)*2*E4Sp_Diesel_AO</formula>
+        <meanValue>1.39876432897603E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions outside of town / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_SO2_ges">
+        <formula>((Anteil_AB*E4Sp_SO2_AB)+(Anteil_AO*E4Sp_SO2_AO)+(Anteil_IO*E4Sp_SO2_IO))*Distanz</formula>
+        <meanValue>1.39821479503268E-7</meanValue>
+        <comment xml:lang="en">[kgSO2/kg] SO2 Emissions weighted; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_SO2_IO">
+        <formula>(ppm_Schwefel/1000000)*2*E4Sp_Diesel_IO</formula>
+        <meanValue>2.19894911764706E-9</meanValue>
+        <comment xml:lang="en">[kgSO2/(kg*km)] SO2 Emissions within a town / 2  (Molar weight SO2/Molar weight S=64g/32g); Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Toluol_AB">
+        <formula>(0.001315691+(0.001311944-0.001315691)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>5.71898061002179E-8</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions motorway; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Toluol_AO">
+        <formula>(0.001144977+(0.001231066-0.001144977)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>5.30785468409586E-8</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions outside of town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Toluol_ges">
+        <formula>((Anteil_AB*E4Sp_Toluol_AB)+(Anteil_AO*E4Sp_Toluol_AO)+(Anteil_IO*E4Sp_Toluol_IO))*Distanz</formula>
+        <meanValue>6.17947577342048E-6</meanValue>
+        <comment xml:lang="en">[gToluene/kg] Toluene Emissions weighted; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Toluol_IO">
+        <formula>(0.002350414+(0.003016529-0.002350414)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.27085479302832E-7</meanValue>
+        <comment xml:lang="en">[gToluene/(kg*km)] Toluene Emissions within a town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Xylol_AB">
+        <formula>(0.003289228+(0.00327986-0.003289228)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.42974518518519E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions motorway; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Xylol_AO">
+        <formula>(0.002862443+(0.003077665-0.002862443)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>1.3269637037037E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions outside of town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Xylol_ges">
+        <formula>((Anteil_AB*E4Sp_Xylol_AB)+(Anteil_AO*E4Sp_Xylol_AO)+(Anteil_IO*E4Sp_Xylol_IO))*Distanz</formula>
+        <meanValue>1.54486901786492E-5</meanValue>
+        <comment xml:lang="en">[gXylene/kg] Xylene Emissions weighted; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="E4Sp_Xylol_IO">
+        <formula>(0.005876035+(0.007541324-0.005876035)*Auslast)/(Nutzlast*1000*Auslast)</formula>
+        <meanValue>3.17713753812636E-7</meanValue>
+        <comment xml:lang="en">[gXylene/(kg*km)] Xylene Emissions within a town; Euro 4</comment>
+      </variableParameter>
+      <variableParameter name="Nutzlast">
+        <meanValue>27</meanValue>
+        <comment xml:lang="en">[07] [t] Standard = 27 t</comment>
+      </variableParameter>
+      <variableParameter name="ppm_Schwefel">
+        <meanValue>50</meanValue>
+        <comment xml:lang="en">[03] [ppm] Proportion of sulphur in diesel, European standard as of 2003 = 50 ppm</comment>
+      </variableParameter>
+      <variableParameter name="Spez_Benzol_ges">
+        <formula>E0Sp_Benzol_ges*Anteil_E0+E1Sp_Benzol_ges*Anteil_E1+E2Sp_Benzol_ges*Anteil_E2+E3Sp_Benzol_ges*Anteil_E3+E4Sp_Benzol_ges*Anteil_E4</formula>
+        <meanValue>3.03625768658305E-5</meanValue>
+        <comment xml:lang="en">[gBenzene/kg] Benzene emissions weighted; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_CH4_ges">
+        <formula>E0Sp_CH4_ges*Anteil_E0+E1Sp_CH4_ges*Anteil_E1+E2Sp_CH4_ges*Anteil_E2+E3Sp_CH4_ges*Anteil_E3+E4Sp_CH4_ges*Anteil_E4</formula>
+        <meanValue>4.36348424959512E-5</meanValue>
+        <comment xml:lang="en">[gCH4/kg] CH4 Emissions weighted; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_CO_ges">
+        <formula>E0Sp_CO_ges*Anteil_E0+E1Sp_CO_ges*Anteil_E1+E2Sp_CO_ges*Anteil_E2+E3Sp_CO_ges*Anteil_E3+E4Sp_CO_ges*Anteil_E4</formula>
+        <meanValue>0.00629818398273196</meanValue>
+        <comment xml:lang="en">[gCO/kg] CO Emissions weighted; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_CO2_ges">
+        <formula>E0Sp_CO2_ges*Anteil_E0+E1Sp_CO2_ges*Anteil_E1+E2Sp_CO2_ges*Anteil_E2+E3Sp_CO2_ges*Anteil_E3+E4Sp_CO2_ges*Anteil_E4</formula>
+        <meanValue>4.42448891619272</meanValue>
+        <comment xml:lang="en">[gCO2/kg] CO2 Emissions weighted; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_Diesel_ges">
+        <formula>E0Sp_Diesel_ges*Anteil_E0+E1Sp_Diesel_ges*Anteil_E1+E2Sp_Diesel_ges*Anteil_E2+E3Sp_Diesel_ges*Anteil_E3+E4Sp_Diesel_ges*Anteil_E4</formula>
+        <meanValue>0.0013935398137839</meanValue>
+        <comment xml:lang="en">[kgDiesel/kg] Diesel consumption; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_N2O_ges">
+        <formula>E0Sp_N2O_ges*Anteil_E0+E1Sp_N2O_ges*Anteil_E1+E2Sp_N2O_ges*Anteil_E2+E3Sp_N2O_ges*Anteil_E3+E4Sp_N2O_ges*Anteil_E4</formula>
+        <meanValue>0.0342241770171329</meanValue>
+        <comment xml:lang="en">[mgN2O/kg] N2O Emissions weighted; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_NH3">
+        <formula>E0Sp_NH3*Anteil_E0+E1Sp_NH3*Anteil_E1+E2Sp_NH3*Anteil_E2+E3Sp_NH3*Anteil_E3+E4Sp_NH3*Anteil_E4</formula>
+        <meanValue>0.0217864923747277</meanValue>
+        <comment xml:lang="en">[mgNH3/kg)] NH3 Emissions in any traffic situation; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_NMVOC_ges">
+        <formula>E0Sp_NMVOC_ges*Anteil_E0+E1Sp_NMVOC_ges*Anteil_E1+E2Sp_NMVOC_ges*Anteil_E2+E3Sp_NMVOC_ges*Anteil_E3+E4Sp_NMVOC_ges*Anteil_E4</formula>
+        <meanValue>0.00172375813759452</meanValue>
+        <comment xml:lang="en">[gNMVOC/kg] NMVOC Emissions (Without Xylene, Toluene and Benzene); Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_NOx_ges">
+        <formula>E0Sp_NOx_ges*Anteil_E0+E1Sp_NOx_ges*Anteil_E1+E2Sp_NOx_ges*Anteil_E2+E3Sp_NOx_ges*Anteil_E3+E4Sp_NOx_ges*Anteil_E4</formula>
+        <meanValue>0.0372096967264979</meanValue>
+        <comment xml:lang="en">[gNOx/kg] NOx Emissions weighted; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_Part_ges">
+        <formula>E0Sp_Part_ges*Anteil_E0+E1Sp_Part_ges*Anteil_E1+E2Sp_Part_ges*Anteil_E2+E3Sp_Part_ges*Anteil_E3+E4Sp_Part_ges*Anteil_E4</formula>
+        <meanValue>0.000716764810864731</meanValue>
+        <comment xml:lang="en">[gParticulate matter/kg] Particulate emissions weighted; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_SO2_ges">
+        <formula>E0Sp_SO2_ges*Anteil_E0+E1Sp_SO2_ges*Anteil_E1+E2Sp_SO2_ges*Anteil_E2+E3Sp_SO2_ges*Anteil_E3+E4Sp_SO2_ges*Anteil_E4</formula>
+        <meanValue>1.3935398137839E-7</meanValue>
+        <comment xml:lang="en">[kgSO2/kg] SO2 Emissions weighted; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_Toluol_ges">
+        <formula>E0Sp_Toluol_ges*Anteil_E0+E1Sp_Toluol_ges*Anteil_E1+E2Sp_Toluol_ges*Anteil_E2+E3Sp_Toluol_ges*Anteil_E3+E4Sp_Toluol_ges*Anteil_E4</formula>
+        <meanValue>5.81797923544109E-6</meanValue>
+        <comment xml:lang="en">[gToluene/kg] Toluene Emissions weighted; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Spez_Xylol_ges">
+        <formula>E0Sp_Xylol_ges*Anteil_E0+E1Sp_Xylol_ges*Anteil_E1+E2Sp_Xylol_ges*Anteil_E2+E3Sp_Xylol_ges*Anteil_E3+E4Sp_Xylol_ges*Anteil_E4</formula>
+        <meanValue>1.45449483758118E-5</meanValue>
+        <comment xml:lang="en">[gXylene/kg] Xylene Emissions weighted; Mix</comment>
+      </variableParameter>
+      <variableParameter name="Tonnage">
+        <formula>Auslast*Nutzlast</formula>
+        <meanValue>22.95</meanValue>
+        <comment xml:lang="en">[t]</comment>
+      </variableParameter>
+    </mathematicalRelations>
+  </processInformation>
+  <modellingAndValidation>
+    <LCIMethodAndAllocation>
+      <typeOfDataSet>Unit process, single operation</typeOfDataSet>
+      <LCIMethodPrinciple>Attributional</LCIMethodPrinciple>
+      <deviationsFromLCIMethodPrinciple xml:lang="en">None</deviationsFromLCIMethodPrinciple>
+      <LCIMethodApproaches>Not applicable</LCIMethodApproaches>
+      <deviationsFromLCIMethodApproaches>None</deviationsFromLCIMethodApproaches>
+      <modellingConstants xml:lang="en">All data used in the calculation of the LCI results refer to net calorific value.</modellingConstants>
+      <deviationsFromModellingConstants xml:lang="en">None</deviationsFromModellingConstants>
+      <referenceToLCAMethodDetails refObjectId="10466572-0cfd-428e-8b10-ae74255e6e83" version="02.01.000" type="source data set" uri="../sources/10466572-0cfd-428e-8b10-ae74255e6e83_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi Modelling Principles</common:shortDescription>
+      </referenceToLCAMethodDetails>
+    </LCIMethodAndAllocation>
+    <dataSourcesTreatmentAndRepresentativeness>
+      <dataCutOffAndCompletenessPrinciples xml:lang="en">Cut-off rules for each unit process: Coverage of at least 95 % of mass and energy of the input and output flows, and 98 % of their environmental relevance (according to expert judgement).</dataCutOffAndCompletenessPrinciples>
+      <deviationsFromCutOffAndCompletenessPrinciples xml:lang="en">Manufacturing and EoL of vehicle is not included.</deviationsFromCutOffAndCompletenessPrinciples>
+      <dataSelectionAndCombinationPrinciples xml:lang="en">Data sources for the transport system are sufficiently consistent, emission factors are based on average European conditions (key emissions are based on measured operating data). LCI modelling is fully consistent.</dataSelectionAndCombinationPrinciples>
+      <deviationsFromSelectionAndCombinationPrinciples xml:lang="en">None</deviationsFromSelectionAndCombinationPrinciples>
+      <dataTreatmentAndExtrapolationsPrinciples xml:lang="en">Several data sources have been averaged. Measured data from representative transport systems have been upscaled.</dataTreatmentAndExtrapolationsPrinciples>
+      <deviationsFromTreatmentAndExtrapolationPrinciples xml:lang="en">None</deviationsFromTreatmentAndExtrapolationPrinciples>
+      <referenceToDataSource refObjectId="d2737042-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d2737042-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Simulierung umweltrelevanter Auswirkungen von Transportprozessen, 1995</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d2737043-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d2737043-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Ökologische Bilanzierung - Einsatz von Nutzfahrzeugen in Transport, Landwirtschaft und Bergbau, 1999</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d2737044-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d2737044-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">BGL - Daten und Fakten, 2006</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d2737045-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d2737045-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Richtlinie 1999/96/EG, Maßnahmen gegen Emission gasf. Schadstoffe und luftverunreinigender Partikel,</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d2737046-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d2737046-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Richtlinie 2003/17/EG - Qualität von Otto- und Dieselkraftstoffen, 2003</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d2737047-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d2737047-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">EUROPA - Environment - Auto-Oil II Programme, 2000</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d2737048-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d2737048-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Emission functions for Heavy Duty Vehicles, 2003</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d2737049-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d2737049-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Statistische Mitteilungen, Reihe 2: Kraftfahrzeuge, 2003</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d273704a-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d273704a-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Emissionen und Minderungspotential von HFKW, FKW und SF6 in Deutschland, Im Auftrag des UBA, 1999</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d273704b-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d273704b-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Handbuch Emissionsfaktoren des Straáenverkehrs, Version 2.1, 2004</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d273704c-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d273704c-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Umweltlexikon: Betankungsverlust, 2006</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="d273704d-5fbd-11db-b0de-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/d273704d-5fbd-11db-b0de-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">Spezif. Energieeinsatz im Verkehr, Ermittlung und Vergleich der spezif. Energieverbräuche, 1990</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="26ee155a-3896-11dd-ae16-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/26ee155a-3896-11dd-ae16-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">TREMOVE 2.7 / EMISSIONS, 2007</common:shortDescription>
+      </referenceToDataSource>
+      <referenceToDataSource refObjectId="6df7ba00-86d1-11db-b606-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/6df7ba00-86d1-11db-b606-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi databases 2006</common:shortDescription>
+      </referenceToDataSource>
+      <percentageSupplyOrProductionCovered>95.0</percentageSupplyOrProductionCovered>
+      <samplingProcedure xml:lang="en">Weighted average based on transport performance.</samplingProcedure>
+      <dataCollectionPeriod xml:lang="en">2003-2007</dataCollectionPeriod>
+      <uncertaintyAdjustments xml:lang="en">None</uncertaintyAdjustments>
+      <useAdviceForDataSet xml:lang="en">The data set should be used for LCI/LCA studies where bulk commodities or packaged goods have to be transported via road. The data set allows individual settings of the variable parameters. The following parameters are variable (default settings): payload (27 t), utilisation ratio (85%), distance (100 km), sulphur content of fuel (50ppm), driving share urban/interurban/motorway as well as the share of EURO 0 to EURO 4 tonkilometers. Default values of the variable parameters have to be checked and adjusted for individual use. The data set does not include the fuel supply route. Therefore the fuel supply data set (diesel) has to be linked with this data set. Vehicle production and end-of-life treatment are not part of the data set (negligible from a LCA point of view).</useAdviceForDataSet>
+    </dataSourcesTreatmentAndRepresentativeness>
+    <completeness>
+      <completenessProductModel>All relevant flows quantified</completenessProductModel>
+    </completeness>
+    <validation>
+      <review type="Dependent internal review">
+        <common:scope name="Raw data">
+          <common:method name="Cross-check with other source" />
+          <common:method name="Expert judgement" />
+        </common:scope>
+        <common:scope name="Unit process(es), black box">
+          <common:method name="Energy balance" />
+          <common:method name="Cross-check with other source" />
+          <common:method name="Cross-check with other data set" />
+          <common:method name="Expert judgement" />
+          <common:method name="Mass balance" />
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:scope name="Documentation">
+          <common:method name="Expert judgement" />
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:scope name="Life cycle inventory methods">
+          <common:method name="Compliance with ISO 14040 to 14044" />
+        </common:scope>
+        <common:reviewDetails xml:lang="en">Inventory: The internal review was done by several iteration steps concerning raw data validation, raw data documentation, representativity, completeness and consistency of modelling with regard to ISO 14040 and 14044.; Documentation: The review of the documentation was performed by Ecobilan and is in compliance with ISO 14040 and 14044. The data set documentation is correct in view of the appropriateness of the information provided. It includes all relevant information in view of data quality and scope of application of the respective LCI result.</common:reviewDetails>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+          <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+          <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+        <common:referenceToNameOfReviewerAndInstitution refObjectId="d571097d-d600-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/d571097d-d600-11da-a94d-0800200c9a66_02.01.000.xml">
+          <common:shortDescription xml:lang="en">Ecobilan</common:shortDescription>
+        </common:referenceToNameOfReviewerAndInstitution>
+      </review>
+    </validation>
+    <complianceDeclarations>
+      <compliance>
+        <common:referenceToComplianceSystem type="source data set" uri="../sources/d92a1a12-2545-49e2-a585-55c259997756_01.01.000.xml" refObjectId="d92a1a12-2545-49e2-a585-55c259997756" version="01.01.000">
+          <common:shortDescription>ILCD Data Network - Entry-level</common:shortDescription>
+        </common:referenceToComplianceSystem>
+        <common:approvalOfOverallCompliance>Not compliant</common:approvalOfOverallCompliance>
+        <common:nomenclatureCompliance>Fully compliant</common:nomenclatureCompliance>
+        <common:methodologicalCompliance>Fully compliant</common:methodologicalCompliance>
+        <common:reviewCompliance>Not compliant</common:reviewCompliance>
+        <common:documentationCompliance>Not compliant</common:documentationCompliance>
+      </compliance>
+    </complianceDeclarations>
+  </modellingAndValidation>
+  <administrativeInformation>
+    <common:commissionerAndGoal>
+      <common:referenceToCommissioner refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToCommissioner>
+      <common:referenceToCommissioner refObjectId="5bb337b0-9a1a-11da-a72b-0800200c9a62" version="02.01.000" type="contact data set" uri="../contacts/5bb337b0-9a1a-11da-a72b-0800200c9a62_02.01.000.xml">
+        <common:shortDescription xml:lang="en">EC, DG ENV</common:shortDescription>
+      </common:referenceToCommissioner>
+      <common:referenceToCommissioner refObjectId="d0d5f8bb-9311-49d1-9e30-2f20a6977f4f" version="01.01.000" type="contact data set" uri="../contacts/d0d5f8bb-9311-49d1-9e30-2f20a6977f4f_01.01.000.xml">
+        <common:shortDescription xml:lang="en">EPLCA project team</common:shortDescription>
+      </common:referenceToCommissioner>
+      <intendedApplications xmlns="http://lca.jrc.it/ILCD/Common" xml:lang="en">This background LCI data set can be used for any types of LCA studies.</intendedApplications>
+    </common:commissionerAndGoal>
+    <dataGenerator>
+      <common:referenceToPersonOrEntityGeneratingTheDataSet refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToPersonOrEntityGeneratingTheDataSet>
+      <common:referenceToPersonOrEntityGeneratingTheDataSet refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+      </common:referenceToPersonOrEntityGeneratingTheDataSet>
+    </dataGenerator>
+    <dataEntryBy>
+      <common:timeStamp>2010-03-12T00:00:00+01:00</common:timeStamp>
+      <common:referenceToDataSetFormat type="source data set" uri="../sources/a97a0155-0234-4b87-b4ce-a45da52f2a40_01.01.000.xml" refObjectId="a97a0155-0234-4b87-b4ce-a45da52f2a40" version="01.01.000">
+        <common:shortDescription>ILCD format</common:shortDescription>
+      </common:referenceToDataSetFormat>
+      <common:referenceToConvertedOriginalDataSetFrom refObjectId="6df7ba00-86d1-11db-b606-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/6df7ba00-86d1-11db-b606-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">GaBi databases 2006</common:shortDescription>
+      </common:referenceToConvertedOriginalDataSetFrom>
+      <common:referenceToPersonOrEntityEnteringTheData refObjectId="de53c560-d6a9-11da-a94d-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/de53c560-d6a9-11da-a94d-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">LBP-GaBi</common:shortDescription>
+      </common:referenceToPersonOrEntityEnteringTheData>
+      <common:referenceToDataSetUseApproval refObjectId="be34bbb0-b054-11db-abbd-0800200c9a66" version="02.01.000" type="contact data set" uri="../contacts/be34bbb0-b054-11db-abbd-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">No official approval by producer or operator</common:shortDescription>
+      </common:referenceToDataSetUseApproval>
+    </dataEntryBy>
+    <publicationAndOwnership>
+      <common:dataSetVersion>02.01.000</common:dataSetVersion>
+      <common:referenceToPrecedingDataSetVersion type="process data set" refObjectId="b444f4d0-3393-11dd-bd11-0800200c9a66" version="02.00.000" uri="http://lca.jrc.ec.europa.eu/lcainfohub/datasets/elcd/processes/b444f4d0-3393-11dd-bd11-0800200c9a66_02.00.000.xml">
+        <common:shortDescription xml:lang="en">Articulated lorry transport; Euro 0, 1, 2, 3, 4 mix; 40 t total weight, 27 t max payload</common:shortDescription>
+      </common:referenceToPrecedingDataSetVersion>
+      <common:permanentDataSetURI>http://lca.jrc.ec.europa.eu/lcainfohub/datasets/elcd/processes/b444f4d0-3393-11dd-bd11-0800200c9a66_02.01.000.xml</common:permanentDataSetURI>
+      <common:workflowAndPublicationStatus>Data set finalised; entirely published</common:workflowAndPublicationStatus>
+      <common:referenceToUnchangedRepublication refObjectId="57bbc510-79c3-11dd-ad8b-0800200c9a66" version="02.01.000" type="source data set" uri="../sources/57bbc510-79c3-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ELCD database 2.0</common:shortDescription>
+      </common:referenceToUnchangedRepublication>
+      <common:referenceToOwnershipOfDataSet refObjectId="623edf96-39d1-4e6f-9892-674c7228546b" version="02.01.000" type="contact data set" uri="../contacts/623edf96-39d1-4e6f-9892-674c7228546b_02.01.000.xml">
+        <common:shortDescription xml:lang="en">PE INTERNATIONAL</common:shortDescription>
+      </common:referenceToOwnershipOfDataSet>
+      <common:copyright>true</common:copyright>
+      <common:accessRestrictions xml:lang="en">The data set can be used free of charge by anybody to perform LCA studies, to distribute it to third parties, to convert it to other formats, to develop own data sets etc. as long as the copyright and license conditions for the ELCD data sets and the ILCD format are met that can be accessed via http://lca.jrc.ec.europa.eu. Please note e.g. that reference must be given to the 'Owner of data set' and to the 'ELCD database' plus version number, when using the data set or parts thereof. Please note also, that any modifications/omissions of the data set results in invalidity of any existing 'Official approval of data set by producer/operator', that the impression must be avoided that this would still be a complete ELCD data set, and that the content of further fields has to be adjusted. For details see the aforementioned copyright and license conditions.</common:accessRestrictions>
+    </publicationAndOwnership>
+  </administrativeInformation>
+  <exchanges>
+    <exchange dataSetInternalID="0">
+      <referenceToFlowDataSet refObjectId="e9fd08fb-8067-4d90-91e3-4c92fc1803f7" version="02.01.000" type="flow data set" uri="../flows/e9fd08fb-8067-4d90-91e3-4c92fc1803f7_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cargo</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <meanAmount>1</meanAmount>
+      <resultingAmount>1</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="1">
+      <referenceToFlowDataSet refObjectId="4f197bf1-7b3b-11dd-ad8b-0800200c9a66" version="02.01.000" type="flow data set" uri="../flows/4f197bf1-7b3b-11dd-ad8b-0800200c9a66_02.01.000.xml">
+        <common:shortDescription xml:lang="en">diesel</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Input</exchangeDirection>
+      <referenceToVariable>Spez_Diesel_ges</referenceToVariable>
+      <meanAmount>1</meanAmount>
+      <resultingAmount>0.0013935398137839</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="2">
+      <referenceToFlowDataSet refObjectId="e9fd08fb-8067-4d90-91e3-4c92fc1803f7" version="02.01.000" type="flow data set" uri="../flows/e9fd08fb-8067-4d90-91e3-4c92fc1803f7_02.01.000.xml">
+        <common:shortDescription xml:lang="en">cargo</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <meanAmount>1</meanAmount>
+      <resultingAmount>1</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Unknown derivation</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="3">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-a2a9-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-a2a9-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">ammonia (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_NH3</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>2.17864923747277E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="4">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9202-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9202-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">benzene (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Benzol_ges</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>3.03625768658305E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="5">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-af54-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-af54-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">carbon dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_CO2_ges</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>0.00442448891619272</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="6">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-924e-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-924e-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">carbon monoxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_CO_ges</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>6.29818398273196E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="7">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-960b-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-960b-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">methane (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_CH4_ges</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>4.36348424959512E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="8">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-96e5-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-96e5-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrogen dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_NOx_ges</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>3.72096967264979E-5</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="9">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-94c3-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-94c3-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">nitrous oxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_N2O_ges</referenceToVariable>
+      <meanAmount>1E-6</meanAmount>
+      <resultingAmount>3.42241770171329E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="10">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-a302-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-a302-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">non-methane volatile organic compounds (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_NMVOC_ges</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>1.72375813759452E-6</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="11">
+      <referenceToFlowDataSet refObjectId="08a91e70-3ddc-11dd-9293-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/08a91e70-3ddc-11dd-9293-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">particles (PM2.5) (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Part_ges</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>7.16764810864731E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="12">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ac48-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ac48-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">sulfur dioxide (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_SO2_ges</referenceToVariable>
+      <meanAmount>1</meanAmount>
+      <resultingAmount>1.3935398137839E-7</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="13">
+      <referenceToFlowDataSet refObjectId="4d9a8790-3ddd-11dd-9bb5-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/4d9a8790-3ddd-11dd-9bb5-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">toluene (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Toluol_ges</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>5.81797923544109E-9</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+    <exchange dataSetInternalID="14">
+      <referenceToFlowDataSet refObjectId="fe0acd60-3ddc-11dd-ad91-0050c2490048" version="02.01.000" type="flow data set" uri="../flows/fe0acd60-3ddc-11dd-ad91-0050c2490048_02.01.000.xml">
+        <common:shortDescription xml:lang="en">xylene (all isomers) (Emissions to air)</common:shortDescription>
+      </referenceToFlowDataSet>
+      <exchangeDirection>Output</exchangeDirection>
+      <referenceToVariable>Spez_Xylol_ges</referenceToVariable>
+      <meanAmount>0.001</meanAmount>
+      <resultingAmount>1.45449483758118E-8</resultingAmount>
+      <dataSourceType>Mixed primary / secondary</dataSourceType>
+      <dataDerivationTypeStatus>Calculated</dataDerivationTypeStatus>
+    </exchange>
+  </exchanges>
+</processDataSet>
