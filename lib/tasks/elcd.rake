@@ -11,9 +11,9 @@ namespace :elcd do
         f = File.open(path)
         doc = Nokogiri::XML(f)
         # Search for all inputs in this file
-        nodes = doc.xpath("//common:shortDescription")
+        nodes = doc.css("exchange referenceToFlowDataSet")
         nodes.each do |n|
-          input_name = n.content
+          input_name = n.children[1].content
           ind = inputs.index(input_name)
           if ind.nil?
             inputs << input_name
@@ -24,7 +24,7 @@ namespace :elcd do
     end
     inputs.sort
     inputs.each do |input|
-      puts input
+      puts input + "\n"
     end
   end
 end
