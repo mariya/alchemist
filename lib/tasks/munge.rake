@@ -51,6 +51,10 @@ namespace :munge do
 			  		         :latitude => location['lat'],
 					         :longitude => location['lng'])
             end # End if municipality.nil?
+            num_companies_with_employees = row[16]
+            if num_companies_with_employees.to_i > 0
+              industry_presence = IndustryPresence.find_or_create_by_municipality_id_and_nace_code_id(municipality.id, nace_code, :num_companies_with_employees => num_companies_with_employees)
+            end
           end # End if administrative_id.to_i > 0
         end
       end
