@@ -1,10 +1,12 @@
-# If a NACE code is less than five chars, pad it with leading zeros
-def pad_nace(nace)
-  nace = nace.to_s
-  while nace.length < 5
-    nace = "0" + nace
-  end
-  nace
+require 'open-uri'
+require 'json'
+require 'cgi'
+
+def geolocate(address)
+  url = "http://maps.googleapis.com/maps/api/geocode/json?sensor=false&address=" + CGI::escape(address)
+  result = JSON.parse(open(url).read)
+  result = result['results'].first
+  location = result['geometry']['location']
 end
 
 namespace :munge do
@@ -21,6 +23,35 @@ namespace :munge do
           nace = NaceCode.find_or_create_by_id(row[i])
           process.nace_codes << nace
           process.save
+        end
+      end
+    end
+  end
+
+  desc "Parse SCB CSV file containing Swedish industrial presence data."
+  task :swedish_industrial_presence, :csv_path, :needs => :environment do |t, args|
+    csv_path = args['csv_path']
+    FasterCSV.foreach(csv_path) do |row|
+      # Municipality name is the third column
+      municipality_name = row[2]
+      unless municipality_name.blank?
+        administrative_id = row[3].strip
+        # If this is a valid name, look up or create the municipality
+        if administrative_id.to_i > 0
+          nace_code = row[4]
+          # Proceed only of this is a valid NACE code
+          if nace_code.to_i > 0
+            municipality = Municipality.find_by_name(municipality_name.strip)
+            if municipality.nil?
+              # Grab coordinates using Google API
+              location = geolocate("#{municipality_name.strip}, Sweden")
+              municipality = Municipality.create(:name => municipality_name.strip, 
+                                                 :country => "SE", 
+		  			         :administrative_id => administrative_id, 
+			  		         :latitude => location['lat'],
+					         :longitude => location['lng'])
+            end # End if municipality.nil?
+          end # End if administrative_id.to_i > 0
         end
       end
     end
