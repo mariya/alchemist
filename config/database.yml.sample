@@ -1,0 +1,20 @@
+common: &common
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  pool: 5
+
+development:
+  <<: *common
+  host: localhost
+  username: root
+  database: alchemist_development
+
+test: &test
+  <<: *common
+  host: localhost
+  username: root
+  database: alchemist_test
+
+cucumber:
+  <<: *test
