@@ -5,4 +5,4 @@ Visualizing potential regional material loops by heuristically matching LCI raw 
 == Populating data
 
 The following Rake tasks need to be run to populate all the necessary data:
-# rake munge:map_industrial_processes_to_nace
+- rake munge:map_industrial_processes_to_nace
