@@ -29,6 +29,8 @@ GEM
       activesupport (= 3.1.1)
     activesupport (3.1.1)
       multi_json (~> 1.0)
+    ancestry (1.2.4)
+      activerecord (>= 2.2.2)
     arel (2.2.1)
     builder (3.0.0)
     coffee-rails (3.1.1)
@@ -109,6 +111,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ancestry
   coffee-rails (~> 3.1.1)
   fastercsv
   jquery-rails
