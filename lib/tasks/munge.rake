@@ -60,4 +60,22 @@ namespace :munge do
       end
     end
   end
+
+  desc "Parse list of EWC into Resource Categories"
+  task :ewc, :needs => :environment do
+    csv_path = File.expand_path('../../data/resource_categories.csv', __FILE__)
+    last_supercat = nil
+    FasterCSV.foreach(csv_path) do |row|
+      # If the first column isn't blank, this is a super-category
+      supercat_name = row[0].to_s.strip
+      unless supercat_name.blank?
+        supercat = ResourceCategory.find_or_create_by_ewc_name(supercat_name, :name => row[1].to_s.strip)
+        last_supercat = supercat
+      else # This is a child category of the last-defined supercat
+        ewc = row[1].to_s.strip
+        name = row[2].to_s.strip
+        ResourceCategory.find_or_create_by_ewc_name(ewc, :name => name, :parent => last_supercat)
+      end
+    end
+  end
 end
