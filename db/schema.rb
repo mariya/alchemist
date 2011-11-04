@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111104122324) do
+ActiveRecord::Schema.define(:version => 20111104122853) do
 
   create_table "industrial_processes", :force => true do |t|
     t.string   "name",       :null => false
@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(:version => 20111104122324) do
   end
 
   create_table "nace_codes", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "outputs", :force => true do |t|
+    t.integer  "industry_category_id",          :null => false
+    t.integer  "resource_category_id",          :null => false
+    t.integer  "tons_non_hazardous_waste_2008", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
