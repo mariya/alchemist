@@ -104,6 +104,23 @@ namespace :munge do
   desc "Map Industry Categories to Resource Categories, weighted with tons of non-hazardous waste produced in Sweden in 2008"
   task :outputs, :needs => :environment do
     csv_path = File.expand_path('../../data/outputs.csv', __FILE__)
+
+    # Put the EWC codes in a lookup table
+    ind_row_with_ewc_codes = 9
+    csv = FasterCSV.read(csv_path)
+    row_with_ewc_codes = csv[ind_row_with_ewc_codes]
+    ewc_indexes = Array.new
+    ind = 0
+    row_with_ewc_codes.each do |val|
+      unless val.nil?
+        rc = ResourceCategory.find_by_ewc_name(val.strip)
+        # If this is a valid EWC, put it in the lookup table
+        ewc_indexes[ind] = rc.ewc_name if rc
+      end
+      ind += 1
+    end
+
+    # Parse the stats
     FasterCSV.foreach(csv_path) do |row|
       ind_group = row[0]
       # Does this row have a valid industrial grouping number?
