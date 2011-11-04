@@ -100,4 +100,18 @@ namespace :munge do
       end
     end
   end
+
+  desc "Map Industry Categories to Resource Categories, weighted with tons of non-hazardous waste produced in Sweden in 2008"
+  task :outputs, :needs => :environment do
+    csv_path = File.expand_path('../../data/outputs.csv', __FILE__)
+    FasterCSV.foreach(csv_path) do |row|
+      ind_group = row[0]
+      # Does this row have a valid industrial grouping number?
+      if !ind_group.blank? and ind_group.strip.to_i > 0
+        industry_category_id = ind_group.strip.to_i
+        industry_category_name = row[1].strip
+        industry_category = IndustryCategory.find_or_create_by_id(industry_category_id, :name => industry_category_name)
+      end
+    end
+  end
 end

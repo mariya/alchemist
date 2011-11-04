@@ -7,3 +7,6 @@ Visualizing potential regional material loops by heuristically matching LCI raw 
 The following Rake tasks need to be run to populate all the necessary data:
 - rake munge:map_industrial_processes_to_nace
 - rake munge:swedish_industrial_presence[path/to/SCB/data.csv]
+- rake munge:ewc
+- rake munge:ewc_to_resources
+- rake munge:outputs
