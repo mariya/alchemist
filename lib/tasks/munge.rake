@@ -115,7 +115,7 @@ namespace :munge do
       unless val.nil?
         rc = ResourceCategory.find_by_ewc_name(val.strip)
         # If this is a valid EWC, put it in the lookup table
-        ewc_indexes[ind] = rc.ewc_name if rc
+        ewc_indexes[ind] = rc.id if rc
       end
       ind += 1
     end
@@ -128,6 +128,20 @@ namespace :munge do
         industry_category_id = ind_group.strip.to_i
         industry_category_name = row[1].strip
         industry_category = IndustryCategory.find_or_create_by_id(industry_category_id, :name => industry_category_name)
+        if industry_category
+          # Loop through all values in this row. If one of them is an integer with the same index as an EWC code we're tracking, we want to capture the data
+          ind = 0
+          row.each do |val|
+            ewc = ewc_indexes[ind]
+            if ewc
+              tons = val.strip.delete(",").to_i
+              if tons > 0
+                output = Output.find_or_create_by_industry_category_id_and_resource_category_id(industry_category.id, ewc, :tons_non_hazardous_waste_2008 => tons)
+              end
+            end
+            ind += 1
+          end
+        end
       end
     end
   end
