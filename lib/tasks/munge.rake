@@ -145,4 +145,22 @@ namespace :munge do
       end
     end
   end
+
+  desc "Map Industry Categories to NACE codes"
+  task :industry_categories_to_nace, :needs => :environment do
+    csv_path = File.expand_path('../../data/industry_categories_to_nace_codes.csv', __FILE__)
+    FasterCSV.foreach(csv_path) do |row|
+      ici = row[0]
+      unless ici.nil?
+        ici = ici.strip.to_i
+        if ici > 0 and ic = IndustryCategory.find_by_id(ici)
+          nace = row[1].strip.delete(".").to_i
+          if nace > 0 and nc = NaceCode.find_by_id(nace)
+            ic.nace_codes << nc unless ic.nace_codes.index(nc)
+            ic.save
+          end
+        end
+      end
+    end
+  end
 end
