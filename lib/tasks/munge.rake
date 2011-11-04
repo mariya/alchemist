@@ -78,4 +78,26 @@ namespace :munge do
       end
     end
   end
+
+  desc "Map EWC to resources"
+  task :ewc_to_resources, :needs => :environment do
+    csv_path = File.expand_path('../../data/resources_to_ewc.csv', __FILE__)    
+    FasterCSV.foreach(csv_path) do |row|
+      resource_name = row[1].strip
+      i_start = 2
+      i_end = 13
+      for i in i_start..i_end do
+        val = row[i]
+        if val
+          ewc_name = val.strip
+          resource_category = ResourceCategory.find_by_ewc_name(ewc_name)
+          unless resource_category.nil?
+            resource = Resource.find_or_create_by_name(resource_name)
+            resource.resource_categories << resource_category unless resource.resource_categories.index(resource_category)
+            resource.save
+          end
+        end
+      end
+    end
+  end
 end
