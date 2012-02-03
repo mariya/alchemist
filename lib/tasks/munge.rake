@@ -169,4 +169,24 @@ namespace :munge do
       end
     end
   end
+
+  desc "Map industrial processes to resources"
+  task :industrial_processes_to_resources, :needs => :environment do
+    csv_path = File.expand_path('../../data/industrial_processes_to_resources.csv', __FILE__)
+    FasterCSV.foreach(csv_path) do |row|
+      industrial_process_name = row[0]
+      resource_name = row[1]
+      quantity = row[2]
+      unless industrial_process_name.nil? or resource_name.nil? or quantity.to_f <= 0
+        industrial_process_name = industrial_process_name.strip
+        resource_name = resource_name.strip
+        industrial_process = IndustrialProcess.find_by_name(industrial_process_name)
+        resource = Resource.find_by_name(resource_name)
+        if industrial_process and resource
+          industrial_process.resources << resource unless industrial_process.resources.index(resource)
+          industrial_process.save
+        end
+      end
+    end
+  end
 end

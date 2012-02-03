@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111104135712) do
+ActiveRecord::Schema.define(:version => 20120203221428) do
 
   create_table "industrial_processes", :force => true do |t|
     t.string   "name",       :null => false
@@ -21,6 +21,11 @@ ActiveRecord::Schema.define(:version => 20111104135712) do
   create_table "industrial_processes_nace_codes", :id => false, :force => true do |t|
     t.integer "industrial_process_id", :null => false
     t.integer "nace_code_id",          :null => false
+  end
+
+  create_table "industrial_processes_resources", :id => false, :force => true do |t|
+    t.integer "industrial_process_id", :null => false
+    t.integer "resource_id",           :null => false
   end
 
   create_table "industry_categories", :force => true do |t|
