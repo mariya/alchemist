@@ -83,21 +83,27 @@ namespace :munge do
   task :ewc_to_resources, :needs => :environment do
     csv_path = File.expand_path('../../data/resources_to_ewc.csv', __FILE__)    
     FasterCSV.foreach(csv_path) do |row|
-      resource_name = row[1].strip
-      i_start = 2
-      i_end = 13
-      for i in i_start..i_end do
-        val = row[i]
-        if val
-          ewc_name = val.strip
-          resource_category = ResourceCategory.find_by_ewc_name(ewc_name)
-          unless resource_category.nil?
-            resource = Resource.find_or_create_by_name(resource_name)
-            resource.resource_categories << resource_category unless resource.resource_categories.index(resource_category)
-            resource.save
-          end
-        end
-      end
+      resource_name = row[0].strip
+      resource_quantity = 0
+      resource_quantity_s = row[2]
+      resource_quantity = resource_quantity_s.strip.to_f if resource_quantity_s
+      i_start = 5
+      i_end = 16
+      min_quantity = 0.02      
+      if resource_quantity >= min_quantity
+	for i in i_start..i_end do
+	  val = row[i]
+	  if val
+	    ewc_name = val.strip
+            resource_category = ResourceCategory.find_by_ewc_name(ewc_name)
+            unless resource_category.nil?
+              resource = Resource.find_or_create_by_name(resource_name)
+              resource.resource_categories << resource_category unless resource.resource_categories.index(resource_category)
+              resource.save
+            end
+	  end # End if val
+	end # End for
+      end # End if resource quantity significant
     end
   end
 
