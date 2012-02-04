@@ -211,4 +211,42 @@ namespace :munge do
       end
     end
   end
+
+  desc "Populate connections for a single Swedish municipality"
+  task :intramunicipal_connections, :municipality_name, :needs => :environment do |t, args|
+    municipality_name = args['municipality_name']
+    mun = Municipality.find_by_name(municipality_name)
+    cons = IntramunicipalConnection.find_by_sql(
+"select m.name as municipality_name,
+r.name as resource_name,
+(o.tons_non_hazardous_waste_2008 * inputs.quantity) as factor,
+ip.name as industrial_process_name,
+ic.name as industry_category_name,
+icnc.nace_code_id as output_nace_code, 
+ipnc.nace_code_id as input_nace_code
+from resource_categories rc 
+join outputs o on rc.id=o.resource_category_id 
+join industry_categories ic on o.industry_category_id=ic.id 
+join industry_categories_nace_codes icnc on ic.id=icnc.industry_category_id 
+join resource_categories_resources rcr on rc.id=rcr.resource_category_id 
+join resources r ON rcr.resource_id=r.id 
+join inputs on r.id=inputs.resource_id 
+join industrial_processes ip ON inputs.industrial_process_id=ip.id 
+join industrial_processes_nace_codes ipnc on ipnc.industrial_process_id=ip.id
+join industry_presences ip2 on ip2.nace_code_id=icnc.nace_code_id 
+join industry_presences ip3 on ip3.nace_code_id=ipnc.nace_code_id 
+join municipalities m on ip2.municipality_id=m.id
+where ip2.municipality_id=ip3.municipality_id and ip2.municipality_id=#{mun.id}")
+    cons.each do |c|
+      IntramunicipalConnection.create(
+        :municipality_name => c.municipality_name,
+        :resource_name => c.resource_name,
+        :factor => c.factor,
+        :industrial_process_name => c.industrial_process_name,
+        :industry_category_name => c.industry_category_name,
+        :output_nace_code => c.output_nace_code,
+        :input_nace_code => c.input_nace_code
+      )
+    end
+  end
 end

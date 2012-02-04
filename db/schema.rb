@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120204091536) do
+ActiveRecord::Schema.define(:version => 20120204093632) do
 
   create_table "industrial_processes", :force => true do |t|
     t.string   "name",       :null => false
@@ -46,6 +46,18 @@ ActiveRecord::Schema.define(:version => 20120204091536) do
     t.integer "industrial_process_id",                  :null => false
     t.integer "resource_id",                            :null => false
     t.float   "quantity",              :default => 0.0, :null => false
+  end
+
+  create_table "intramunicipal_connections", :force => true do |t|
+    t.string   "municipality_name",       :null => false
+    t.string   "resource_name",           :null => false
+    t.string   "industrial_process_name", :null => false
+    t.string   "industry_category_name",  :null => false
+    t.integer  "input_nace_code",         :null => false
+    t.integer  "output_nace_code",        :null => false
+    t.float    "factor",                  :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "municipalities", :force => true do |t|
