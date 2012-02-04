@@ -189,4 +189,15 @@ namespace :munge do
       end
     end
   end
+
+  desc "Map nace codes to resource categories (outputs)"
+  task :industry_categories_to_resource_categories, :needs => :environment do
+    Output.find(:all).each do |output|
+      ic = output.industry_category
+      ic.nace_codes.each do |nc|
+        nc.resource_categories << output.resource_category
+        nc.save
+      end
+    end
+  end
 end
