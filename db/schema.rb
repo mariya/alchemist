@@ -43,9 +43,9 @@ ActiveRecord::Schema.define(:version => 20120204091536) do
   end
 
   create_table "inputs", :id => false, :force => true do |t|
-    t.integer "industrial_process_id",                :null => false
-    t.integer "resource_id",                          :null => false
-    t.integer "quantity",              :default => 0, :null => false
+    t.integer "industrial_process_id",                  :null => false
+    t.integer "resource_id",                            :null => false
+    t.float   "quantity",              :default => 0.0, :null => false
   end
 
   create_table "municipalities", :force => true do |t|
