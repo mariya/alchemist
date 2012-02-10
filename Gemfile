@@ -42,3 +42,4 @@ group :development do
   gem "thin"
 end
 
+gem 'inherited_resources'
