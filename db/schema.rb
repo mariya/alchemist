@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120204093632) do
+ActiveRecord::Schema.define(:version => 20120210104055) do
 
   create_table "industrial_processes", :force => true do |t|
     t.string   "name",       :null => false
@@ -61,13 +61,15 @@ ActiveRecord::Schema.define(:version => 20120204093632) do
   end
 
   create_table "municipalities", :force => true do |t|
-    t.string   "name",              :null => false
-    t.string   "country",           :null => false
+    t.string   "name",                                     :null => false
+    t.string   "country",                                  :null => false
     t.string   "administrative_id"
-    t.float    "latitude",          :null => false
-    t.float    "longitude",         :null => false
+    t.float    "latitude",                                 :null => false
+    t.float    "longitude",                                :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "num_connections",         :default => 0,   :null => false
+    t.float    "mean_connections_factor", :default => 0.0, :null => false
   end
 
   create_table "nace_codes", :force => true do |t|
