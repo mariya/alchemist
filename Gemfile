@@ -18,6 +18,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'haml', '~> 3.1.3'
 gem 'jquery-rails'
 gem 'nokogiri'
 gem 'ancestry'
