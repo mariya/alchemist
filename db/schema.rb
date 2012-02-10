@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120210104055) do
+ActiveRecord::Schema.define(:version => 20120210104951) do
 
   create_table "industrial_processes", :force => true do |t|
     t.string   "name",       :null => false
@@ -59,6 +59,13 @@ ActiveRecord::Schema.define(:version => 20120210104055) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "intramunicipal_connections", ["industrial_process_name"], :name => "index_intramunicipal_connections_on_industrial_process_name"
+  add_index "intramunicipal_connections", ["industry_category_name"], :name => "index_intramunicipal_connections_on_industry_category_name"
+  add_index "intramunicipal_connections", ["input_nace_code"], :name => "index_intramunicipal_connections_on_input_nace_code"
+  add_index "intramunicipal_connections", ["municipality_name"], :name => "index_intramunicipal_connections_on_municipality_name"
+  add_index "intramunicipal_connections", ["output_nace_code"], :name => "index_intramunicipal_connections_on_output_nace_code"
+  add_index "intramunicipal_connections", ["resource_name"], :name => "index_intramunicipal_connections_on_resource_name"
 
   create_table "municipalities", :force => true do |t|
     t.string   "name",                                     :null => false
