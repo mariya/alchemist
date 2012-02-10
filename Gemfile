@@ -19,6 +19,7 @@ group :assets do
 end
 
 gem 'haml', '~> 3.1.3'
+gem "haml-rails"
 gem 'jquery-rails'
 gem 'nokogiri'
 gem 'ancestry'
