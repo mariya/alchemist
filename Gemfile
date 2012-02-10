@@ -37,3 +37,8 @@ gem 'gmaps4rails'
 # To use debugger
 # gem 'ruby-debug'
 
+# Development web server
+group :development do
+  gem "thin"
+end
+
