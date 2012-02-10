@@ -252,4 +252,20 @@ namespace :munge do
       end
     end
   end
+
+  desc "Calculate number of connections and mean connections factor per municipality"
+  task :municipal_stats, :needs => :environment do
+    ms = Municipality.find(:all)
+    ms.each do |mun|
+      municipality_name = mun.name
+      puts "Processing connection stats for #{municipality_name} municipality"
+      cons = IntramunicipalConnection.find_all_by_municipality_name(municipality_name, :order => "factor ASC")
+      num_cons = cons.size
+      if num_cons > 0
+	i_midpoint = [((num_cons / 2).floor - 1), 0].max
+	mean_con_factor = cons[i_midpoint].factor
+	mun.update_attributes(:num_connections => num_cons, :mean_connections_factor => mean_con_factor)
+      end
+    end
+  end
 end
