@@ -6,3 +6,12 @@
  *= require_tree . 
  *= require gmaps4rails
 */
+
+html {
+  background-color: #EEEEEE;
+}
+
+body {
+  font-family: Verdana, Arial, sans-serif;
+  margin: 20px;
+}

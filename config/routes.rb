@@ -1,5 +1,10 @@
 Alchemist::Application.routes.draw do
-  resources :municipalities
+  resources :municipalities do
+    collection do
+      get 'top_connections'
+      get 'top_factor'
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
