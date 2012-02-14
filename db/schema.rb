@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120210104951) do
+ActiveRecord::Schema.define(:version => 20120214163225) do
 
   create_table "industrial_processes", :force => true do |t|
     t.string   "name",       :null => false
@@ -98,6 +98,13 @@ ActiveRecord::Schema.define(:version => 20120210104951) do
     t.integer  "industry_category_id",          :null => false
     t.integer  "resource_category_id",          :null => false
     t.integer  "tons_non_hazardous_waste_2008", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
