@@ -4,9 +4,13 @@
   <title>Alchemist</title>
   <%= stylesheet_link_tag 'heatmaps' %>
   <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+  <%= javascript_include_tag 'heatmap' %>
+  <%= javascript_include_tag 'heatmap-gmaps' %>
+  <%= javascript_include_tag 'heatmap-alchemist' %>
 </head>
 <body>
 <div id="main">
+      <%= yield %>
       <div id="heatmapArea">      
       </div>
       <div id="configArea">
@@ -14,8 +18,5 @@
         <div id="gen" class="btn">Add 5 random lat/lng coordinates</div>
       </div>
 </div>
-<script type="text/javascript" src="/assets/heatmap.js"></script>
-<script type="text/javascript" src="/assets/heatmap-gmaps.js"></script>
-<script type="text/javascript" src="/assets/heatmap-alchemist.js"></script>
 </body>
 </html>
