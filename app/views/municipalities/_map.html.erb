@@ -3,4 +3,7 @@
   var coordinates = {
     data: <%= raw @json %>
   };
+  var rawBounds = <%= raw @bounds %>;
+  var bounds = new google.maps.LatLngBounds(new google.maps.LatLng(rawBounds.south, rawBounds.west), 
+                                          new google.maps.LatLng(rawBounds.north, rawBounds.east));
 </script>

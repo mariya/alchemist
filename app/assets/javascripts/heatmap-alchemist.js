@@ -20,6 +20,7 @@ window.onload = function(){
     disableDoubleClickZoom: false
   };
   map = new google.maps.Map(document.getElementById("heatmapArea"), myOptions);
+  map.fitBounds(bounds);
   
   heatmap = new HeatmapOverlay(map, {"radius":15, "visible":true, "opacity":60});
   

@@ -7,8 +7,21 @@ class MunicipalitiesController < InheritedResources::Base
 
   def top_connections
     @title = "Top #{@limit} municipalities, by number of potential connections"
-    @json = Municipality.find(:all, :order => "num_connections desc", :limit => @limit).to_gmaps4rails
-        render :layout => "heatmap"
+    # Let's get bounds for our map
+    bounds = {}
+    bounds[:north] = Municipality.maximum(:latitude)
+    bounds[:south] = Municipality.minimum(:latitude)
+    bounds[:east] = Municipality.maximum(:longitude)
+    bounds[:west] = Municipality.minimum(:longitude)
+    @bounds = bounds.to_json
+
+    muns = []
+    Municipality.find(:all, :order => "num_connections desc", :limit => @limit).each do |m|
+      muns << {:lat => m.latitude, :lng => m.longitude}
+    end
+    @json = muns.to_json
+    #@json = Municipality.find(:all, :order => "num_connections desc", :limit => @limit).to_gmaps4rails
+    render :layout => "heatmap"
   end
 
   def top_factor
