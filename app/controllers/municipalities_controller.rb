@@ -1,12 +1,11 @@
 class MunicipalitiesController < InheritedResources::Base
-  before_filter :limit_connections
+  before_filter :limit_connections, :init_map_vars
 
   def limit_connections
     @limit = 10
   end
 
-  def top_connections
-    @title = "Top #{@limit} municipalities, by number of potential connections"
+  def init_map_vars
     # Let's get bounds for our map
     bounds = {}
     bounds[:north] = Municipality.maximum(:latitude)
@@ -14,6 +13,10 @@ class MunicipalitiesController < InheritedResources::Base
     bounds[:east] = Municipality.maximum(:longitude)
     bounds[:west] = Municipality.minimum(:longitude)
     @bounds = bounds.to_json
+  end
+
+  def top_connections
+    @title = "Top #{@limit} municipalities, by number of potential connections"
 
     # What is the highest count?
     @heatmap_max = Municipality.maximum(:num_connections)
@@ -23,7 +26,6 @@ class MunicipalitiesController < InheritedResources::Base
       muns << {:lat => m.latitude, :lng => m.longitude, :count => m.num_connections}
     end
     @json = muns.to_json
-    #@json = Municipality.find(:all, :order => "num_connections desc", :limit => @limit).to_gmaps4rails
     render :layout => "heatmap"
   end
 
