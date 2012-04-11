@@ -1,9 +1,5 @@
 class MunicipalitiesController < InheritedResources::Base
-  before_filter :limit_connections, :init_map_vars
-
-  def limit_connections
-    @limit = 10
-  end
+  before_filter :init_map_vars
 
   def init_map_vars
     # Let's get bounds for our map
@@ -16,13 +12,13 @@ class MunicipalitiesController < InheritedResources::Base
   end
 
   def top_connections
-    @title = "Top #{@limit} municipalities, by number of potential connections"
+    @title = "Top municipalities, by number of potential connections"
 
-    # What is the highest count?
-    @heatmap_max = Municipality.maximum(:num_connections)
+    # What is the highest count? TODO: Consider using maximum instead of average
+    @heatmap_max = Municipality.average(:num_connections)
 
     muns = []
-    Municipality.find(:all, :order => "num_connections desc", :limit => @limit).each do |m|
+    Municipality.find(:all, :order => "num_connections desc").each do |m|
       muns << {:lat => m.latitude, :lng => m.longitude, :count => m.num_connections}
     end
     @json = muns.to_json
@@ -30,8 +26,17 @@ class MunicipalitiesController < InheritedResources::Base
   end
 
   def top_factor
-    @title = "Top #{@limit} municipalities, by mean size of potential connections"
-    @json = Municipality.find(:all, :order => "mean_connections_factor desc", :limit => @limit).to_gmaps4rails
+    @title = "Top municipalities, by mean size of potential connections"
+
+    # What is the highest factor? TODO: Consider using maximum instead of average
+    @heatmap_max = Municipality.average(:mean_connections_factor)
+
+    muns = []
+    Municipality.find(:all, :order => "mean_connections_factor desc").each do |m|
+      muns << {:lat => m.latitude, :lng => m.longitude, :count => m.mean_connections_factor}
+    end
+    @json = muns.to_json
+    render :layout => "heatmap"
   end
 
   def heatmap
