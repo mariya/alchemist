@@ -1,6 +1,7 @@
 <h1><%=@title %></h1>
 <script type="text/javascript">
   var coordinates = {
+    max: <%= raw @heatmap_max %>,
     data: <%= raw @json %>
   };
   var rawBounds = <%= raw @bounds %>;

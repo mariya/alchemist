@@ -15,9 +15,12 @@ class MunicipalitiesController < InheritedResources::Base
     bounds[:west] = Municipality.minimum(:longitude)
     @bounds = bounds.to_json
 
+    # What is the highest count?
+    @heatmap_max = Municipality.maximum(:num_connections)
+
     muns = []
     Municipality.find(:all, :order => "num_connections desc", :limit => @limit).each do |m|
-      muns << {:lat => m.latitude, :lng => m.longitude}
+      muns << {:lat => m.latitude, :lng => m.longitude, :count => m.num_connections}
     end
     @json = muns.to_json
     #@json = Municipality.find(:all, :order => "num_connections desc", :limit => @limit).to_gmaps4rails
