@@ -31,6 +31,7 @@ namespace :munge do
   desc "Parse SCB CSV file containing Swedish industrial presence data."
   task :swedish_industrial_presence, :csv_path, :needs => :environment do |t, args|
     csv_path = args['csv_path']
+    puts "Parsing #{csv_path}..."
     FasterCSV.foreach(csv_path) do |row|
       # Municipality name is the third column
       municipality_name = row[2]
@@ -218,27 +219,37 @@ namespace :munge do
     ms.each do |mun|
       municipality_name = mun.name
       puts "Processing connections for #{municipality_name} municipality"
-      cons = IntramunicipalConnection.find_by_sql(
-  "select m.name as municipality_name,
-  r.name as resource_name,
-  (o.tons_non_hazardous_waste_2008 * inputs.quantity) as factor,
-  ip.name as industrial_process_name,
-  ic.name as industry_category_name,
-  icnc.nace_code_id as output_nace_code, 
-  ipnc.nace_code_id as input_nace_code
-  from resource_categories rc 
-  join outputs o on rc.id=o.resource_category_id 
-  join industry_categories ic on o.industry_category_id=ic.id 
-  join industry_categories_nace_codes icnc on ic.id=icnc.industry_category_id 
-  join resource_categories_resources rcr on rc.id=rcr.resource_category_id 
-  join resources r ON rcr.resource_id=r.id 
-  join inputs on r.id=inputs.resource_id 
-  join industrial_processes ip ON inputs.industrial_process_id=ip.id 
-  join industrial_processes_nace_codes ipnc on ipnc.industrial_process_id=ip.id
-  join industry_presences ip2 on ip2.nace_code_id=icnc.nace_code_id 
-  join industry_presences ip3 on ip3.nace_code_id=ipnc.nace_code_id 
-  join municipalities m on ip2.municipality_id=m.id
-  where ip2.municipality_id=ip3.municipality_id and ip2.municipality_id=#{mun.id}")
+      # The left joins are to ensure connections are not duplicated
+      sql = "select cons.id,
+        m.name as municipality_name,
+	r.name as resource_name,
+	(o.tons_non_hazardous_waste_2008 * inputs.quantity) as factor,
+	ip.name as industrial_process_name,
+	ic.name as industry_category_name,
+	icnc.nace_code_id as output_nace_code, 
+	ipnc.nace_code_id as input_nace_code
+	from resource_categories rc 
+	join outputs o on rc.id=o.resource_category_id 
+	join industry_categories ic on o.industry_category_id=ic.id 
+	join industry_categories_nace_codes icnc on ic.id=icnc.industry_category_id 
+	join resource_categories_resources rcr on rc.id=rcr.resource_category_id 
+	join resources r ON rcr.resource_id=r.id 
+	join inputs on r.id=inputs.resource_id 
+	join industrial_processes ip ON inputs.industrial_process_id=ip.id 
+	join industrial_processes_nace_codes ipnc on ipnc.industrial_process_id=ip.id
+	join industry_presences ip2 on ip2.nace_code_id=icnc.nace_code_id 
+	join industry_presences ip3 on ip3.nace_code_id=ipnc.nace_code_id 
+	join municipalities m on ip2.municipality_id=m.id
+        left join intramunicipal_connections cons ON 
+          (cons.municipality_name=m.name AND 
+           cons.resource_name=r.name AND 
+           cons.industrial_process_name=ip.name AND 
+           cons.industry_category_name=ic.name AND 
+           cons.input_nace_code=ipnc.nace_code_id AND 
+           cons.output_nace_code=icnc.nace_code_id)
+	where ip2.municipality_id=ip3.municipality_id and ip2.municipality_id=#{mun.id}
+        and cons.id IS NULL"
+      cons = IntramunicipalConnection.find_by_sql(sql)
       cons.each do |c|
 	IntramunicipalConnection.create(
 	  :municipality_name => c.municipality_name,
